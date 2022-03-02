@@ -35,6 +35,7 @@ public class LoginButton : MonoBehaviour
         }
         else
         {
+            //Debug.Log(uwr.downloadHandler.text);
             gi.UpdatePlayerData(uwr.downloadHandler.text);
 
         }

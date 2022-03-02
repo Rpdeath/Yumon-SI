@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+
 [CreateAssetMenu(fileName = "UserData", menuName = "Create a UserData", order = 2)]
 public class User : ScriptableObject
 {
@@ -13,22 +14,11 @@ public class User : ScriptableObject
     public string users_key_private;
 
     public List<Wallet> wallets;
-    public List<NFT> nft;
+    public List<Nft> nfts;
 
 
 
 }
 
-public class Wallet : ScriptableObject
-{
-    public int wallet_id;
-    public int wallet_currency;
-    public int wallet_amount;
-}
 
-public class NFT : ScriptableObject
-{
-    public int nft_id;
-    public string nft_data;
-    public int nft_owner;
-}
+

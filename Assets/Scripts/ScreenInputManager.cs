@@ -17,6 +17,10 @@ public class ScreenInputManager : MonoBehaviour
     {
         click = new InputAction(binding: "<Mouse>/leftButton");
         click.performed += ctx => {
+            if (gameCamera == null)
+            {
+                gameCamera = Camera.main;
+            }
             RaycastHit hit;
             Vector3 coor = Mouse.current.position.ReadValue();
             if (Physics.Raycast(gameCamera.ScreenPointToRay(coor), out hit))
@@ -27,12 +31,5 @@ public class ScreenInputManager : MonoBehaviour
         click.Enable();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (gameCamera == null)
-        {
-            gameCamera = Camera.main;
-        }
-    }
+
 }
