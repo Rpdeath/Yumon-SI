@@ -22,6 +22,7 @@ public enum Rarity
 [CreateAssetMenu(fileName = "Card_0", menuName = "Create a Card", order = 1)]
 public class Card : ScriptableObject
 {
+    public int id=0;
     public string name;
     public Object assetReference;
     public List<Tags> listOfTags;
