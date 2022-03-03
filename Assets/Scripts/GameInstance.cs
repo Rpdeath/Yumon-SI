@@ -5,8 +5,70 @@ using UnityEngine.SceneManagement;
 
 public class GameInstance : MonoBehaviour
 {
+    #region Variable
 
     public User userData;
+    
+
+    [HideInInspector]
+    public CreateGameInfo actualGameInfo;
+
+    #endregion
+
+    private void Start()
+    {
+        CreateGameInfo card = (CreateGameInfo)ScriptableObject.CreateInstance("CreateGameInfo");
+        actualGameInfo = card;
+    }
+
+
+    public void AddScore(int playerId, int scoreToAdd)
+    {
+        if (playerId == 1)
+        {
+            actualGameInfo.scorePlayer1 += scoreToAdd;
+        }
+        else
+        {
+            actualGameInfo.scorePlayer2 += scoreToAdd;
+        }
+    }
+
+    public void AddStarzInList(int playerId, Card starzPlace)
+    {
+        if (playerId == 1)
+        {
+            actualGameInfo.actualStarzPlayer1.Add(starzPlace);
+        }
+        else
+        {
+            actualGameInfo.actualStarzPlayer2.Add(starzPlace);
+        }
+    }
+    public void RemoveStarzInList(int playerId, Card starzToRemove)
+    {
+        if (playerId == 1)
+        {
+            actualGameInfo.actualStarzPlayer1.Remove(starzToRemove);
+        }
+        else
+        {
+            actualGameInfo.actualStarzPlayer2.Remove(starzToRemove);
+        }
+    }
+    
+    public void RefreshManaState(int playerId, int manaValue)
+    {
+        if (playerId == 1)
+        {
+            actualGameInfo.manaPlayer1 = manaValue;
+        }
+        else
+        {
+            actualGameInfo.manaPlayer2 = manaValue;
+        }
+    }
+
 
     public void UpdatePlayerData(string jsonData)
     {
@@ -37,4 +99,5 @@ public class GameInstance : MonoBehaviour
 
         }
     }
+
 }
