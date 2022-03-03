@@ -27,6 +27,8 @@ public class Deck_Place_Manager : MonoBehaviour, IReceive
         CardPlaced = obj;
         GetComponent<BoxCollider>().enabled = false;
         obj.GetComponent<CardDeckDragable>().DeckPosition = gameObject;
+
+        //GetComponent<HypeGenerator>().InitGenerator(obj timeToHarvest);
         
     }
 }

@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 302512837234649879}
   - component: {fileID: 2992230089516265294}
   - component: {fileID: 2456652895259888332}
+  - component: {fileID: 5691846725620258375}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -172,6 +173,19 @@ CapsuleCollider:
   m_Height: 36.67
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5691846725620258375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587783047850466933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f83976ac3f6612a459d0fa0cfe3ac559, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CardPlaced: {fileID: 0}
 --- !u!1 &2702294745299956493
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,6 +348,7 @@ GameObject:
   - component: {fileID: 4973294485395257864}
   - component: {fileID: 1737069587611043631}
   - component: {fileID: 5175498495760483965}
+  - component: {fileID: 4470332151044740947}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -419,6 +434,19 @@ CapsuleCollider:
   m_Height: 36.67
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4470332151044740947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2902411336538348286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f83976ac3f6612a459d0fa0cfe3ac559, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CardPlaced: {fileID: 0}
 --- !u!1 &3254560189159126202
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,6 +459,7 @@ GameObject:
   - component: {fileID: 1511085835123413582}
   - component: {fileID: 7970133808221475113}
   - component: {fileID: 4923582013912685735}
+  - component: {fileID: 3556554268448895425}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -516,6 +545,19 @@ CapsuleCollider:
   m_Height: 5.34
   m_Direction: 1
   m_Center: {x: 0, y: 0.8, z: 0}
+--- !u!114 &3556554268448895425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3254560189159126202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f83976ac3f6612a459d0fa0cfe3ac559, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CardPlaced: {fileID: 0}
 --- !u!1 &3731935374065682732
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,6 +670,7 @@ GameObject:
   - component: {fileID: 1176387746620094764}
   - component: {fileID: 5263426196781224380}
   - component: {fileID: 3606196903862974286}
+  - component: {fileID: 8307272485739163770}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -713,6 +756,19 @@ CapsuleCollider:
   m_Height: 5.34
   m_Direction: 1
   m_Center: {x: 0, y: 0.8, z: 0}
+--- !u!114 &8307272485739163770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4093288684910023726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f83976ac3f6612a459d0fa0cfe3ac559, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CardPlaced: {fileID: 0}
 --- !u!1 &4310591954363139687
 GameObject:
   m_ObjectHideFlags: 0
@@ -825,6 +881,7 @@ GameObject:
   - component: {fileID: 7715621051765797107}
   - component: {fileID: 8657534258144518443}
   - component: {fileID: 3979587156739025491}
+  - component: {fileID: 3940818798632498047}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -910,6 +967,19 @@ CapsuleCollider:
   m_Height: 5.34
   m_Direction: 1
   m_Center: {x: 0, y: 0.8, z: 0}
+--- !u!114 &3940818798632498047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4343542723497259901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f83976ac3f6612a459d0fa0cfe3ac559, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CardPlaced: {fileID: 0}
 --- !u!1 &4430066484908318912
 GameObject:
   m_ObjectHideFlags: 0
@@ -1061,6 +1131,7 @@ GameObject:
   - component: {fileID: 1478392477325161851}
   - component: {fileID: 641424971164816498}
   - component: {fileID: 5916520000237677570}
+  - component: {fileID: 2675948775820746494}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -1146,6 +1217,19 @@ CapsuleCollider:
   m_Height: 36.67
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2675948775820746494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5786094689497725808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f83976ac3f6612a459d0fa0cfe3ac559, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CardPlaced: {fileID: 0}
 --- !u!1 &5998375505093548010
 GameObject:
   m_ObjectHideFlags: 0
