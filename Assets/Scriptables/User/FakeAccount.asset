@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c954fcab710e05f48b997a1f16fdcd7a, type: 3}
+  m_Name: FakeAccount
+  m_EditorClassIdentifier: 
+  users_id: -10
+  users_name: Michel Le Bresil
+  users_password_crypted: none
+  users_key_public: key_10
+  users_key_private: key_101
+  wallets:
+  - {fileID: 11400000, guid: 151f3356e6e30fb4692f9c98964715b1, type: 2}
+  nfts: []
