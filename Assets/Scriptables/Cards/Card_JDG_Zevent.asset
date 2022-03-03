@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b508145f0efca90438089837a030abd1, type: 3}
   m_Name: Card_JDG_Zevent
   m_EditorClassIdentifier: 
+  id: 0
   name: JDG du Z-EVENT
-  assetReference: {fileID: 21300000, guid: f419b2b9b15d7d24e86bb6ce803bd966, type: 3}
+  pathOfImage: jdg_Zevent
   listOfTags: 02000000
   rarity: 2

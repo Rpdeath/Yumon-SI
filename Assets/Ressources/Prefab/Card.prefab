@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CardData: {fileID: 0}
+  assetref: {fileID: 11400000, guid: b1fc1bc0c07dc464795ddfef67f21762, type: 2}
 --- !u!65 &4211503543075507681
 BoxCollider:
   m_ObjectHideFlags: 0
