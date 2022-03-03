@@ -4,6 +4,5 @@ using UnityEngine;
 
 public class Deck : ScriptableObject
 {
-    public Object prefabToUse;
     public List<Card> listOfCard;
 }

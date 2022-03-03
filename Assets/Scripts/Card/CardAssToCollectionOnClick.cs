@@ -3,18 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using UnityEngine.Networking;
-using UnityEngine.UI;
-public class CarDataManager : MonoBehaviour,IClickable
+public class CardAssToCollectionOnClick : MonoBehaviour,IClickable
 {
-    // Start is called before the first frame update
-
     public Card CardData;
-
+    // Start is called before the first frame update
     void Start()
     {
-        Image image = this.GetComponent<Image>();
-        Debug.Log(CardData.assetReference);
-        image.sprite = (Sprite)CardData.assetReference;
         
     }
 
@@ -35,7 +29,7 @@ public class CarDataManager : MonoBehaviour,IClickable
     IEnumerator Request(string url, Card data)
     {
         //Debug.Log(JsonUtility.ToJson(data));
-        UnityWebRequest uwr = UnityWebRequest.Get(url+"?data="+JsonUtility.ToJson(data));
+        UnityWebRequest uwr = UnityWebRequest.Get(url + "?data=" + JsonUtility.ToJson(data));
 
         yield return uwr.SendWebRequest();
 
@@ -50,8 +44,7 @@ public class CarDataManager : MonoBehaviour,IClickable
 
 
 
-        
-    }
 
+    }
 
 }
