@@ -26,7 +26,7 @@ public class CarHandPostions : MonoBehaviour
     {
         
         handLenght = hand.Count;
-        float angle = 25/ handLenght;
+        float angle = 3;
         if (handLenght == 0)
             return;
 
@@ -35,21 +35,20 @@ public class CarHandPostions : MonoBehaviour
         {
             if (i < handLenght / 2)
             {
-                hand[i].GetComponent<RectTransform>().anchoredPosition = gameObject.GetComponent<RectTransform>().anchoredPosition - cardSize * i;
+                hand[i].GetComponent<RectTransform>().anchoredPosition = gameObject.GetComponent<RectTransform>().anchoredPosition - cardSize * i - cardSize/2;
                 hand[i].GetComponent<RectTransform>().rotation = Quaternion.Euler(0,0,angle + angle*i);
-                hand[i].GetComponent<RectTransform>().anchoredPosition -= Vector2.up * (i+1)*20;
-
+                hand[i].GetComponent<RectTransform>().anchoredPosition -= Vector2.up * (10 + 10*i);
             }
             else
             {
-                hand[i].GetComponent<RectTransform>().anchoredPosition = gameObject.GetComponent<RectTransform>().anchoredPosition + cardSize * (handLenght - i);
-                hand[i].GetComponent<RectTransform>().rotation = Quaternion.Euler(0, 0,-angle -angle * (handLenght - i));
-                hand[i].GetComponent<RectTransform>().anchoredPosition -= Vector2.up * (handLenght - (i+1))*20;
+                hand[i].GetComponent<RectTransform>().anchoredPosition = gameObject.GetComponent<RectTransform>().anchoredPosition + cardSize * (handLenght - i) - cardSize/2;
+                hand[i].GetComponent<RectTransform>().rotation = Quaternion.Euler(0, 0, -angle * (handLenght - i));
+                hand[i].GetComponent<RectTransform>().anchoredPosition -= Vector2.up * ( 10 * (handLenght - i));
             }
             if (handLenght % 2 != 0)
             {
-                hand[i].GetComponent<RectTransform>().anchoredPosition -= cardSize;
-                hand[i].GetComponent<RectTransform>().rotation *= Quaternion.Euler(0, 0, angle);
+                hand[i].GetComponent<RectTransform>().anchoredPosition -= cardSize/2;
+                hand[i].GetComponent<RectTransform>().rotation *= Quaternion.Euler(0, 0, 2*angle);
             }
         }
     }

@@ -20,6 +20,11 @@ public interface IReceive
     
 }
 
+public interface IHover
+{
+    void Hover();
+
+}
 
 public class ScreenInputManager : MonoBehaviour
 {
@@ -31,7 +36,8 @@ public class ScreenInputManager : MonoBehaviour
     void Awake()
     {
         click = new InputAction(binding: "<Mouse>/leftButton");
-        click.performed += ctx => {
+        click.performed += ctx =>
+        {
             if (gameCamera == null)
             {
                 gameCamera = Camera.main;
@@ -44,7 +50,7 @@ public class ScreenInputManager : MonoBehaviour
                 {
                     if (isDragging)
                     {
-                        
+
                         if (hit.collider.GetComponent<Deck_Place_Manager>() != null && hit.collider.GetComponent<Deck_Place_Manager>().CardPlaced == null)
                         {
                             Debug.Log("Should Drop");
@@ -71,6 +77,24 @@ public class ScreenInputManager : MonoBehaviour
         };
         click.Enable();
     }
+    private void Update()
+    {
+        if (gameCamera == null)
+        {
+            gameCamera = Camera.main;Debug.Log("enter");
+        }
+        
+        RaycastHit hit;
+        Vector3 coor = Mouse.current.position.ReadValue();
+        if (Physics.Raycast(gameCamera.ScreenPointToRay(coor), out hit))
+        {
+            Debug.Log(hit.collider.gameObject.name);
+            if (hit.collider.GetComponent<IHover>() != null)
+            {
+                Debug.Log("Hit");
+                hit.collider.GetComponent<IHover>()?.Hover();
+            }
+        }
 
-
+    }
 }
