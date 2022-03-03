@@ -27,9 +27,9 @@ public class CarDataManager : MonoBehaviour,IClickable
     public void OnClick()
     {
 
-        //Debug.Log("Card Clicked : "+ JsonUtility.ToJson(CardData));
+        Debug.Log("Card Clicked : "+ JsonUtility.ToJson(CardData));
 
-        //StartCoroutine(Request("localhost:8080/YumonAPI/create/nft", CardData));
+        StartCoroutine(Request("localhost:8080/YumonAPI/create/nft", CardData));
     }
 
     IEnumerator Request(string url, Card data)
