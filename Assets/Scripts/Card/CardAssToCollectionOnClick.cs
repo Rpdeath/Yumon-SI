@@ -23,7 +23,7 @@ public class CardAssToCollectionOnClick : MonoBehaviour,IClickable
 
         Debug.Log("Card Clicked : "+ JsonUtility.ToJson(CardData));
 
-        StartCoroutine(Request("localhost:8080/YumonAPI/create/nft", CardData));
+        StartCoroutine(Request("10.51.0.195:8080/YumonAPI/create/nft", CardData));
     }
 
     IEnumerator Request(string url, Card data)
