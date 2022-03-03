@@ -18,6 +18,8 @@ public class ManaBar : MonoBehaviour
     public Image fillSprite;
     public Text manaCounter;
 
+    public User userData;
+
     [HideInInspector]
     public int actualMana;
     private float actualTime;
@@ -25,8 +27,13 @@ public class ManaBar : MonoBehaviour
 
     private void Start()
     {
+        userData = GameInstance.instance.userData;
+
         actualMana = startMana;
-        actualTime = timeForGainMana;
+        actualTime = 0;
+
+        fillSprite.fillAmount = 0;
+        manaCounter.text = startMana.ToString();
     }
 
     private void Update()
@@ -40,20 +47,26 @@ public class ManaBar : MonoBehaviour
         {
             if (actualMana < manaMax)
             {
-                if (actualTime >= 0)
+                if (actualTime <= timeForGainMana)
                 {
-                    actualTime -= Time.deltaTime * boost;
+                    actualTime += Time.deltaTime * boost;
                 }
                 else
                 {
                     actualMana += 1;
-                    actualTime = timeForGainMana;
+                    actualTime = 0;
+
+                    GameInstance.instance.RefreshManaState(userData.users_id, actualMana);
                 }
             }
+            UiMana();
         }
     }
 
+    private void UiMana()
+    {
+        fillSprite.fillAmount = actualTime / timeForGainMana;
+        manaCounter.text = actualMana.ToString();
+    }
 
-
-    
 }
