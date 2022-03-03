@@ -11,6 +11,8 @@ public class CreateCollection : MonoBehaviour
     public int maxCardOnDeck=10;
     public int currentCardsonDeck=0;
     public Text count;
+
+    
     private void Start()
     {
         gi = Object.FindObjectOfType<GameInstance>();

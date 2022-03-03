@@ -29,6 +29,7 @@ public class CardCollectionSelectOnClick : MonoBehaviour,IClickable
             {
                 GetComponent<RectTransform>().localScale = new Vector3(1.2f, 1.2f, 1);
                 collectionCreator.currentCardsonDeck += 1;
+                //Debug.Log(JsonUtility.ToJson(GetComponent<CarDataManager>().CardData));
             }
             else
             {
