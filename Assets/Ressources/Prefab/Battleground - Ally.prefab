@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 2992230089516265294}
   - component: {fileID: 2456652895259888332}
   - component: {fileID: 5691846725620258375}
+  - component: {fileID: 911929685802096158}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -186,6 +187,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CardPlaced: {fileID: 0}
+--- !u!114 &911929685802096158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587783047850466933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 838e22f1e6c10fe4caccf351e7ec7d70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generatorFill: {fileID: 3543533656741384888}
+  actualTime: 0
+  maxFill: 0
+  timeToCompletion: 0
+  boost: 1
+  isReadyToHarvest: 0
 --- !u!1 &2702294745299956493
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,6 +368,7 @@ GameObject:
   - component: {fileID: 1737069587611043631}
   - component: {fileID: 5175498495760483965}
   - component: {fileID: 4470332151044740947}
+  - component: {fileID: 8816034944823813778}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -447,6 +467,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CardPlaced: {fileID: 0}
+--- !u!114 &8816034944823813778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2902411336538348286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 838e22f1e6c10fe4caccf351e7ec7d70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generatorFill: {fileID: 1975398727848030647}
+  actualTime: 0
+  maxFill: 0
+  timeToCompletion: 0
+  boost: 1
+  isReadyToHarvest: 0
 --- !u!1 &3254560189159126202
 GameObject:
   m_ObjectHideFlags: 0
@@ -460,6 +498,7 @@ GameObject:
   - component: {fileID: 7970133808221475113}
   - component: {fileID: 4923582013912685735}
   - component: {fileID: 3556554268448895425}
+  - component: {fileID: 7013034483190212867}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -558,6 +597,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CardPlaced: {fileID: 0}
+--- !u!114 &7013034483190212867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3254560189159126202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 838e22f1e6c10fe4caccf351e7ec7d70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generatorFill: {fileID: 1167171753110208286}
+  actualTime: 0
+  maxFill: 0
+  timeToCompletion: 0
+  boost: 1
+  isReadyToHarvest: 0
 --- !u!1 &3731935374065682732
 GameObject:
   m_ObjectHideFlags: 0
@@ -671,6 +728,7 @@ GameObject:
   - component: {fileID: 5263426196781224380}
   - component: {fileID: 3606196903862974286}
   - component: {fileID: 8307272485739163770}
+  - component: {fileID: 2565260264849172040}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -769,6 +827,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CardPlaced: {fileID: 0}
+--- !u!114 &2565260264849172040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4093288684910023726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 838e22f1e6c10fe4caccf351e7ec7d70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generatorFill: {fileID: 4821799583200547863}
+  actualTime: 0
+  maxFill: 0
+  timeToCompletion: 0
+  boost: 1
+  isReadyToHarvest: 0
 --- !u!1 &4310591954363139687
 GameObject:
   m_ObjectHideFlags: 0
@@ -882,6 +958,7 @@ GameObject:
   - component: {fileID: 8657534258144518443}
   - component: {fileID: 3979587156739025491}
   - component: {fileID: 3940818798632498047}
+  - component: {fileID: 311855128355862270}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -980,6 +1057,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CardPlaced: {fileID: 0}
+--- !u!114 &311855128355862270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4343542723497259901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 838e22f1e6c10fe4caccf351e7ec7d70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generatorFill: {fileID: 6504903022949870798}
+  actualTime: 0
+  maxFill: 0
+  timeToCompletion: 0
+  boost: 1
+  isReadyToHarvest: 0
 --- !u!1 &4430066484908318912
 GameObject:
   m_ObjectHideFlags: 0
@@ -1132,6 +1227,7 @@ GameObject:
   - component: {fileID: 641424971164816498}
   - component: {fileID: 5916520000237677570}
   - component: {fileID: 2675948775820746494}
+  - component: {fileID: 8686990890016033399}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -1230,6 +1326,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CardPlaced: {fileID: 0}
+--- !u!114 &8686990890016033399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5786094689497725808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 838e22f1e6c10fe4caccf351e7ec7d70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generatorFill: {fileID: 2020894970698504328}
+  actualTime: 0
+  maxFill: 0
+  timeToCompletion: 0
+  boost: 1
+  isReadyToHarvest: 0
 --- !u!1 &5998375505093548010
 GameObject:
   m_ObjectHideFlags: 0

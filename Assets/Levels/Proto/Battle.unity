@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7563167}
   - component: {fileID: 7563168}
+  - component: {fileID: 7563169}
   m_Layer: 5
   m_Name: HypeTrain - Ally
   m_TagString: Untagged
@@ -213,6 +214,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7563169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7563166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fddca800888ec8479c2d4a0217974df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHypeValue: 1000
+  currentHypeValue: 0
 --- !u!1 &47966747
 GameObject:
   m_ObjectHideFlags: 0
@@ -1032,6 +1047,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1741947832}
   - component: {fileID: 1741947833}
+  - component: {fileID: 1741947834}
   m_Layer: 5
   m_Name: HypeTrain - Enemy
   m_TagString: Untagged
@@ -1112,6 +1128,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1741947834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741947831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fddca800888ec8479c2d4a0217974df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHypeValue: 1000
+  currentHypeValue: 0
 --- !u!1 &1783705780
 GameObject:
   m_ObjectHideFlags: 0
@@ -1501,6 +1531,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 330477096942096777, guid: ddb9a081fe4762f4488c5f18226a5363, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020894970698504328, guid: ddb9a081fe4762f4488c5f18226a5363, type: 3}
+      propertyPath: m_FillAmount
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4606163771644367855, guid: ddb9a081fe4762f4488c5f18226a5363, type: 3}
