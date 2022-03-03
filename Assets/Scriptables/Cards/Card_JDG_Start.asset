@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b508145f0efca90438089837a030abd1, type: 3}
   m_Name: Card_JDG_Start
   m_EditorClassIdentifier: 
+  id: 0
   name: JDG Du Commencement
-  assetReference: {fileID: 21300000, guid: 9e61889beadac7a41988094f9c01f844, type: 3}
+  pathOfImage: jdg_Start
   listOfTags: 01000000
   rarity: 1

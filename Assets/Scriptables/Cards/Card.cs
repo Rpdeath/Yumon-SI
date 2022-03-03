@@ -24,8 +24,9 @@ public class Card : ScriptableObject
 {
     public int id=0;
     public string name;
-    public Object assetReference;
+    public string pathOfImage;
     public List<Tags> listOfTags;
     public Rarity rarity;
+    
 
 }

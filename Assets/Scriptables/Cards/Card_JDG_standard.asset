@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b508145f0efca90438089837a030abd1, type: 3}
   m_Name: Card_JDG_standard
   m_EditorClassIdentifier: 
+  id: 0
   name: JDG
-  assetReference: {fileID: 21300000, guid: d2fa22e2ee2bb5045acea5abf79ec69a, type: 3}
+  pathOfImage: jdg_standard
   listOfTags: 00000000
   rarity: 0
