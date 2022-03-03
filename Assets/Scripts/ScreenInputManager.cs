@@ -23,6 +23,7 @@ public interface IReceive
 public interface IHover
 {
     void Hover();
+    void StopHover();
 
 }
 
@@ -33,6 +34,7 @@ public class ScreenInputManager : MonoBehaviour
     private InputAction click;
     private bool isDragging = false;
     private GameObject dragedObject;
+    private GameObject hoveredObject;
     void Awake()
     {
         click = new InputAction(binding: "<Mouse>/leftButton");
@@ -88,11 +90,26 @@ public class ScreenInputManager : MonoBehaviour
         Vector3 coor = Mouse.current.position.ReadValue();
         if (Physics.Raycast(gameCamera.ScreenPointToRay(coor), out hit))
         {
-            Debug.Log(hit.collider.gameObject.name);
+            
             if (hit.collider.GetComponent<IHover>() != null)
             {
-                Debug.Log("Hit");
+                if (hoveredObject!=null && hoveredObject != hit.collider.gameObject)
+                {
+                    hoveredObject.GetComponent<IHover>()?.StopHover();
+                    hoveredObject = null;
+                }
                 hit.collider.GetComponent<IHover>()?.Hover();
+                hoveredObject = hit.collider.gameObject;
+                
+                
+            }
+        }
+        else
+        {
+            if (hoveredObject != null)
+            {
+                hoveredObject.GetComponent<IHover>()?.StopHover();
+                hoveredObject = null;
             }
         }
 
