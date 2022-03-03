@@ -6,14 +6,30 @@ using UnityEngine.SceneManagement;
 public class GameInstance : MonoBehaviour
 {
     #region Variable
+    public static GameInstance instance;
+
 
     public User userData;
+    public User userDataEnemy;
     
-
     [HideInInspector]
     public CreateGameInfo actualGameInfo;
 
     #endregion
+
+    private void Awake()
+    {
+        #region Setup instance
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Debug.LogWarning("Care there is multiple GameInstance in the scene");
+        }
+        #endregion
+    }
 
     private void Start()
     {
@@ -22,9 +38,10 @@ public class GameInstance : MonoBehaviour
     }
 
 
+
     public void AddScore(int playerId, int scoreToAdd)
     {
-        if (playerId == 1)
+        if (playerId == userData.users_id)
         {
             actualGameInfo.scorePlayer1 += scoreToAdd;
         }
@@ -36,7 +53,7 @@ public class GameInstance : MonoBehaviour
 
     public void AddStarzInList(int playerId, Card starzPlace)
     {
-        if (playerId == 1)
+        if (playerId == userData.users_id)
         {
             actualGameInfo.actualStarzPlayer1.Add(starzPlace);
         }
@@ -47,7 +64,7 @@ public class GameInstance : MonoBehaviour
     }
     public void RemoveStarzInList(int playerId, Card starzToRemove)
     {
-        if (playerId == 1)
+        if (playerId == userData.users_id)
         {
             actualGameInfo.actualStarzPlayer1.Remove(starzToRemove);
         }
@@ -59,7 +76,7 @@ public class GameInstance : MonoBehaviour
     
     public void RefreshManaState(int playerId, int manaValue)
     {
-        if (playerId == 1)
+        if (playerId == userData.users_id)
         {
             actualGameInfo.manaPlayer1 = manaValue;
         }
