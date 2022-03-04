@@ -9,9 +9,9 @@ public class Properties : ScriptableObject
     public int cost = 0;
     public int hype = 0;
     public int speed = 0;
-    public int passivId = 0;
+    public string passivId = "none";
     public int actif_cost = 0;
     public int cooldown = 0;
-    public int actifId = 0;
-    
+    public string actifId = "none";
+
 }

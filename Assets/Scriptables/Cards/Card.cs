@@ -27,6 +27,7 @@ public class Card : ScriptableObject
     public string pathOfImage;
     public List<Tags> listOfTags;
     public Rarity rarity;
+    public Properties propertie;
     
 
 }

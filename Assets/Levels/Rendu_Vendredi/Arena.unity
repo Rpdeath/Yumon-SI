@@ -1359,6 +1359,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Starz_Plateform (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4928275399828574851, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
+      propertyPath: allowDrop
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
 --- !u!1 &1833336432
@@ -1565,6 +1569,10 @@ PrefabInstance:
     - target: {fileID: 4928275398251277117, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
       propertyPath: m_Name
       value: Starz_Plateform (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928275399828574851, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
+      propertyPath: allowDrop
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
@@ -1806,6 +1814,10 @@ PrefabInstance:
     - target: {fileID: 4928275398251277117, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
       propertyPath: m_Name
       value: Starz_Plateform
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928275399828574851, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
+      propertyPath: allowDrop
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}

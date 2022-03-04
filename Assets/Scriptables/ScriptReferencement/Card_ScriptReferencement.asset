@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b508145f0efca90438089837a030abd1, type: 3}
-  m_Name: Card_JDG_standard
+  m_Script: {fileID: 11500000, guid: b01ff72c8a05d39448a1531a1d516f3d, type: 3}
+  m_Name: Card_ScriptReferencement
   m_EditorClassIdentifier: 
-  id: 0
-  name: JDG
-  pathOfImage: jdg_standard
-  listOfTags: 00000000
-  rarity: 0
-  propertie: {fileID: 11400000, guid: 688c4f84411185d40ba19e12cd901fd5, type: 2}
+  AssetList_id:
+  - zevent
+  - bob_lennon
+  AssetList_script:
+  - {fileID: 0}
+  - {fileID: 0}

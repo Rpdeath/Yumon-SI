@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b508145f0efca90438089837a030abd1, type: 3}
-  m_Name: Card_JDG_standard
+  m_Name: Card_ZEVENT_BOB_LENNON
   m_EditorClassIdentifier: 
   id: 0
-  name: JDG
-  pathOfImage: jdg_standard
-  listOfTags: 00000000
+  name: Bob Lennon
+  pathOfImage: bob_lennon
+  listOfTags: 02000000
   rarity: 0
-  propertie: {fileID: 11400000, guid: 688c4f84411185d40ba19e12cd901fd5, type: 2}
+  propertie: {fileID: 11400000, guid: 512e033a3eff1834b9e5d1b50e8aa82a, type: 2}
