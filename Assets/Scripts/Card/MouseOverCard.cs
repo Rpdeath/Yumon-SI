@@ -11,7 +11,7 @@ public class MouseOverCard : MonoBehaviour,IHover
         if (!isHover)
         {
             isHover = true;
-            transform.position += Vector3.up * 1f;
+            transform.position += Vector3.up * 5f;
         }
         
 
@@ -21,7 +21,7 @@ public class MouseOverCard : MonoBehaviour,IHover
     public void StopHover()
     {
         isHover = false;
-        transform.position -= Vector3.up * 1f;
+        transform.position -= Vector3.up * 5f;
     }
     
 }

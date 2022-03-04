@@ -13,6 +13,7 @@ public class GetDeckCard : MonoBehaviour
         for (int i=0;i<playerDeck.listOfCard.Count; i++)
         {
             blankCards[i].GetComponent<CarDataManager>().CardData = playerDeck.listOfCard[i];
+            blankCards[i].GetComponent<CarDataManager>().UpdateCArd();
         }
         handManager.hand = blankCards;
         handManager.UpdateHandPoses();

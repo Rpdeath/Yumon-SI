@@ -11,7 +11,7 @@ public class DropStarz : MonoBehaviour, IReceive
     {
         if (actualStarz != null)
         {
-            SpawnStarz(obj.GetComponent<CarDataManager>().CardData.assetReference as GameObject);
+            //SpawnStarz(obj.GetComponent<CarDataManager>().CardData.assetReference as GameObject);
         }
     }
 
