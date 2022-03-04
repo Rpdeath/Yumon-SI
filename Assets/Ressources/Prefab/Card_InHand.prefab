@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2681750492675249995, guid: 2b633b7ac8942244ba3781f7589460d4, type: 3}
+      propertyPath: panel
+      value: 
+      objectReference: {fileID: 6209669231923127584}
     - target: {fileID: 7593735169229542057, guid: 2b633b7ac8942244ba3781f7589460d4, type: 3}
       propertyPath: m_Name
       value: Card_InHand
@@ -97,3 +101,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b633b7ac8942244ba3781f7589460d4, type: 3}
+--- !u!1 &6209669231923127584 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1216806486137862420, guid: 2b633b7ac8942244ba3781f7589460d4, type: 3}
+  m_PrefabInstance: {fileID: 5102536911978765364}
+  m_PrefabAsset: {fileID: 0}

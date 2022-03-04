@@ -12,7 +12,7 @@ public class CardHandDragable : MonoBehaviour, IDragable
     RectTransform rectT;
     public CarHandPostions cardHand;
     Card card;
-
+    public GameObject panel;
     private void Start()
     {
         rectT = GetComponent<RectTransform>();
@@ -25,11 +25,13 @@ public class CardHandDragable : MonoBehaviour, IDragable
         if(card.propertie.cost<= GameInstance.instance.actualGameInfo.manaPlayer1)
         {
             isDraggable = true;
+            
         }
         else
         {
             isDraggable = false;
         }
+        panel.active= !isDraggable;
 
 
         if (isDraged)
