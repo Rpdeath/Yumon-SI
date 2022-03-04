@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 184596619694847103, guid: f189e99c610bd3a40b519487d364d6a1, type: 3}
       propertyPath: m_Name
-      value: Slot - Ally (1)
+      value: Slot - Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 2715881753825043848, guid: f189e99c610bd3a40b519487d364d6a1, type: 3}
       propertyPath: m_RootOrder
@@ -55,6 +55,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7101721572931787270, guid: f189e99c610bd3a40b519487d364d6a1, type: 3}
+      propertyPath: m_Color.b
+      value: 0.4575472
+      objectReference: {fileID: 0}
+    - target: {fileID: 7101721572931787270, guid: f189e99c610bd3a40b519487d364d6a1, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6578519
+      objectReference: {fileID: 0}
+    - target: {fileID: 7101721572931787270, guid: f189e99c610bd3a40b519487d364d6a1, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7101721572931787270, guid: f189e99c610bd3a40b519487d364d6a1, type: 3}
+      propertyPath: m_FillAmount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530670901519210236, guid: f189e99c610bd3a40b519487d364d6a1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 71868ad42d6972b4cb7ad8955783133e, type: 2}
     - target: {fileID: 9091540153033820053, guid: f189e99c610bd3a40b519487d364d6a1, type: 3}
       propertyPath: m_Camera
       value: 
