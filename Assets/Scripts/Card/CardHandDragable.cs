@@ -7,16 +7,31 @@ public class CardHandDragable : MonoBehaviour, IDragable
 {
 
     private bool isDraged = false;
+    public bool isDraggable = false;
     Camera gameCamera;
     RectTransform rectT;
     public CarHandPostions cardHand;
+    Card card;
 
     private void Start()
     {
         rectT = GetComponent<RectTransform>();
+        card = GetComponent<CarDataManager>().CardData;
     }
     void Update()
     {
+
+
+        if(card.propertie.cost<= GameInstance.instance.actualGameInfo.manaPlayer1)
+        {
+            isDraggable = true;
+        }
+        else
+        {
+            isDraggable = false;
+        }
+
+
         if (isDraged)
         {
             if (gameCamera == null) { gameCamera = Camera.main; }

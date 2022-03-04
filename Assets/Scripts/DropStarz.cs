@@ -34,9 +34,13 @@ public class DropStarz : MonoBehaviour, IReceive
     private void SpawnStarz(GameObject objToSpawn,Card card)
     {
         actualStarz = Instantiate(objToSpawn, spawnPoint.position, spawnPoint.rotation);
-        GameInstance.instance.actualGameInfo.actualStarzPlayer1.Add(card);
+        actualStarz.GetComponentInChildren<HypeGenerator>().timeToCompletion = card.propertie.speed;
+        GameInstance.instance.actualGameInfo.manaPlayer1 -= card.propertie.cost;
+
+
+        //GameInstance.instance.actualGameInfo.actualStarzPlayer1.Add(card);
         
-        foreach(Tags tag in card.listOfTags)
+        /*foreach(Tags tag in card.listOfTags)
         {
             switch (tag)
             {
@@ -56,7 +60,7 @@ public class DropStarz : MonoBehaviour, IReceive
         foreach(HypeGenerator starz in GameObject.FindObjectsOfType<HypeGenerator>()){
             starz.gameObject.GetComponent<IPassive>()?.UpdatePassiveOnNewCard(card, GameInstance.instance.actualGameInfo.actualStarzPlayer1, GameInstance.instance.actualGameInfo.actualStarzPlayer2);
         }
-
+*/
         
     }
 }

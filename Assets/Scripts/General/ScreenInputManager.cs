@@ -86,9 +86,12 @@ public class ScreenInputManager : MonoBehaviour
                         }
                         if (hit.collider.GetComponent<IDragable>() != null)
                         {
-                            isDragging = true;
-                            hit.collider.GetComponent<IDragable>()?.StartDrag();
-                            dragedObject = hit.collider.gameObject;
+                            if (hit.collider.GetComponent<CardHandDragable>() != null && hit.collider.GetComponent<CardHandDragable>().isDraggable)
+                            {
+                                isDragging = true;
+                                hit.collider.GetComponent<IDragable>()?.StartDrag();
+                                dragedObject = hit.collider.gameObject;
+                            }
                         }
                     }
                 }

@@ -29,8 +29,8 @@ public class ManaBar : MonoBehaviour
     private void Start()
     {
         userData = GameInstance.instance.userData;
-
-        actualMana = startMana;
+        startGenerateMana = true;
+        GameInstance.instance.actualGameInfo.manaPlayer1 = startMana;
         actualTime = 0;
 
         fillSprite.fillAmount = 0;
@@ -46,7 +46,7 @@ public class ManaBar : MonoBehaviour
     {
         if (startGenerateMana)
         {
-            if (actualMana < manaMax)
+            if (GameInstance.instance.actualGameInfo.manaPlayer1 < manaMax)
             {
                 if (actualTime <= timeForGainMana)
                 {
@@ -54,10 +54,10 @@ public class ManaBar : MonoBehaviour
                 }
                 else
                 {
-                    actualMana += 1;
+                    GameInstance.instance.actualGameInfo.manaPlayer1 += 1;
                     actualTime = 0;
 
-                    GameInstance.instance.RefreshManaState(userData.users_id, actualMana);
+                    GameInstance.instance.RefreshManaState(userData.users_id, GameInstance.instance.actualGameInfo.manaPlayer1);
                 }
             }
             UiMana();
@@ -67,7 +67,7 @@ public class ManaBar : MonoBehaviour
     private void UiMana()
     {
         fillSprite.fillAmount = actualTime / timeForGainMana;
-        manaCounter.text = actualMana.ToString();
+        manaCounter.text = GameInstance.instance.actualGameInfo.manaPlayer1.ToString();
     }
 
 }

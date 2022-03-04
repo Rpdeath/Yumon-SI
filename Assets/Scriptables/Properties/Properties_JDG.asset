@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Properties_JDG
   m_EditorClassIdentifier: 
   cost: 3
-  hype: 2
-  speed: 4
+  hype: 400
+  speed: 10
   passivId: 0
   actif_cost: 3
   cooldown: 20
