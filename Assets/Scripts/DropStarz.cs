@@ -34,6 +34,7 @@ public class DropStarz : MonoBehaviour, IReceive
     private void SpawnStarz(GameObject objToSpawn,Card card)
     {
         actualStarz = Instantiate(objToSpawn, spawnPoint.position, spawnPoint.rotation);
+        GameInstance.instance.actualGameInfo.actualStarzPlayer1.Add(card);
         
         foreach(Tags tag in card.listOfTags)
         {
@@ -45,13 +46,17 @@ public class DropStarz : MonoBehaviour, IReceive
                 case Tags.Start:
                     break;
                 case Tags.ZEvent:
-                    actualStarz.AddComponent<Passive_zevent>();
+                    Passive_zevent pz = actualStarz.GetComponentInChildren<HypeGenerator>().gameObject.AddComponent<Passive_zevent>();
                     break;
                 default:
                     break;
             }
-
         }
+
+        foreach(HypeGenerator starz in GameObject.FindObjectsOfType<HypeGenerator>()){
+            starz.gameObject.GetComponent<IPassive>()?.UpdatePassiveOnNewCard(card, GameInstance.instance.actualGameInfo.actualStarzPlayer1, GameInstance.instance.actualGameInfo.actualStarzPlayer2);
+        }
+
         
     }
 }

@@ -5,8 +5,8 @@ using UnityEngine;
 
 public interface IPassive
 {
-    void UpdatePassiveOnNewCard(Card generator, Deck Ally, Deck Ennemy);
-    void ProcPassive(Card generator,Deck Ally,Deck Ennemy);
+    void UpdatePassiveOnNewCard(Card generator, List<Card> Ally, List<Card> Ennemy);
+    void ProcPassive(Card generator, List<Card> Ally, List<Card> Ennemy);
 }
 
 public class Passive : MonoBehaviour, IPassive
@@ -19,12 +19,12 @@ public class Passive : MonoBehaviour, IPassive
         GetComponent<HypeGenerator>().boost = speedRatio;
     }
 
-    public void UpdatePassiveOnNewCard(Card generator, Deck Ally, Deck Ennemy)
+    public void UpdatePassiveOnNewCard(Card generator, List<Card> Ally, List<Card> Ennemy)
     {
 
     }
 
-    public void ProcPassive(Card generator,Deck Ally, Deck Ennemy)
+    public void ProcPassive(Card generator, List<Card> Ally, List<Card> Ennemy)
     {
         
     }

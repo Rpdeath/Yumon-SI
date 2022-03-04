@@ -13,6 +13,8 @@ public class GameInstance : MonoBehaviour
     
     [HideInInspector]
     public CreateGameInfo actualGameInfo;
+    
+
 
     #endregion
 
