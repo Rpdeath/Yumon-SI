@@ -998,3 +998,4 @@ Received Import Request.
   path: Assets/Graph/Streamer/Bob_Lennon/Material/M_STarz.shadergraph
   artifactKey: Guid(4dff10bc41d1d0d4fa979d7f708e7860) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Graph/Streamer/Bob_Lennon/Material/M_STarz.shadergraph using Guid(4dff10bc41d1d0d4fa979d7f708e7860) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54c6ddd9ad75b1aee9d5517488bed7e2') in 0.004740 seconds 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
