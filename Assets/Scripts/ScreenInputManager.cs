@@ -63,10 +63,19 @@ public class ScreenInputManager : MonoBehaviour
 
                         if (hit.collider.GetComponent<DropStarz>() != null)
                         {
-                            Debug.Log("Should Drop");
-                            isDragging = false;
-                            hit.collider.GetComponent<IReceive>()?.DropCard(dragedObject);
-                            dragedObject = null;
+                            if (hit.collider.GetComponent<DropStarz>().allowDrop)
+                            {
+                                Debug.Log("Should Drop");
+                                isDragging = false;
+                                hit.collider.GetComponent<IReceive>()?.DropCard(dragedObject);
+                                dragedObject = null;
+                            }
+                            else
+                            {
+                                dragedObject.GetComponent<IDragable>().StopDrag();
+                                isDragging = false;
+                                dragedObject = null;
+                            }
                         }
                     }
                     else
