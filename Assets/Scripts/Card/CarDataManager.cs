@@ -18,6 +18,12 @@ public class CarDataManager : MonoBehaviour
         if(assetref.AssetList_id.IndexOf(CardData.pathOfImage)!=-1) image.sprite = assetref.AssetList_sprite[assetref.AssetList_id.IndexOf(CardData.pathOfImage)] as Sprite;
         
     }
+    public void UpdateCArd()
+    {
+        Image image = this.GetComponent<Image>();
+        //Sprite sp = Resources.Load<Sprite>(CardData.pathOfImage);
+        if (assetref.AssetList_id.IndexOf(CardData.pathOfImage) != -1) image.sprite = assetref.AssetList_sprite[assetref.AssetList_id.IndexOf(CardData.pathOfImage)] as Sprite;
+    }
 
     // Update is called once per frame
     void Update()
