@@ -61,7 +61,7 @@ public class HypeGenerator : MonoBehaviour, IClickable
         }
     }
     public void ResetGenerator()
-    {      
+    {
         actualTime = 0;
         isReadyToHarvest = false;
     }
