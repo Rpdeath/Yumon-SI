@@ -55,7 +55,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4928275398950291536}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4928275399828574848}
@@ -161,6 +161,7 @@ MonoBehaviour:
   actualStarz: {fileID: 0}
   spawnPoint: {fileID: 4928275398950291539}
   assetRef: {fileID: 11400000, guid: b1fc1bc0c07dc464795ddfef67f21762, type: 2}
+  allowDrop: 1
 --- !u!65 &4928275399828574850
 BoxCollider:
   m_ObjectHideFlags: 0

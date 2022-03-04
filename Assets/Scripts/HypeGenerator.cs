@@ -3,43 +3,47 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HypeGenerator : MonoBehaviour
+public class HypeGenerator : MonoBehaviour, IClickable
 {
+    #region Variable
+
     private Deck_Place_Manager place;
     public Image generatorFill;
 
-    public float actualTime;
     public float maxFill;
     public float timeToCompletion;
     public float boost;
 
+    [HideInInspector]
+    public float actualTime;
+
     [HideInInspector] public bool isReadyToHarvest = false;
+
+    #endregion
 
     private void Start()
     {
-        place = GetComponent<Deck_Place_Manager>();
-    }
-
-    public void InitGenerator(float time)
-    {
-        timeToCompletion = time;
-        actualTime = timeToCompletion;
+        InitGenerator();
     }
 
     public void Update()
     {
-        if (place.CardPlaced != null && isReadyToHarvest == false)
+        if (isReadyToHarvest == false)
         {
             StartGeneratingHype();
         }
     }
 
+    public void InitGenerator()
+    {
+        actualTime = 0;
+    }
     public void StartGeneratingHype()
     {
-        if (actualTime >= 0)
+        if (actualTime <= maxFill)
         {
-            actualTime -= Time.deltaTime * boost;
-            generatorFill.fillAmount = 1 - (1 / actualTime);
+            actualTime += Time.deltaTime * boost;
+            generatorFill.fillAmount =  actualTime / maxFill;
         }
         else
         {
@@ -47,10 +51,18 @@ public class HypeGenerator : MonoBehaviour
         }
     }
 
-    // Appeler quand on click sur le Starz et qu'il est ready to harvest
+
+
+    public void OnClick()
+    {
+        if (isReadyToHarvest)
+        {
+            ResetGenerator();
+        }
+    }
     public void ResetGenerator()
-    {      
-        actualTime = timeToCompletion;
+    {
+        actualTime = 0;
         isReadyToHarvest = false;
     }
 }
