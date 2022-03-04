@@ -307,8 +307,6 @@ MonoBehaviour:
   maxFill: 3
   timeToCompletion: 3
   boost: 1
-  actualTime: 3
-  isReadyToHarvest: 0
 --- !u!136 &2140787822924498154
 CapsuleCollider:
   m_ObjectHideFlags: 0

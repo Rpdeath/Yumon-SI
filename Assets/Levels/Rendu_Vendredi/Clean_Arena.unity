@@ -1022,10 +1022,9 @@ GameObject:
   m_Component:
   - component: {fileID: 458247243}
   - component: {fileID: 458247245}
-  - component: {fileID: 458247244}
   m_Layer: 5
   m_Name: HypeTrain - Ally
-  m_TagString: Untagged
+  m_TagString: Slider1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1052,21 +1051,6 @@ RectTransform:
   m_AnchoredPosition: {x: 425, y: -50}
   m_SizeDelta: {x: 260, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &458247244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 458247242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fddca800888ec8479c2d4a0217974df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHypeValue: 1000
-  currentHypeValue: 0
-  slider: {fileID: 458247245}
 --- !u!114 &458247245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1923,6 +1907,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1413349046}
+  - component: {fileID: 1413349047}
   m_Layer: 0
   m_Name: Game Instance
   m_TagString: Untagged
@@ -1944,6 +1929,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1413349047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413349045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee732499cc45ea44f944284532b10082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  userData: {fileID: 11400000, guid: 82e262b7f0e0fbc439a384ffca2bd314, type: 2}
+  userDataEnemy: {fileID: 0}
+  actualGameInfo: {fileID: 0}
 --- !u!1 &1430643939
 GameObject:
   m_ObjectHideFlags: 0
@@ -2106,10 +2106,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1680255047}
   - component: {fileID: 1680255049}
-  - component: {fileID: 1680255048}
   m_Layer: 5
   m_Name: HypeTrain - Enemy
-  m_TagString: Untagged
+  m_TagString: Slider2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2136,21 +2135,6 @@ RectTransform:
   m_AnchoredPosition: {x: -420, y: -50}
   m_SizeDelta: {x: 260, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1680255048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1680255046}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fddca800888ec8479c2d4a0217974df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHypeValue: 1000
-  currentHypeValue: 0
-  slider: {fileID: 1680255049}
 --- !u!114 &1680255049
 MonoBehaviour:
   m_ObjectHideFlags: 0

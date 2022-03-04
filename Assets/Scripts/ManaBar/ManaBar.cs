@@ -12,7 +12,7 @@ public class ManaBar : MonoBehaviour
     public float timeForGainMana;
     public float boost;
     [Space]
-    public bool startGenerateMana;
+    public bool startGenerateMana = true;
 
     [Header ("UI")]
     public Image fillSprite;

@@ -43,10 +43,10 @@ public class HypeGenerator : MonoBehaviour, IClickable
     }
     public void StartGeneratingHype()
     {
-        if (actualTime <= maxFill)
+        if (actualTime <= timeToCompletion)
         {
             actualTime += Time.deltaTime * boost;
-            generatorFill.fillAmount =  actualTime / maxFill;
+            generatorFill.fillAmount =  actualTime / timeToCompletion;
         }
         else
         {
