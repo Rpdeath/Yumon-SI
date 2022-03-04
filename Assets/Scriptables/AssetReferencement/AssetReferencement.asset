@@ -21,6 +21,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9e61889beadac7a41988094f9c01f844, type: 3}
   - {fileID: 21300000, guid: f419b2b9b15d7d24e86bb6ce803bd966, type: 3}
   AssetList_model:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 7835938397286150881, guid: 4028ed01b9813014b98474846a6aa493, type: 3}
+  - {fileID: 7835938397286150881, guid: 4028ed01b9813014b98474846a6aa493, type: 3}
+  - {fileID: 7835938397286150881, guid: 4028ed01b9813014b98474846a6aa493, type: 3}
