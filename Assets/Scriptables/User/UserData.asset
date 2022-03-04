@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c954fcab710e05f48b997a1f16fdcd7a, type: 3}
   m_Name: UserData
   m_EditorClassIdentifier: 
-  id: 0
-  name: 
-  password_crypted: 
-  public_key: 
-  private_key: 
+  users_id: 1
+  users_name: 
+  users_password_crypted: 
+  users_key_public: 
+  users_key_private: 
+  wallets: []
+  nfts: []
