@@ -5,25 +5,19 @@ using UnityEngine.UI;
 
 public class HypeTrain : MonoBehaviour
 {
-
     #region Variable    
+
     public int maxHypeValue = 1000;
     public int currentHypeValue;
-    private int hypeAddValue;
 
-    private Slider slider; 
+    public Slider slider; 
+
     #endregion
 
-    public void Start()
-    {
-        slider = GetComponent<Slider>();
-    }
-    
     public void AddHypeToTrain(int value)
     {
-        hypeAddValue = value;
-        currentHypeValue = currentHypeValue + hypeAddValue;
-        slider.value = maxHypeValue / currentHypeValue;
+        currentHypeValue += value;
+        slider.value = currentHypeValue / maxHypeValue;
 
         if(currentHypeValue >= maxHypeValue)
         {

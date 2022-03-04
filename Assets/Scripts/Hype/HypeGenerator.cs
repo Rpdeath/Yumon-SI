@@ -9,20 +9,23 @@ public class HypeGenerator : MonoBehaviour, IClickable
 
     private Deck_Place_Manager place;
     public Image generatorFill;
-
-    public float maxFill;
+   
+    public int maxFill;
     public float timeToCompletion;
     public float boost;
 
-    [HideInInspector]
-    public float actualTime;
+    private float actualTime;
 
-    [HideInInspector] public bool isReadyToHarvest = false;
+    private bool isReadyToHarvest = false;
+
+    private User userData;
 
     #endregion
 
     private void Start()
     {
+        userData = GameInstance.instance.userData;
+
         InitGenerator();
     }
 
@@ -62,6 +65,8 @@ public class HypeGenerator : MonoBehaviour, IClickable
     }
     public void ResetGenerator()
     {
+        GameInstance.instance.AddScore(userData.users_id, maxFill);
+
         actualTime = 0;
         isReadyToHarvest = false;
     }
