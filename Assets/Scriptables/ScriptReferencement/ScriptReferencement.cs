@@ -11,6 +11,6 @@ using UnityEngine;
 public class ScriptReferencement : ScriptableObject
 {
     public List<string> AssetList_id;
-    public List<MonoBehaviour> AssetList_script;
+    public List<Passive> AssetList_script;
 
 }
