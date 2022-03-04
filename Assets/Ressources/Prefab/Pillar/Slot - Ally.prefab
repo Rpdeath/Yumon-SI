@@ -145,7 +145,11 @@ GameObject:
   - component: {fileID: 7638532953879558133}
   - component: {fileID: 8530670901519210236}
   - component: {fileID: 9116916634911760123}
+<<<<<<< Updated upstream
   - component: {fileID: 3067355954972858219}
+=======
+  - component: {fileID: 1998632079568415525}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -230,7 +234,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0000001, y: 2, z: 1.0000002}
   m_Center: {x: 0, y: 0.5, z: 0}
+<<<<<<< Updated upstream
 --- !u!114 &3067355954972858219
+=======
+--- !u!114 &1998632079568415525
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -243,8 +251,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actualStarz: {fileID: 0}
+<<<<<<< Updated upstream
   spawnPoint: {fileID: 3946511780107856153}
   assetRef: {fileID: 0}
+=======
+  spawnPoint: {fileID: 0}
+>>>>>>> Stashed changes
 --- !u!1 &5098781816694597034
 GameObject:
   m_ObjectHideFlags: 0
