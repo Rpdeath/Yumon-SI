@@ -18,6 +18,7 @@ public class ManaBar : MonoBehaviour
     public Image fillSprite;
     public Text manaCounter;
 
+    [HideInInspector]
     public User userData;
 
     [HideInInspector]

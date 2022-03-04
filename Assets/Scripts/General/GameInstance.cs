@@ -8,7 +8,6 @@ public class GameInstance : MonoBehaviour
     #region Variable
     public static GameInstance instance;
 
-
     public User userData;
     public User userDataEnemy;
     
@@ -36,7 +35,6 @@ public class GameInstance : MonoBehaviour
         CreateGameInfo card = (CreateGameInfo)ScriptableObject.CreateInstance("CreateGameInfo");
         actualGameInfo = card;
     }
-
 
 
     public void AddScore(int playerId, int scoreToAdd)
