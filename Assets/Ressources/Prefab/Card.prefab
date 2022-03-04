@@ -13,8 +13,7 @@ GameObject:
   - component: {fileID: 7593735169229542053}
   - component: {fileID: 7593735169229542052}
   - component: {fileID: 4211503543075507681}
-  - component: {fileID: 3393676094131407831}
-  - component: {fileID: 7643826571473861308}
+  - component: {fileID: 2681750492675249995}
   m_Layer: 5
   m_Name: Card
   m_TagString: Untagged
@@ -106,7 +105,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 186, y: 220, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3393676094131407831
+--- !u!114 &2681750492675249995
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,21 +114,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7593735169229542057}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a80020486804ae04ab66e2620a2d6cd9, type: 3}
+  m_Script: {fileID: 11500000, guid: 652a8ec0d5f21994398bdb65d1d4c985, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardTransform: {fileID: 7593735169229542058}
-  isHover: 0
---- !u!114 &7643826571473861308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7593735169229542057}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a158b7083953354990a3230ea88d6af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DeckPosition: {fileID: 0}
+  cardHand: {fileID: 0}

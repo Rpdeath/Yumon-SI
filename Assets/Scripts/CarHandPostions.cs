@@ -16,10 +16,21 @@ public class CarHandPostions : MonoBehaviour
     }
     private void Update()
     {
+
+        
+
         if (hand.Count != handLenght)
         {
             UpdateHandPoses();
         }
+    }
+
+    public void RemoveCard(GameObject card)
+    {
+        hand.Remove(card);
+        handLenght -= 1;
+        UpdateHandPoses();
+        Destroy(card);
     }
 
     public void UpdateHandPoses()

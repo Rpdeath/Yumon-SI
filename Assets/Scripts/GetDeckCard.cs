@@ -10,10 +10,12 @@ public class GetDeckCard : MonoBehaviour
 
     private void Start()
     {
+        CarHandPostions carHand = GetComponent<CarHandPostions>();
         for (int i=0;i<playerDeck.listOfCard.Count; i++)
         {
             blankCards[i].GetComponent<CarDataManager>().CardData = playerDeck.listOfCard[i];
             blankCards[i].GetComponent<CarDataManager>().UpdateCArd();
+            blankCards[i].GetComponent<CardHandDragable>().cardHand = carHand;
         }
         handManager.hand = blankCards;
         handManager.UpdateHandPoses();

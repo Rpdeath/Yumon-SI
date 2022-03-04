@@ -11,7 +11,7 @@ public interface IClickable
 public interface IDragable
 {
     void StartDrag();
-    void StopDrag();
+    void StopDrag(bool destroy=false);
 }
 
 public interface IReceive
@@ -60,6 +60,14 @@ public class ScreenInputManager : MonoBehaviour
                             hit.collider.GetComponent<IReceive>()?.DropCard(dragedObject);
                             dragedObject = null;
                         }
+
+                        if (hit.collider.GetComponent<DropStarz>() != null)
+                        {
+                            Debug.Log("Should Drop");
+                            isDragging = false;
+                            hit.collider.GetComponent<IReceive>()?.DropCard(dragedObject);
+                            dragedObject = null;
+                        }
                     }
                     else
                     {
@@ -73,6 +81,17 @@ public class ScreenInputManager : MonoBehaviour
                             hit.collider.GetComponent<IDragable>()?.StartDrag();
                             dragedObject = hit.collider.gameObject;
                         }
+                    }
+                }
+            }
+            else
+            {
+                if(dragedObject != null)
+                {
+                    if (dragedObject.GetComponent<CardHandDragable>()){
+                        dragedObject.GetComponent<IDragable>().StopDrag();
+                        isDragging = false;
+                        dragedObject = null;
                     }
                 }
             }

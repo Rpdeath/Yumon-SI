@@ -6,12 +6,19 @@ public class MouseOverCard : MonoBehaviour,IHover
 {
     public RectTransform cardTransform;
     public bool isHover;
+    RectTransform rectT;
+
+    private void Start()
+    {
+        rectT = GetComponent<RectTransform>();
+    }
     public void Hover()
     {
         if (!isHover)
         {
             isHover = true;
-            transform.position += Vector3.up * 5f;
+            
+            rectT.transform.position += Vector3.up * 10f;
         }
         
 
@@ -21,7 +28,7 @@ public class MouseOverCard : MonoBehaviour,IHover
     public void StopHover()
     {
         isHover = false;
-        transform.position -= Vector3.up * 5f;
+        rectT.transform.position -= Vector3.up * 10f;
     }
     
 }

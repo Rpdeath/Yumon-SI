@@ -35,7 +35,7 @@ public class CardDeckDragable : MonoBehaviour, IDragable
         }
     }
 
-    public void StopDrag()
+    public void StopDrag(bool destroy=false)
     {
         isDraged = false;
         GetComponent<BoxCollider>().enabled = true;

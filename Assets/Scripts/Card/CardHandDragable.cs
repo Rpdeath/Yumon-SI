@@ -8,15 +8,23 @@ public class CardHandDragable : MonoBehaviour, IDragable
 
     private bool isDraged = false;
     Camera gameCamera;
-    public GameObject DeckPosition;
+    RectTransform rectT;
+    public CarHandPostions cardHand;
+
+    private void Start()
+    {
+        rectT = GetComponent<RectTransform>();
+    }
     void Update()
     {
         if (isDraged)
         {
             if (gameCamera == null) { gameCamera = Camera.main; }
-            Vector3 pz = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-            pz.z = 0;
-            transform.position = pz;
+            Vector3 pz = Camera.main.ScreenToViewportPoint(Mouse.current.position.ReadValue());
+            pz.y = -500 + 1000*pz.y;
+            pz.x = -1000 + 2000 * pz.x;
+
+            rectT.transform.localPosition = pz ;
 
 
         }
@@ -26,19 +34,27 @@ public class CardHandDragable : MonoBehaviour, IDragable
     {
         isDraged = true;
         GetComponent<BoxCollider>().enabled = false;
-        if (DeckPosition != null)
-        {
-            DeckPosition.GetComponent<Deck_Place_Manager>().CardPlaced = null;
-            DeckPosition.GetComponent<BoxCollider>().enabled = true;
-            
-
-        }
+        
     }
 
-    public void StopDrag()
+    
+    public void StopDrag(bool Destroy=false)
     {
-        isDraged = false;
-        GetComponent<BoxCollider>().enabled = true;
-        Destroy(gameObject);
+        
+        if (Destroy)
+        {
+            Debug.Log("Destroy Object :" + gameObject.name);
+
+            cardHand.RemoveCard(gameObject);
+        }
+        else
+        {
+            cardHand.UpdateHandPoses();
+            isDraged = false;
+            GetComponent<BoxCollider>().enabled = true;
+        }
+
+
+
     }
 }
