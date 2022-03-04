@@ -6,12 +6,16 @@ public class DropStarz : MonoBehaviour, IReceive
 {
     public GameObject actualStarz;
     public Transform spawnPoint;
+    public AssetReferencement assetRef;
 
     public void DropCard(GameObject obj)
     {
         if (actualStarz != null)
         {
-            //SpawnStarz(obj.GetComponent<CarDataManager>().CardData.assetReference as GameObject);
+            Card card = obj.GetComponent<CarDataManager>().CardData;
+            GameObject gobj = null;
+            if (assetRef.AssetList_id.IndexOf(card.pathOfImage) != -1) gobj = assetRef.AssetList_model[assetRef.AssetList_id.IndexOf(card.pathOfImage)] as GameObject;
+            SpawnStarz(gobj);
         }
     }
 
