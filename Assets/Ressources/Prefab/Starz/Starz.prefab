@@ -268,6 +268,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7835938398310893493}
+  - component: {fileID: 4061153235685021126}
+  - component: {fileID: 2140787822924498154}
   m_Layer: 0
   m_Name: Logic
   m_TagString: Untagged
@@ -289,6 +291,38 @@ Transform:
   m_Father: {fileID: 7835938397286150882}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4061153235685021126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7835938398310893492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 838e22f1e6c10fe4caccf351e7ec7d70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generatorFill: {fileID: 4307125405385682561}
+  maxFill: 3
+  timeToCompletion: 3
+  boost: 1
+  actualTime: 3
+  isReadyToHarvest: 0
+--- !u!136 &2140787822924498154
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7835938398310893492}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1.4953516
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.72248304, z: 0}
 --- !u!1001 &3372465889400843620
 PrefabInstance:
   m_ObjectHideFlags: 0
