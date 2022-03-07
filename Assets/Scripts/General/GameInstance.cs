@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System;
 
 public class GameInstance : MonoBehaviour
 {
@@ -160,7 +161,9 @@ public class GameInstance : MonoBehaviour
             {
                 Debug.Log(item);
                 string xee = (item.Substring(item.IndexOf("\"deck_data\"")+1, item.IndexOf(",\"deck_owner\"")-1  - item.IndexOf("\"deck_data\""))).Remove(0,11);
-                Debug.Log(xee);
+                string xei = (item.Substring(item.IndexOf("\"deck_id\"") + 1, item.IndexOf(",\"deck_data\"") - 2 - item.IndexOf("\"deck_id\""))).Remove(0, 10);
+                deck.deck_id = int.Parse(xei);
+                Debug.Log(xei);
 
             }
 

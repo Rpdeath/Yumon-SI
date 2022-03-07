@@ -25,7 +25,7 @@ public class CardAssToCollectionOnClick : MonoBehaviour,IClickable
         {
             Debug.Log("Card Clicked : " + JsonUtility.ToJson(CardData));
 
-            StartCoroutine(Request("portfolio.michaelabid.com/YumonAPI/create/nft", CardData));
+            StartCoroutine(Request("yumon.rpdeath.com/create/nft", CardData));
             canclick = false;
         }
     }
