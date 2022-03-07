@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eda7181f01401d543b5234b5a23b224e, type: 3}
+  m_Name: Card03
+  m_EditorClassIdentifier: 
+  nft_id: 0
+  nft_data: '{"id":"95","name":"Bob Lennon","pathOfImage":"bob_lennon","listOfTags":[2],"rarity":1}'
+  nft_owner: 0

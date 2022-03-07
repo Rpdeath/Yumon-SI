@@ -16,6 +16,8 @@ public class User : ScriptableObject
     public List<Wallet> wallets;
     public List<Nft> nfts;
 
+    public Deck currentDeck;
+
 
 
 }

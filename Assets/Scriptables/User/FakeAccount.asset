@@ -19,4 +19,22 @@ MonoBehaviour:
   users_key_private: key_101
   wallets:
   - {fileID: 11400000, guid: 151f3356e6e30fb4692f9c98964715b1, type: 2}
-  nfts: []
+  nfts:
+  - {fileID: 11400000, guid: b865afbb93ecf49409504b8054a7b0d2, type: 2}
+  - {fileID: 11400000, guid: ffdd86255437cc64a87152614bc971f7, type: 2}
+  - {fileID: 11400000, guid: b86ab6bb7afc6c64d8ec3850b856ee88, type: 2}
+  - {fileID: 11400000, guid: ffdd86255437cc64a87152614bc971f7, type: 2}
+  - {fileID: 11400000, guid: b865afbb93ecf49409504b8054a7b0d2, type: 2}
+  - {fileID: 11400000, guid: b865afbb93ecf49409504b8054a7b0d2, type: 2}
+  - {fileID: 11400000, guid: b86ab6bb7afc6c64d8ec3850b856ee88, type: 2}
+  - {fileID: 11400000, guid: b86ab6bb7afc6c64d8ec3850b856ee88, type: 2}
+  - {fileID: 11400000, guid: b86ab6bb7afc6c64d8ec3850b856ee88, type: 2}
+  - {fileID: 11400000, guid: b86ab6bb7afc6c64d8ec3850b856ee88, type: 2}
+  - {fileID: 11400000, guid: b86ab6bb7afc6c64d8ec3850b856ee88, type: 2}
+  - {fileID: 11400000, guid: b86ab6bb7afc6c64d8ec3850b856ee88, type: 2}
+  - {fileID: 11400000, guid: b86ab6bb7afc6c64d8ec3850b856ee88, type: 2}
+  - {fileID: 11400000, guid: b86ab6bb7afc6c64d8ec3850b856ee88, type: 2}
+  - {fileID: 11400000, guid: b86ab6bb7afc6c64d8ec3850b856ee88, type: 2}
+  - {fileID: 11400000, guid: b86ab6bb7afc6c64d8ec3850b856ee88, type: 2}
+  - {fileID: 11400000, guid: b86ab6bb7afc6c64d8ec3850b856ee88, type: 2}
+  currentDeck: {fileID: 0}
