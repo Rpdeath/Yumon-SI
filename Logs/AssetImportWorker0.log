@@ -378,3 +378,4 @@ Received Import Request.
   path: Assets/Graph/Enviro/M_Pillier.shadergraph
   artifactKey: Guid(8ba8b062d54c3754f89e0c1dacba2207) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Graph/Enviro/M_Pillier.shadergraph using Guid(8ba8b062d54c3754f89e0c1dacba2207) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5567e8109a50f4743f3f32e4028d557') in 0.006575 seconds 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
