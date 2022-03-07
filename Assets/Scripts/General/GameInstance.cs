@@ -41,6 +41,8 @@ public class GameInstance : MonoBehaviour
         actualGameInfo.maxScore = 1000;
         actualGameInfo.sliderPlayer1 = GameObject.FindGameObjectWithTag("Slider1").GetComponent<Slider>();
         actualGameInfo.sliderPlayer2 = GameObject.FindGameObjectWithTag("Slider2").GetComponent<Slider>();
+
+        actualGameInfo.handle1 = GameObject.FindGameObjectWithTag("Handle1").GetComponent<Image>();
     }
 
 
