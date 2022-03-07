@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b508145f0efca90438089837a030abd1, type: 3}
-  m_Name: Card_JDG_Zevent
+  m_Name: Card_KCORP_Kamet0
   m_EditorClassIdentifier: 
   id: 0
-  name: JDG du Z-EVENT
-  pathOfImage: jdg_Zevent
-  listOfTags: 04000000
+  name: Kamet0 KCorp
+  pathOfImage: kcorp_kamet0
+  listOfTags: 02000000
   rarity: 2
-  propertie: {fileID: 11400000, guid: 688c4f84411185d40ba19e12cd901fd5, type: 2}
+  propertie: {fileID: 11400000, guid: 6ecabb7af74a7674b8496b0ff2e5437d, type: 2}
