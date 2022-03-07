@@ -17,7 +17,7 @@ public class CreateCollection : MonoBehaviour
     // {"id":"83","name":"Bob Lennon","pathOfImage":"bob_lennon","listOfTags":[2],"rarity":1}
     private void Start()
     {
-<<<<<<< Updated upstream
+
         gi = GameInstance.instance;
         if (gi == null)
         {
@@ -25,10 +25,7 @@ public class CreateCollection : MonoBehaviour
             gi.userData = usData;
         }
         int perline = 6;
-=======
-        gi = Object.FindObjectOfType<GameInstance>();
-        int perline = 5;
->>>>>>> Stashed changes
+
         Vector3 pos = transform.position- (Vector3.right*((perline/2)+3));
         
         int i = 0;
@@ -44,11 +41,9 @@ public class CreateCollection : MonoBehaviour
                 GameObject clone = (GameObject) Instantiate(prefab,transform);
                 clone.GetComponent<CarDataManager>().CardData = card;
                 clone.GetComponent<CardCollectionSelectOnClick>().collectionCreator = this;
-<<<<<<< Updated upstream
+
                 clone.transform.position = pos+(Vector3.right*3f);
-=======
-                clone.transform.position = pos + Vector3.right*2f;
->>>>>>> Stashed changes
+
                 pos = clone.transform.position;
                 listofCards.Add(clone);
                 i++;
@@ -57,11 +52,9 @@ public class CreateCollection : MonoBehaviour
             {
                 i = 0;
                 pos.x = transform.position.x - ((perline / 2) + 3);
-<<<<<<< Updated upstream
+
                 pos.y -= 3f;
-=======
-                pos.y -= 4f;
->>>>>>> Stashed changes
+
             }
         }
 
