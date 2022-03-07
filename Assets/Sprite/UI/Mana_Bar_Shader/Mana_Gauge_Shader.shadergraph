@@ -262,7 +262,7 @@
     },
     "m_PreviewData": {
         "serializedMesh": {
-            "m_SerializedMesh": "{\"mesh\":{\"instanceID\":0}}",
+            "m_SerializedMesh": "{\"mesh\":{\"fileID\":10210,\"guid\":\"0000000000000000e000000000000000\",\"type\":0}}",
             "m_Guid": ""
         }
     },
@@ -965,8 +965,8 @@
         "m_Expanded": false,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -856.0,
-            "y": -850.0,
+            "x": -711.0,
+            "y": -941.0,
             "width": 208.0,
             "height": 278.0
         }
@@ -1136,13 +1136,13 @@
     },
     "m_Name": "Rotate",
     "m_DrawState": {
-        "m_Expanded": false,
+        "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -1063.0,
-            "y": -850.0,
-            "width": 208.00001525878907,
-            "height": 362.0000305175781
+            "x": -918.0,
+            "y": -941.0,
+            "width": 208.0,
+            "height": 362.0
         }
     },
     "m_Slots": [
