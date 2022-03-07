@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class SaveDeck : MonoBehaviour
@@ -11,13 +12,14 @@ public class SaveDeck : MonoBehaviour
      
         CreateCollection creator =  GameObject.FindObjectOfType<CreateCollection>();
         if (creator.currentCardsonDeck < creator.maxCardOnDeck) return;
-        Deck dc = (Deck)ScriptableObject.CreateInstance("Deck");
+        Deck dc = GameInstance.instance.userData.deck;
+        dc.listOfCard.Clear();
         foreach (Card card in creator.listofSCards)
         {
             dc.listOfCard.Add(card);
         }
 
-        GameInstance.instance.userData.deck = dc;
+        SceneManager.LoadScene("MainMenu");
 
 
 

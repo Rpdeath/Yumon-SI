@@ -23,9 +23,9 @@ public class CreateCollection : MonoBehaviour
         if (gi == null)
         {
             gi = new GameInstance();
-            gi.userData = usData;
+            
         }
-        int perline = 6;
+        int perline = 9;
 
         Vector3 pos = transform.position - (Vector3.right * ((perline / 2) + 3));
 
@@ -43,8 +43,8 @@ public class CreateCollection : MonoBehaviour
                 clone.GetComponent<CarDataManager>().CardData = card;
                 clone.GetComponent<CardCollectionSelectOnClick>().collectionCreator = this;
 
-                clone.transform.position = pos + (Vector3.right * 3f);
-
+                clone.transform.position = pos + (Vector3.right * 2f);
+                clone.transform.localScale = clone.transform.localScale * 0.5f;
                 pos = clone.transform.position;
                 listofCards.Add(clone);
                 listofSCards.Add(card);

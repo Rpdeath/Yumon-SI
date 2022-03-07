@@ -38,6 +38,12 @@ public class GameInstance : MonoBehaviour
         CreateGameInfo card = (CreateGameInfo)ScriptableObject.CreateInstance("CreateGameInfo");
         actualGameInfo = card;
 
+        
+    }
+
+
+    public void StartNewGame()
+    {
         actualGameInfo.maxScore = 1000;
         actualGameInfo.sliderPlayer1 = GameObject.FindGameObjectWithTag("Slider1").GetComponent<Slider>();
         actualGameInfo.sliderPlayer2 = GameObject.FindGameObjectWithTag("Slider2").GetComponent<Slider>();
@@ -128,6 +134,43 @@ public class GameInstance : MonoBehaviour
                 JsonUtility.FromJsonOverwrite(item, nft);
                 userData.nfts.Add(nft);
             }
+
+            string w = (b.Substring(b.IndexOf("\"wallets\"")+3, b.IndexOf("\"nfts\"") - 4 - b.IndexOf("\"wallets\""))).Remove(0, 8);
+            w = w.Remove(w.Length - 1, 1);
+            Debug.Log(w);
+            
+            string x = w.Replace("},{", "}|{");
+            foreach (var item in x.Split('|'))
+            {
+                //Debug.Log(item);
+                Wallet wallet = (Wallet)ScriptableObject.CreateInstance("Wallet");
+                JsonUtility.FromJsonOverwrite(item, wallet);
+                userData.wallets.Add(wallet);
+            }
+
+            Deck deck = (Deck)ScriptableObject.CreateInstance("Deck");
+            a.deck = deck;
+
+            string de = (b.Substring(b.IndexOf("\"deck\"")-1, b.IndexOf("\"wallets\"") +1 - b.IndexOf("\"deck\""))).Remove(0, 8);
+            de = de.Remove(de.Length - 1, 1);
+            Debug.Log(de);
+
+            string xe = de.Replace("},{", "}|{");
+            foreach (var item in xe.Split('|'))
+            {
+                Debug.Log(item);
+                string xee = (item.Substring(item.IndexOf("\"deck_data\"")+1, item.IndexOf(",\"deck_owner\"")-1  - item.IndexOf("\"deck_data\""))).Remove(0,11);
+                Debug.Log(xee);
+
+            }
+
+
+
+
+
+
+
+
 
             //Debug.Log(JsonUtility.ToJson(userData));
             SceneManager.LoadScene("MainMenu");
