@@ -39,7 +39,7 @@ public class DropStarz : MonoBehaviour, IReceive
         GameInstance.instance.actualGameInfo.manaPlayer1 -= card.propertie.cost;
         actualStarz.GetComponentInChildren<StarzData>().data = card;
         actualStarz.GetComponentInChildren<StarzData>().pos = pillarId;
-        GameInstance.instance.gameManager.allyStarz.Add(actualStarz);
+        GameInstance.instance.gameManager.allyStarz[pillarId - 1] = actualStarz;
         GameInstance.instance.gameManager.AddStarzToPosition(pillarId);
 
 

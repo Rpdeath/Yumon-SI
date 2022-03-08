@@ -49,8 +49,8 @@ public class GameManager : MonoBehaviour
 {
     #region Variable
 
-    public List<GameObject> allyStarz;
-    public List<GameObject> enemyStarz;
+    public GameObject[] allyStarz;
+    public GameObject[] enemyStarz;
 
     public ActiveEffects activeEffects = new ActiveEffects();
     public PassiveEffects passiveEffects = new PassiveEffects();
