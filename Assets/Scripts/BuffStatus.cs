@@ -17,16 +17,5 @@ public class BuffStatus : MonoBehaviour
         canvasStatus.worldCamera = cam;
         camRot = cam.transform.rotation;
         transform.rotation = camRot;
-    }
-
-    void Start()
-    {
-        
-    }
-
-
-    void Update()
-    {
-        
-    }
+    }    
 }
