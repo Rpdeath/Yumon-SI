@@ -7,6 +7,10 @@ public interface IClickable
 {
     void OnClick();
 }
+public interface IHelper {
+    void OpenHelper();
+    void CloseHelper();
+}
 
 public interface IDragable
 {
@@ -32,9 +36,12 @@ public class ScreenInputManager : MonoBehaviour
     // Start is called before the first frame update
     private Camera gameCamera;
     private InputAction click;
+    private InputAction clickRight;
     private bool isDragging = false;
     private GameObject dragedObject;
     private GameObject hoveredObject;
+    private GameObject openedHelper;
+
     void Awake()
     {
         click = new InputAction(binding: "<Mouse>/leftButton");
@@ -98,9 +105,10 @@ public class ScreenInputManager : MonoBehaviour
             }
             else
             {
-                if(dragedObject != null)
+                if (dragedObject != null)
                 {
-                    if (dragedObject.GetComponent<CardHandDragable>()){
+                    if (dragedObject.GetComponent<CardHandDragable>())
+                    {
                         dragedObject.GetComponent<IDragable>().StopDrag();
                         isDragging = false;
                         dragedObject = null;
@@ -109,6 +117,33 @@ public class ScreenInputManager : MonoBehaviour
             }
         };
         click.Enable();
+        clickRight = new InputAction(binding: "<Mouse>/rightButton");
+        clickRight.Enable();
+        clickRight.performed += ctx =>
+        {
+            if (gameCamera == null)
+            {
+                gameCamera = Camera.main;
+            }
+            RaycastHit hit;
+            Vector3 coor = Mouse.current.position.ReadValue();
+            if (openedHelper != null)
+            {
+                openedHelper.GetComponent<HelperBox>().CloseHelp();
+                openedHelper = null;
+            }
+            if (Physics.Raycast(gameCamera.ScreenPointToRay(coor), out hit))
+            {
+                if (openedHelper != hit.collider.gameObject)
+                {
+                    if (hit.collider.gameObject.layer == 5 && hit.collider.gameObject.GetComponent<HelperBox>() != null)
+                    {
+                        openedHelper = hit.collider.gameObject;
+                        openedHelper.GetComponent<HelperBox>().OpenHelp();
+                    }
+                }
+            }
+        };
     }
     private void Update()
     {
