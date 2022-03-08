@@ -7,8 +7,6 @@ public enum Tags
 {
     Standard,
     Start,
-    KCorp,
-    AmongUs,
     ZEvent
 }
 

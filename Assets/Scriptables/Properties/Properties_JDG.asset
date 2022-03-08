@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb03376abe0e68447b8037302c6d3077, type: 3}
   m_Name: Properties_JDG
   m_EditorClassIdentifier: 
-  cost: 0
-  hype: 500
-  speed: 1
+  cost: 3
+  hype: 400
+  speed: 10
   passivId: 0
   actif_cost: 3
   cooldown: 20

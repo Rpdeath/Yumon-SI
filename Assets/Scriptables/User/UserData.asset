@@ -17,6 +17,5 @@ MonoBehaviour:
   users_password_crypted: 
   users_key_public: 
   users_key_private: 
-  deck: {fileID: 11400000, guid: 5aef84e130a3844459d9cf9bc2b3d89e, type: 2}
   wallets: []
   nfts: []

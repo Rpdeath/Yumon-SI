@@ -11,8 +11,6 @@ public class CreateGameInfo : ScriptableObject
     public Slider sliderPlayer1;
     public Slider sliderPlayer2;
 
-    public Image handle1;
-
 
     public int scorePlayer1;
     public int scorePlayer2;
