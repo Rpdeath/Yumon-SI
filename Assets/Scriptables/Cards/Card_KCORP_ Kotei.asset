@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b508145f0efca90438089837a030abd1, type: 3}
-  m_Name: Card_JDG_Zevent
+  m_Name: Card_KCORP_ Kotei
   m_EditorClassIdentifier: 
   id: 0
-  name: JDG du Z-EVENT
-  pathOfImage: jdg_Zevent
-  listOfTags: 04000000
-  rarity: 2
-  propertie: {fileID: 11400000, guid: 688c4f84411185d40ba19e12cd901fd5, type: 2}
+  name: Kotei KCorp
+  pathOfImage: kcorp_kotei
+  listOfTags: 02000000
+  rarity: 1
+  propertie: {fileID: 11400000, guid: 97c9968c271f12e408a2b56f68ba8cc9, type: 2}
