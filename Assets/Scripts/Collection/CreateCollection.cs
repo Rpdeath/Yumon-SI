@@ -30,7 +30,6 @@ public class CreateCollection : MonoBehaviour
         Vector3 pos = transform.position - (Vector3.right * ((perline / 2) + 3));
 
         int i = 0;
-        Debug.Log(JsonUtility.ToJson(gi.userData));
         foreach (Nft nft in gi.userData.nfts)
         {
             if (JsonUtility.ToJson(nft) != "")

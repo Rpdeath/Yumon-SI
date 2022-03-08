@@ -425,7 +425,7 @@ PrefabInstance:
     - target: {fileID: 2786721678774072740, guid: ed9a63e56d91f40479892673c412f0b9, type: 3}
       propertyPath: CardData
       value: 
-      objectReference: {fileID: 11400000, guid: 1b1fb2d5537281640b8ba77397621402, type: 2}
+      objectReference: {fileID: 11400000, guid: c03afd1a300eefb4bb535b8d6b22e62c, type: 2}
     - target: {fileID: 2786721678774072745, guid: ed9a63e56d91f40479892673c412f0b9, type: 3}
       propertyPath: m_Name
       value: Card_Buy (2)
@@ -517,7 +517,7 @@ PrefabInstance:
     - target: {fileID: 7105801062710702578, guid: ed9a63e56d91f40479892673c412f0b9, type: 3}
       propertyPath: CardData
       value: 
-      objectReference: {fileID: 11400000, guid: 1b1fb2d5537281640b8ba77397621402, type: 2}
+      objectReference: {fileID: 11400000, guid: c03afd1a300eefb4bb535b8d6b22e62c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed9a63e56d91f40479892673c412f0b9, type: 3}
 --- !u!1001 &915991435
@@ -530,7 +530,7 @@ PrefabInstance:
     - target: {fileID: 2786721678774072740, guid: ed9a63e56d91f40479892673c412f0b9, type: 3}
       propertyPath: CardData
       value: 
-      objectReference: {fileID: 11400000, guid: dd79ec5692626924d85a6a572d7389a4, type: 2}
+      objectReference: {fileID: 11400000, guid: b50f59b4b500987429cecd77b2406876, type: 2}
     - target: {fileID: 2786721678774072745, guid: ed9a63e56d91f40479892673c412f0b9, type: 3}
       propertyPath: m_Name
       value: Card_Buy (1)
@@ -622,7 +622,7 @@ PrefabInstance:
     - target: {fileID: 7105801062710702578, guid: ed9a63e56d91f40479892673c412f0b9, type: 3}
       propertyPath: CardData
       value: 
-      objectReference: {fileID: 11400000, guid: dd79ec5692626924d85a6a572d7389a4, type: 2}
+      objectReference: {fileID: 11400000, guid: b50f59b4b500987429cecd77b2406876, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed9a63e56d91f40479892673c412f0b9, type: 3}
 --- !u!1 &1012967545
@@ -811,7 +811,7 @@ PrefabInstance:
     - target: {fileID: 2786721678774072740, guid: ed9a63e56d91f40479892673c412f0b9, type: 3}
       propertyPath: CardData
       value: 
-      objectReference: {fileID: 11400000, guid: 496fd1f25cab8f34abc1f38de5884416, type: 2}
+      objectReference: {fileID: 11400000, guid: 937a5f6ce1153604d9d0e836c8b1d73a, type: 2}
     - target: {fileID: 2786721678774072745, guid: ed9a63e56d91f40479892673c412f0b9, type: 3}
       propertyPath: m_Name
       value: Card_Buy
@@ -903,7 +903,7 @@ PrefabInstance:
     - target: {fileID: 7105801062710702578, guid: ed9a63e56d91f40479892673c412f0b9, type: 3}
       propertyPath: CardData
       value: 
-      objectReference: {fileID: 11400000, guid: b912578ff69bdae428a0674c003991a8, type: 2}
+      objectReference: {fileID: 11400000, guid: 937a5f6ce1153604d9d0e836c8b1d73a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed9a63e56d91f40479892673c412f0b9, type: 3}
 --- !u!224 &1744533905 stripped

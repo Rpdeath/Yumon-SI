@@ -37,6 +37,11 @@ public class FindAGame : MonoBehaviour
             {
                 
                 onlineUser.text = "Game Found";
+                GameInstance.instance.gameManager = new GameManager();
+                GameInstance.instance.StoreOnlineUserData(response);
+                GameInstance.instance.gameManager.localUserData = GameInstance.instance.userData;
+
+
             }
 
         }

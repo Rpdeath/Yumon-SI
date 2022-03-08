@@ -49,6 +49,11 @@ public class GameManager : MonoBehaviour
 {
     #region Variable
 
+    public User localUserData;
+    public User onlineUserData;
+
+    public List<Card> onlineUserCardInGame = new List<Card>();
+
     public GameObject[] allyStarz;
     public GameObject[] enemyStarz;
 
