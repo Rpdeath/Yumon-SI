@@ -148,3 +148,4 @@ Received Import Request.
   path: Assets/Sprite/UI/ColonneLumiere/SH_ColonneLumiere.shadergraph
   artifactKey: Guid(ee7ae04299d648f4996ab6d74e59f2c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Sprite/UI/ColonneLumiere/SH_ColonneLumiere.shadergraph using Guid(ee7ae04299d648f4996ab6d74e59f2c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52c200aa0edb910f35bdf150dbd9e74e') in 0.005285 seconds 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
