@@ -4,6 +4,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
 
+
+class SerializedDeck
+{
+    public List<int> listOfCardId;
+}
+
 public class SaveDeck : MonoBehaviour
 {
     bool canclick = true;
@@ -12,27 +18,33 @@ public class SaveDeck : MonoBehaviour
      
         CreateCollection creator =  GameObject.FindObjectOfType<CreateCollection>();
         if (creator.currentCardsonDeck < creator.maxCardOnDeck) return;
-        Deck dc = GameInstance.instance.userData.deck;
-        dc.listOfCard.Clear();
+        Debug.Log(GameInstance.instance.userData.deck);
+        GameInstance.instance.userData.deck.listOfCard = new List<Card>();
+        GameInstance.instance.userData.deck.listOfCard.Clear();
+        SerializedDeck sDeck = new SerializedDeck();
+        sDeck.listOfCardId = new List<int>();
         foreach (Card card in creator.listofSCards)
         {
-            dc.listOfCard.Add(card);
+            GameInstance.instance.userData.deck.listOfCard.Add(card);
+            sDeck.listOfCardId.Add(card.id);
         }
 
 
         
         if (canclick)
         {
-            Debug.Log("Card Clicked : " + JsonUtility.ToJson(dc));
+            
 
-            StartCoroutine(Request("yumon.rpdeath.com/edit/deck", dc));
+            Debug.Log("Save Clicked : " + JsonUtility.ToJson(GameInstance.instance.userData.deck));
+
+            StartCoroutine(Request("yumon.rpdeath.com/edit/decks", sDeck));
             canclick = false;
         }
 
 
     }
 
-    IEnumerator Request(string url, Deck data)
+    IEnumerator Request(string url, SerializedDeck data)
     {
         Debug.Log(url + "?owner=" + GameInstance.instance.userData.users_id +"&deck_id="+ GameInstance.instance.userData.deck.deck_id + "&data=" + JsonUtility.ToJson(data));
         UnityWebRequest uwr = UnityWebRequest.Get(url + "?owner=" + GameInstance.instance.userData.users_id + "&deck_id=" + GameInstance.instance.userData.deck.deck_id + "&data=" + JsonUtility.ToJson(data));

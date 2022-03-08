@@ -977,6 +977,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   userData: {fileID: 11400000, guid: 82e262b7f0e0fbc439a384ffca2bd314, type: 2}
+  userDataEnemy: {fileID: 0}
+  actualGameInfo: {fileID: 0}
+  assetRef: {fileID: 11400000, guid: b1fc1bc0c07dc464795ddfef67f21762, type: 2}
+  ScriptRef: {fileID: 11400000, guid: 6b5fcec24c7f89245b331a946c3dadcc, type: 2}
 --- !u!114 &1694616181
 MonoBehaviour:
   m_ObjectHideFlags: 0

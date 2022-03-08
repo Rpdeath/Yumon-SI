@@ -15,7 +15,10 @@ public class GameInstance : MonoBehaviour
     
     //[HideInInspector]
     public CreateGameInfo actualGameInfo;
-    
+
+
+    public AssetReferencement assetRef;
+    public ScriptReferencement ScriptRef;
 
 
     #endregion
@@ -152,8 +155,8 @@ public class GameInstance : MonoBehaviour
             }
 
             Deck deck = (Deck)ScriptableObject.CreateInstance("Deck");
-            a.deck = deck;
-
+            userData.deck = deck;
+            deck.listOfCard = new List<Card>();
             string de = (b.Substring(b.IndexOf("\"deck\"")-1, b.IndexOf("\"wallets\"") +1 - b.IndexOf("\"deck\""))).Remove(0, 8);
             de = de.Remove(de.Length - 1, 1);
             Debug.Log(de);
@@ -161,11 +164,37 @@ public class GameInstance : MonoBehaviour
             string xe = de.Replace("},{", "}|{");
             foreach (var item in xe.Split('|'))
             {
-                Debug.Log(item);
+                //Debug.Log(item);
                 string xee = (item.Substring(item.IndexOf("\"deck_data\"")+1, item.IndexOf(",\"deck_owner\"")-1  - item.IndexOf("\"deck_data\""))).Remove(0,11);
                 string xei = (item.Substring(item.IndexOf("\"deck_id\"") + 1, item.IndexOf(",\"deck_data\"") - 2 - item.IndexOf("\"deck_id\""))).Remove(0, 10);
                 deck.deck_id = int.Parse(xei);
-                Debug.Log(xei);
+                SerializedDeck sDeck = new SerializedDeck();
+                xee = (xee.Remove(xee.Length - 1, 1)).Remove(0,1).Replace("\\\"","\"");
+                
+                JsonUtility.FromJsonOverwrite(xee, sDeck);
+                List<Card> lCard = new List<Card>();
+                foreach (Nft nft in GameInstance.instance.userData.nfts)
+                {
+                    if (JsonUtility.ToJson(nft) != "")
+                    {
+                        Card card = (Card)ScriptableObject.CreateInstance("Card");
+                        JsonUtility.FromJsonOverwrite(nft.nft_data, card);
+
+                        card.propertie = (Properties)GameInstance.instance.ScriptRef.AssetList_script[GameInstance.instance.ScriptRef.AssetList_id.IndexOf(card.pathOfImage)];
+                        lCard.Add(card);
+
+                    }
+                }
+                foreach (int i in sDeck.listOfCardId)
+                {
+                   foreach(Card card in lCard)
+                    {
+                        if (card.id == i)
+                        {
+                            deck.listOfCard.Add(card);
+                        }
+                    } 
+                }
 
             }
 
