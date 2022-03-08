@@ -7,5 +7,4 @@ public class StarzData : MonoBehaviour
     public Card data;
     public int pos;
 
-
 }
