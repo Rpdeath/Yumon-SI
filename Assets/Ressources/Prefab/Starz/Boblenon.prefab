@@ -250,6 +250,7 @@ GameObject:
   - component: {fileID: 7835938398310893493}
   - component: {fileID: 4061153235685021126}
   - component: {fileID: 2140787822924498154}
+  - component: {fileID: 3167510571499616972}
   m_Layer: 0
   m_Name: Logic
   m_TagString: Untagged
@@ -283,15 +284,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 838e22f1e6c10fe4caccf351e7ec7d70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxFill: 3
-  timeToCompletion: 0.2
-  boost: 1
   loadingColor: {r: 1, g: 0.48472303, b: 0, a: 1}
   harvestReadyColor: {r: 0.00965023, g: 1, b: 0, a: 1}
   loadingColor2: {r: 0, g: 0, b: 0, a: 1}
   harvestReadyColor2: {r: 0, g: 0, b: 0, a: 1}
   particuleOnHarvest: {fileID: 1296804583814003741, guid: 24d20f00c2be877458bbdbacfb062502, type: 3}
   generatorFill: {fileID: 4307125405385682561}
+  maxFill: 3
+  timeToCompletion: 0.2
+  boost: 1
 --- !u!136 &2140787822924498154
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -306,6 +307,26 @@ CapsuleCollider:
   m_Height: 1.4953516
   m_Direction: 1
   m_Center: {x: 0, y: 0.72248304, z: 0}
+--- !u!114 &3167510571499616972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7835938398310893492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66bc8599318ff5d40a94b8230c5025a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hypeScript: {fileID: 4061153235685021126}
+  selfActifUi: {fileID: 0}
+  actifId: 1
+  cooldownActif: 3
+  actifCost: 0
+  actifDuration: 3
+  actualActifDuration: 0
+  actualCooldown: 0
 --- !u!1001 &3081087305610367966
 PrefabInstance:
   m_ObjectHideFlags: 0
