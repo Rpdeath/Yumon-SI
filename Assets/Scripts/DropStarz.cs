@@ -9,6 +9,7 @@ public class DropStarz : MonoBehaviour, IReceive
     public Transform spawnPoint;
     public AssetReferencement assetRef;
     public bool allowDrop = true;
+    public int pillarId;
 
     public void DropCard(GameObject obj)
     {
@@ -36,10 +37,16 @@ public class DropStarz : MonoBehaviour, IReceive
         actualStarz = Instantiate(objToSpawn, spawnPoint.position, spawnPoint.rotation);
         actualStarz.GetComponentInChildren<HypeGenerator>().timeToCompletion = card.propertie.speed;
         GameInstance.instance.actualGameInfo.manaPlayer1 -= card.propertie.cost;
+        actualStarz.GetComponentInChildren<StarzData>().data = card;
+        actualStarz.GetComponentInChildren<StarzData>().pos = pillarId;
+        GameInstance.instance.gameManager.allyStarz.Add(actualStarz);
+        GameInstance.instance.gameManager.AddStarzToPosition(pillarId);
+
+
 
 
         //GameInstance.instance.actualGameInfo.actualStarzPlayer1.Add(card);
-        
+
         /*foreach(Tags tag in card.listOfTags)
         {
             switch (tag)
@@ -61,6 +68,6 @@ public class DropStarz : MonoBehaviour, IReceive
             starz.gameObject.GetComponent<IPassive>()?.UpdatePassiveOnNewCard(card, GameInstance.instance.actualGameInfo.actualStarzPlayer1, GameInstance.instance.actualGameInfo.actualStarzPlayer2);
         }
 */
-        
+
     }
 }

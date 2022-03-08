@@ -16,10 +16,11 @@ public class GameInstance : MonoBehaviour
     //[HideInInspector]
     public CreateGameInfo actualGameInfo;
 
-
     public AssetReferencement assetRef;
     public ScriptReferencement ScriptRef;
 
+
+    public GameManager gameManager;
 
     #endregion
 
@@ -35,14 +36,14 @@ public class GameInstance : MonoBehaviour
             Debug.LogWarning("Care there is multiple GameInstance in the scene");
         }
         #endregion
+
+        CreateGameInfo card = (CreateGameInfo)ScriptableObject.CreateInstance("CreateGameInfo");
+        actualGameInfo = card;
     }
 
     private void Start()
-    {
-        CreateGameInfo card = (CreateGameInfo)ScriptableObject.CreateInstance("CreateGameInfo");
-        actualGameInfo = card;
-
-        
+    {      
+                
     }
 
 
