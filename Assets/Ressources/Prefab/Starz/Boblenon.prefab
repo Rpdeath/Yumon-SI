@@ -323,10 +323,12 @@ MonoBehaviour:
   selfActifUi: {fileID: 0}
   actifId: 1
   cooldownActif: 3
-  actifCost: 0
+  actifCost: 1
   actifDuration: 3
   actualActifDuration: 0
   actualCooldown: 0
+  actifIsRunning: 0
+  coolDownIsRunning: 0
 --- !u!1001 &3081087305610367966
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -19,11 +19,16 @@ public class StarzActifSysteme : MonoBehaviour
     [HideInInspector]public float actualActifDuration;
     [HideInInspector]public float actualCooldown;
 
+    [HideInInspector] public bool actifIsRunning;
+    [HideInInspector] public bool coolDownIsRunning;
+
     #endregion
 
     private void Start()
     {
         selfActifUi.selfStarzActif = this;
+        actualActifDuration = actifDuration;
+        actualCooldown = 0f;
     }
 
     private void Update()
@@ -35,9 +40,11 @@ public class StarzActifSysteme : MonoBehaviour
 
     public void StartActifEffect(int id)
     {
-        if (actualCooldown == 0 && GameInstance.instance.actualGameInfo.manaPlayer1 >= actifCost)
+        if (!coolDownIsRunning && !actifIsRunning && GameInstance.instance.actualGameInfo.manaPlayer1 >= actifCost)
         {
             // Cherché l'effet de l'actif dans le script qui stock tous les actif
+
+            actifIsRunning = true;
 
             DragDownUi();
             actualActifDuration = 0f;
@@ -45,30 +52,42 @@ public class StarzActifSysteme : MonoBehaviour
         }
     }
 
-    private void CheckActifCooldown()
-    {
-        if (actualCooldown > 0)
-        {
-            actualCooldown -= Time.deltaTime;
-        }
-        else
-        {
-            actualCooldown = 0f;
-        }
-    }
-
     private void CheckActifDuration()
     {
-        if (actualActifDuration < actifDuration)
+        if (actifIsRunning)
         {
-            actualActifDuration += Time.deltaTime;
+            if (actualActifDuration < actifDuration)
+            {
+                actualActifDuration += Time.deltaTime;
+            }
+            else
+            {
+                actifIsRunning = false;
+                actualActifDuration = actifDuration;
+
+                DragUpUi();
+
+                coolDownIsRunning = true;
+                actualCooldown = cooldownActif;
+            }
+        }
+    }
+    private void CheckActifCooldown()
+    {
+        if (coolDownIsRunning)
+        {
+            if (actualCooldown > 0)
+            {
+                actualCooldown -= Time.deltaTime;
+            }
+            else
+            {
+                actualCooldown = 0f;
+                coolDownIsRunning = false;
+            }
         }
     }
 
-    public void ReactivateActifButton()
-    {
-        selfActifUi.gameObject.GetComponent<BoxCollider>().enabled = true;
-    }
 
 
     private void DragDownUi()
@@ -76,6 +95,13 @@ public class StarzActifSysteme : MonoBehaviour
         StartCoroutine(AnimMoveUi(selfActifUi.effectSquareObj, selfActifUi.squareEffectDownPos, 0.1f));
 
         StartCoroutine(AnimMoveUi(selfActifUi.sliderObj, selfActifUi.sliderDownPos, 0.1f));
+    }
+
+    private void DragUpUi()
+    {
+        StartCoroutine(AnimMoveUi(selfActifUi.effectSquareObj, selfActifUi.coolDownActifImage.gameObject.transform, 0.1f));
+
+        StartCoroutine(AnimMoveUi(selfActifUi.sliderObj, selfActifUi.coolDownActifImage.gameObject.transform, 0.1f));
     }
 
     IEnumerator AnimMoveUi(GameObject objToMove ,Transform newPos, float speed)

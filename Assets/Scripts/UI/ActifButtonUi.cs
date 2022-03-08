@@ -8,6 +8,7 @@ public class ActifButtonUi : MonoBehaviour, IClickable
     #region Variable
 
     [Header("1st Square Info")]
+    public Image realBackGround;
     public Image coolDownActifImage;
     public GameObject pictoHolderInfo;
 
@@ -19,34 +20,96 @@ public class ActifButtonUi : MonoBehaviour, IClickable
     public GameObject sliderObj;
     public Slider selfSlider;
 
+    [Header("Color")]
+    public Color playableColor;
+    public Color notPlayableColor;
+    public Color actifRunningColor;
+    public Color emptyActifColor;
+
     [Header ("Unity setup")]
     public BoxCollider selfCollider;
     public Transform squareEffectDownPos;
     public Transform sliderDownPos;
 
-    [HideInInspector]public StarzActifSysteme selfStarzActif;
+    [HideInInspector] public Transform startSliderPos;
+    [HideInInspector] public Transform startSquareEffectPos;
+
+    [HideInInspector] public StarzActifSysteme selfStarzActif;
+
     #endregion
+
+    private void Start()
+    {
+        Ininit();
+    }
+
+
+    private void Update()
+    {
+        SetActifDurationUi();
+
+        SetActifCooldownUi();
+
+        CheckColor();
+    }
+
+    private void Ininit()
+    {
+        coolDownActifImage.fillAmount = 0f;
+        realBackGround.color = emptyActifColor;
+
+        selfSlider.value = 0f;
+        startSliderPos = sliderObj.transform;
+        startSquareEffectPos = effectSquareObj.transform;
+    }
 
 
     public void OnClick()
     {
-        selfStarzActif.StartActifEffect(selfStarzActif.actifId);
+        if (selfStarzActif != null)
+        {
+            selfStarzActif.StartActifEffect(selfStarzActif.actifId);
+        }
     }
 
-    private void Update()
-    {
-        SetActifCooldownUi();
-    }
 
-    public void SetActifCooldownUi()
+    private void SetActifDurationUi()
     {
         if (selfStarzActif != null)
         {
-            coolDownActifImage.fillAmount = selfStarzActif.actualCooldown / selfStarzActif.cooldownActif;
+            if (selfStarzActif.actualActifDuration < selfStarzActif.actifDuration)
+            {
+                selfSlider.value = selfStarzActif.actualActifDuration / selfStarzActif.actifDuration;
+            }
+        }
+    }
+    private void SetActifCooldownUi()
+    {
+        if (selfStarzActif != null)
+        {
+            if (selfStarzActif.actualCooldown != 0f)
+            {
+                coolDownActifImage.fillAmount = selfStarzActif.actualCooldown / selfStarzActif.cooldownActif;
+            }
+        }
+    }
+
+    private void CheckColor()
+    {
+        if (!selfStarzActif.actifIsRunning)
+        {
+            if (GameInstance.instance.actualGameInfo.manaPlayer1 >= selfStarzActif.actifCost)
+            {
+                realBackGround.color = playableColor;
+            }
+            else
+            {
+                realBackGround.color = notPlayableColor;
+            }
         }
         else
         {
-            coolDownActifImage.fillAmount = 0f;
+            realBackGround.color = actifRunningColor;
         }
     }
 }
