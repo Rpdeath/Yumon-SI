@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class DropStarz : MonoBehaviour, IReceive
 {
+    [Header ("Ui")]
+    public GameObject uiActif;
+
+
     public ScriptReferencement ScriptRef;
     public GameObject actualStarz;
     public Transform spawnPoint;
