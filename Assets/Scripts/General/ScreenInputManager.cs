@@ -41,6 +41,7 @@ public class ScreenInputManager : MonoBehaviour
     private GameObject dragedObject;
     private GameObject hoveredObject;
     private GameObject openedHelper;
+    private float timer;
 
     void Awake()
     {
@@ -166,9 +167,29 @@ public class ScreenInputManager : MonoBehaviour
                 }
                 hit.collider.GetComponent<IHover>()?.Hover();
                 hoveredObject = hit.collider.gameObject;
-                
-                
             }
+           /* if(hit.collider.GetComponent<HelperBox>()!= null)
+            {
+                if (openedHelper == null)
+                {
+                    if (hit.collider.GetComponent<HelperBox>().hasOpened == false)
+                    {
+                        timer += Time.deltaTime;
+                        if (timer >= hit.collider.GetComponent<HelperBox>().timerHover)
+                        {
+                            openedHelper = hit.collider.gameObject;
+                            openedHelper.GetComponent<HelperBox>().OpenHelp();
+                        }
+
+                    }
+                }
+                else
+                {
+                    timer = 0;
+
+                }
+            }*/
+
         }
         else
         {
