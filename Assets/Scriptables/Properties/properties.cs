@@ -8,7 +8,7 @@ public class Properties : ScriptableObject
 {
     public int cost = 0;
     public int hype = 0;
-    public int speed = 0;
+    public float speed = 0;
     public string passivId = "none";
     public int actif_cost = 0;
     public int cooldown = 0;
