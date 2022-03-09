@@ -863,12 +863,6 @@ MonoBehaviour:
   maxFill: 3
   timeToCompletion: 0.2
   boost: 1
-  loadingColor: {r: 1, g: 0.48472303, b: 0, a: 1}
-  harvestReadyColor: {r: 0.00965023, g: 1, b: 0, a: 1}
-  loadingColor2: {r: 0, g: 0, b: 0, a: 1}
-  harvestReadyColor2: {r: 0, g: 0, b: 0, a: 1}
-  particuleOnHarvest: {fileID: 1296804583814003741, guid: 24d20f00c2be877458bbdbacfb062502, type: 3}
-  generatorFill: {fileID: 4307125405385682561}
 --- !u!114 &3154374412450651659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -882,6 +876,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 0}
+  pos: 0
 --- !u!136 &2140787822924498154
 CapsuleCollider:
   m_ObjectHideFlags: 0
