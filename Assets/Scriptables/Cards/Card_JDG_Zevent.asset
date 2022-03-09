@@ -15,6 +15,6 @@ MonoBehaviour:
   id: 0
   name: JDG du Z-EVENT
   pathOfImage: jdg_Zevent
-  listOfTags: 02000000
+  listOfTags: 04000000
   rarity: 2
   propertie: {fileID: 11400000, guid: 688c4f84411185d40ba19e12cd901fd5, type: 2}
