@@ -54,7 +54,6 @@ public class GameInstance : MonoBehaviour
         actualGameInfo.sliderPlayer2 = GameObject.FindGameObjectWithTag("Slider2").GetComponent<Slider>();
 
         actualGameInfo.handle1 = GameObject.FindGameObjectWithTag("Handle1").GetComponent<Image>();
-        actualGameInfo.handle2 = GameObject.FindGameObjectWithTag("Handle2").GetComponent<Image>();
     }
 
 
