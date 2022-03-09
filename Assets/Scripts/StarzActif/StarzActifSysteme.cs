@@ -10,7 +10,7 @@ public class StarzActifSysteme : MonoBehaviour
     public ActifButtonUi selfActifUi;
 
     [HideInInspector] public bool UsedByPlayer = true;
-    public int actifId;
+    public string actifId;
 
     [Header ("Stats")]
     public float cooldownActif;
@@ -45,7 +45,7 @@ public class StarzActifSysteme : MonoBehaviour
     }
     
 
-    public void StartActifEffect(int id)
+    public void StartActifEffect(string id)
     {
         if (!coolDownIsRunning && !actifIsRunning && GameInstance.instance.actualGameInfo.manaPlayer1 >= actifCost)
         {
