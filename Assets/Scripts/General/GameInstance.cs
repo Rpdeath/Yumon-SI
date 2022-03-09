@@ -13,7 +13,7 @@ public class GameInstance : MonoBehaviour
     public User userData;
     public User userDataEnemy;
     
-    //[HideInInspector]
+    [HideInInspector]
     public CreateGameInfo actualGameInfo;
 
 
@@ -43,9 +43,11 @@ public class GameInstance : MonoBehaviour
         actualGameInfo = card;
     }
 
+
+
     private void Start()
-    {      
-                
+    {
+        StartNewGame();
     }
 
 
@@ -56,6 +58,7 @@ public class GameInstance : MonoBehaviour
         actualGameInfo.sliderPlayer2 = GameObject.FindGameObjectWithTag("Slider2").GetComponent<Slider>();
 
         actualGameInfo.handle1 = GameObject.FindGameObjectWithTag("Handle1").GetComponent<Image>();
+        actualGameInfo.handle2 = GameObject.FindGameObjectWithTag("Handle2").GetComponent<Image>();
     }
 
 
