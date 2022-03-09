@@ -43,6 +43,8 @@ public class ScreenInputManager : MonoBehaviour
     private GameObject openedHelper;
     private float timer;
 
+    private bool isHoverBox;
+
     void Awake()
     {
         click = new InputAction(binding: "<Mouse>/leftButton");
@@ -167,27 +169,36 @@ public class ScreenInputManager : MonoBehaviour
                 hit.collider.GetComponent<IHover>()?.Hover();
                 hoveredObject = hit.collider.gameObject;
             }
-           /* if(hit.collider.GetComponent<HelperBox>()!= null)
-            {
-                if (openedHelper == null)
-                {
-                    if (hit.collider.GetComponent<HelperBox>().hasOpened == false)
-                    {
-                        timer += Time.deltaTime;
-                        if (timer >= hit.collider.GetComponent<HelperBox>().timerHover)
-                        {
-                            openedHelper = hit.collider.gameObject;
-                            openedHelper.GetComponent<HelperBox>().OpenHelp();
-                        }
+           if(hit.collider.GetComponent<HelperBox>()!= null)
+           {
+                isHoverBox = true;
 
+           }
+           else
+           {
+                isHoverBox = false;
+                if(openedHelper != null)
+                {
+                    openedHelper.GetComponent<HelperBox>().CloseHelp();
+                    openedHelper = null;
+                }
+                timer = 0;
+            }
+            if (isHoverBox && openedHelper == null)
+            {
+                if (hit.collider.GetComponent<HelperBox>().hasOpened == false)
+                {
+                    timer += Time.deltaTime;
+                    if (timer >= hit.collider.GetComponent<HelperBox>().timerHover)
+                    {
+                        openedHelper = hit.collider.gameObject;
+                        openedHelper.GetComponent<HelperBox>().OpenHelp();
                     }
                 }
-                else
-                {
-                    timer = 0;
+            }
 
-                }
-            }*/
+
+
 
         }
         else
@@ -197,6 +208,14 @@ public class ScreenInputManager : MonoBehaviour
                 hoveredObject.GetComponent<IHover>()?.StopHover();
                 hoveredObject = null;
             }
+            isHoverBox = false;
+            if (openedHelper != null)
+            {
+                openedHelper.GetComponent<HelperBox>().CloseHelp();
+                openedHelper = null;
+            }
+            timer = 0;
+
         }
 
     }
