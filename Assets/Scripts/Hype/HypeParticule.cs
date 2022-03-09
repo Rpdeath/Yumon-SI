@@ -8,7 +8,8 @@ public class HypeParticule : MonoBehaviour
 
     private Vector3 worldPos;
 
-
+    public ParticleSystem main;
+    public ParticleSystem child;
 
     private void Update()
     {
@@ -20,7 +21,8 @@ public class HypeParticule : MonoBehaviour
 
         if (transform.position == worldPos)
         {
-            Destroy(gameObject);
+            child.Stop();
+            Destroy(gameObject, 1f);
         }
 
         

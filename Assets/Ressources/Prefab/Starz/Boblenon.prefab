@@ -583,7 +583,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e87f6cb68e824fc419af2c047f412c52, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f8d38522bcd11ff42bf14b77b5c603c7, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -854,10 +854,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 838e22f1e6c10fe4caccf351e7ec7d70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadingColor: {r: 1, g: 0.48472303, b: 0, a: 1}
+  loadingColor: {r: 0, g: 0.42736816, b: 1, a: 1}
   harvestReadyColor: {r: 0.00965023, g: 1, b: 0, a: 1}
-  loadingColor2: {r: 0, g: 0, b: 0, a: 1}
-  harvestReadyColor2: {r: 0, g: 0, b: 0, a: 1}
+  loadingColor2: {r: 1, g: 0.48627454, b: 0, a: 1}
+  harvestReadyColor2: {r: 0.007843138, g: 1, b: 0, a: 1}
   particuleOnHarvest: {fileID: 1296804583814003741, guid: 24d20f00c2be877458bbdbacfb062502, type: 3}
   generatorFill: {fileID: 4307125405385682561}
   maxFill: 3
