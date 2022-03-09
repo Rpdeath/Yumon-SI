@@ -25,6 +25,7 @@ public class StarzActifSysteme : MonoBehaviour
     public float cooldownActif;
     public int actifCost;
     public float actifDuration;
+    public bool userController = true;
 
     [HideInInspector]public float actualActifDuration;
     [HideInInspector]public float actualCooldown;
@@ -138,9 +139,45 @@ public class StarzActifSysteme : MonoBehaviour
             case "zevent_boblennon":
                 zevent_boblennon();
                 break;
+            case "amongus_gomart":
+                amongus_gomart();
+                break;
+            case "amongus_ponce":
+                amongus_ponce();
+                break;
+            case "amongus_baghera":
+                amongus_baghera();
+                break;
             default:
                 break;
         }
+    }
+
+    private void amongus_baghera()
+    {
+        EffectOnUser effect = new EffectOnUser();
+        effect.name = "PreventSpawnStarz";
+        effect.stringBuff = "All";
+        AssUserEffect(effect, 3, false);
+    }
+    private void amongus_ponce()
+    {
+        EffectOnUser effect = new EffectOnUser();
+        effect.name = "PreventHype"; // A Faire
+        effect.stringBuff = "All";
+        AssUserEffect(effect, 3,false);
+        EffectOnUser effect2 = new EffectOnUser();
+        effect2.name = "PreventActif"; // A faire
+        effect2.stringBuff = "All";
+        AssUserEffect(effect2, 3, false);
+    }
+
+    private void amongus_gomart()
+    {
+        EffectOnUser effect = new EffectOnUser();
+        effect.name = "ManaProduction";
+        effect.floatBuff = 0.5f;
+        AssUserEffect(effect, 4, false);
     }
 
     private void zevent_boblennon()
@@ -149,19 +186,38 @@ public class StarzActifSysteme : MonoBehaviour
         effect.name="ManaCost";
         effect.stringBuff = "ZEvent";
         effect.floatBuff = 0.1f;
-        AssUserEffect(effect, 6);
+        AssUserEffect(effect, 6,true);
     }
 
-    private void AssUserEffect(EffectOnUser effect,float time)
+    private void AssUserEffect(EffectOnUser effect,float time, bool User)
     {
-        GameInstance.instance.gameManager.lEffect.Add(effect);
-        StartCoroutine(RemoveUserEffect(effect, time));
+        if (User)
+        {
+            GameInstance.instance.gameManager.lEffect.Add(effect);
+
+        }
+        else
+        {
+            GameInstance.instance.gameManager.lEffectEnnemy.Add(effect);
+
+        }
+        StartCoroutine(RemoveUserEffect(effect, time,User));
     }
 
-    IEnumerator RemoveUserEffect(EffectOnUser effect, float time)
+    IEnumerator RemoveUserEffect(EffectOnUser effect, float time, bool User)
     {
         yield return new WaitForSeconds(time);
-        GameInstance.instance.gameManager.lEffect.Remove(effect);
+        if (User && userController)
+        {
+            GameInstance.instance.gameManager.lEffect.Remove(effect);
+
+        }
+        else
+        {
+            GameInstance.instance.gameManager.lEffectEnnemy.Remove(effect);
+
+        }
+        
     }
 
 }

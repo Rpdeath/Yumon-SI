@@ -50,6 +50,14 @@ public class ManaBar : MonoBehaviour
             {
                 if (actualTime <= timeForGainMana)
                 {
+                    
+                    foreach (EffectOnUser effect in GameInstance.instance.gameManager.lEffect)
+                    {
+                        if (effect.name == "ManaProduction")
+                        {
+                            boost = boost - effect.floatBuff;
+                        }
+                    }
                     actualTime += Time.deltaTime * boost;
                 }
                 else

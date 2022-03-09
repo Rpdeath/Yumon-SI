@@ -58,6 +58,7 @@ public class GameManager : MonoBehaviour
     public EnemyPosition enemyPos = new EnemyPosition();
 
     public List<EffectOnUser> lEffect = new List<EffectOnUser>();
+    public List<EffectOnUser> lEffectEnnemy = new List<EffectOnUser>();
 
 
     #endregion

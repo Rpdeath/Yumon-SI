@@ -59,7 +59,16 @@ public class CardHandDragable : MonoBehaviour, IDragable
             }
         }
 
-        if (cost<= GameInstance.instance.actualGameInfo.manaPlayer1)
+        bool canLaunchCard = true;
+        foreach (EffectOnUser effect in GameInstance.instance.gameManager.lEffectEnnemy)
+        {
+            if (effect.name == "PreventSpawnStarz")
+            {
+                canLaunchCard = false;
+            }
+        }
+
+        if (cost<= GameInstance.instance.actualGameInfo.manaPlayer1 && canLaunchCard)
         {
             isDraggable = true;
             

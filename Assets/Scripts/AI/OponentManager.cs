@@ -22,7 +22,7 @@ public class OponentManager : MonoBehaviour
     public List<GameObject> starzPosed;
 
 
-    public int mana=0;
+    public float mana=0;
 
     private void Start()
     {
@@ -69,17 +69,28 @@ public class OponentManager : MonoBehaviour
     IEnumerator LaunchCard()
     {
         yield return new WaitForSeconds((float)difficulty);
-        foreach(Card card in cardInHand)
+        bool canLaunchCard = true;
+        foreach (EffectOnUser effect in GameInstance.instance.gameManager.lEffectEnnemy)
         {
-            if (mana >= card.propertie.cost)
+            if (effect.name == "PreventSpawnStarz")
             {
-                foreach(GameObject colu in columns)
+                canLaunchCard = false;
+            }
+        }
+        if (canLaunchCard)
+        {
+            foreach (Card card in cardInHand)
+            {
+                if (mana >= card.propertie.cost)
                 {
-                    if (colu.GetComponentInChildren<DropStarz>().actualStarz == null)
+                    foreach (GameObject colu in columns)
                     {
-                        DropCardOnColumn(colu.GetComponent<ColumnPosition>().x, colu.GetComponent<ColumnPosition>().y, card);
-                        mana -= card.propertie.cost;
-                        break;
+                        if (colu.GetComponentInChildren<DropStarz>().actualStarz == null)
+                        {
+                            DropCardOnColumn(colu.GetComponent<ColumnPosition>().x, colu.GetComponent<ColumnPosition>().y, card);
+                            mana -= card.propertie.cost;
+                            break;
+                        }
                     }
                 }
             }
@@ -113,7 +124,15 @@ public class OponentManager : MonoBehaviour
     IEnumerator AddMana()
     {
         yield return new WaitForSeconds((float)difficulty/2);
-        mana += 1;
+        float boost = 1;
+        foreach (EffectOnUser effect in GameInstance.instance.gameManager.lEffectEnnemy)
+        {
+            if (effect.name == "ManaProduction")
+            {
+                boost = boost - effect.floatBuff;
+            }
+        }
+        mana += 1 * boost;
         StartCoroutine(AddMana());
     }
 
