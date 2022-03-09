@@ -194,3 +194,22 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 493.165690 seconds.
+  path: Assets/Levels/Rendu_Vendredi/Clean_Arena.unity
+  artifactKey: Guid(48700ae2a76e7c14db454e60d33d48e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Levels/Rendu_Vendredi/Clean_Arena.unity using Guid(48700ae2a76e7c14db454e60d33d48e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c725e8bca2b2a5c319abf15013c08db') in 0.031772 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 58.435728 seconds.
+  path: Assets/Levels/Rendu_Vendredi/Clean_Arena.unity
+  artifactKey: Guid(48700ae2a76e7c14db454e60d33d48e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Levels/Rendu_Vendredi/Clean_Arena.unity using Guid(48700ae2a76e7c14db454e60d33d48e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00847250fdc97b0f6cf34aaf84ad5820') in 0.003877 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 18.740010 seconds.
+  path: Assets/Levels/Rendu_Vendredi
+  artifactKey: Guid(bb3fa4e53f9f0d34784021806fb1a62f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Levels/Rendu_Vendredi using Guid(bb3fa4e53f9f0d34784021806fb1a62f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a2e5d64c4bf301bdf7fd471cbb02fea') in 0.008764 seconds 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
