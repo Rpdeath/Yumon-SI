@@ -38,12 +38,9 @@ public class CreateCollection : MonoBehaviour
 
                 Card card = (Card)ScriptableObject.CreateInstance("Card");
                 JsonUtility.FromJsonOverwrite(nft.nft_data, card);
-<<<<<<< HEAD
 
                 card.propertie = (Properties) GameInstance.instance.ScriptRef.AssetList_script[GameInstance.instance.ScriptRef.AssetList_id.IndexOf(card.pathOfImage)];
 
-=======
->>>>>>> parent of 2fe7cd3 (ColonneLumiereStillWIP)
                 //Debug.Log(JsonUtility.ToJson(card));
                 GameObject clone = (GameObject)Instantiate(prefab, transform);
                 clone.GetComponent<CarDataManager>().CardData = card;
