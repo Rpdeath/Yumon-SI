@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b508145f0efca90438089837a030abd1, type: 3}
+  m_Name: Card_AMONGUS_Antoine_Daniel
+  m_EditorClassIdentifier: 
+  id: 0
+  name: Antoine Daniel Among Us
+  pathOfImage: amongus_antoinedaniel
+  listOfTags: 03000000
+  rarity: 2
+  propertie: {fileID: 11400000, guid: 0554c293645150449bd337476e99788c, type: 2}

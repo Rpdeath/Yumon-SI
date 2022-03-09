@@ -6,11 +6,13 @@ public class CardCollectionSelectOnClick : MonoBehaviour,IClickable
 {
     bool inDeck=false;
     public CreateCollection collectionCreator;
-
+    Vector3 startScale;
+    RectTransform rt;
     // Start is called before the first frame update
     void Start()
     {
-        
+        rt = GetComponent<RectTransform>();
+        startScale = rt.localScale;
     }
 
     // Update is called once per frame
@@ -27,13 +29,13 @@ public class CardCollectionSelectOnClick : MonoBehaviour,IClickable
 
             if (inDeck)
             {
-                GetComponent<RectTransform>().localScale = new Vector3(1.2f, 1.2f, 1);
+                GetComponent<RectTransform>().localScale = startScale*1.5f;
                 collectionCreator.currentCardsonDeck += 1;
                 //Debug.Log(JsonUtility.ToJson(GetComponent<CarDataManager>().CardData));
             }
             else
             {
-                GetComponent<RectTransform>().localScale = new Vector3(1f, 1f, 1);
+                GetComponent<RectTransform>().localScale = startScale;
                 collectionCreator.currentCardsonDeck -= 1;
 
             }
