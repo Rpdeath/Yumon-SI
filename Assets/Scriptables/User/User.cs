@@ -12,7 +12,7 @@ public class User : ScriptableObject
     public string users_password_crypted;
     public string users_key_public;
     public string users_key_private;
-
+    public Deck deck;
     public List<Wallet> wallets;
     public List<Nft> nfts;
 
