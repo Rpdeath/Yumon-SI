@@ -230,6 +230,8 @@ MonoBehaviour:
   - Jamy de c'est pas sorcier
   - Le prix de la farine
   - "Les bronz\xE9s font du ski"
+  timerHover: 2
+  hasOpened: 0
 --- !u!1 &115259601 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8337637892664127959, guid: 1f5d57b12518707488e0a846ac8f596e, type: 3}
@@ -252,6 +254,8 @@ MonoBehaviour:
   - Jamy de c'est pas sorcier
   - Le prix de la farine
   - "Les bronz\xE9s font du ski"
+  timerHover: 2
+  hasOpened: 0
 --- !u!1001 &144663188
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -761,6 +765,8 @@ MonoBehaviour:
   - Jamy de c'est pas sorcier
   - Le prix de la farine
   - "Les bronz\xE9s font du ski"
+  timerHover: 2
+  hasOpened: 0
 --- !u!1 &375550714 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6008785503637107131, guid: 1f5d57b12518707488e0a846ac8f596e, type: 3}
@@ -783,6 +789,8 @@ MonoBehaviour:
   - Jamy de c'est pas sorcier
   - Le prix de la farine
   - "Les bronz\xE9s font du ski"
+  timerHover: 2
+  hasOpened: 0
 --- !u!1 &420911644
 GameObject:
   m_ObjectHideFlags: 0
@@ -915,6 +923,8 @@ MonoBehaviour:
   - Jamy de c'est pas sorcier
   - Le prix de la farine
   - "Les bronz\xE9s font du ski"
+  timerHover: 2
+  hasOpened: 0
 --- !u!1 &460995280
 GameObject:
   m_ObjectHideFlags: 0
@@ -1548,6 +1558,8 @@ MonoBehaviour:
   - Jamy de c'est pas sorcier
   - Le prix de la farine
   - "Les bronz\xE9s font du ski"
+  timerHover: 2
+  hasOpened: 0
 --- !u!1 &865694632 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4879216283985206749, guid: 1f5d57b12518707488e0a846ac8f596e, type: 3}
@@ -1570,6 +1582,8 @@ MonoBehaviour:
   - Jamy de c'est pas sorcier
   - Le prix de la farine
   - "Les bronz\xE9s font du ski"
+  timerHover: 2
+  hasOpened: 0
 --- !u!1 &938558882
 GameObject:
   m_ObjectHideFlags: 0
@@ -2257,6 +2271,9 @@ MonoBehaviour:
   userData: {fileID: 11400000, guid: 82e262b7f0e0fbc439a384ffca2bd314, type: 2}
   userDataEnemy: {fileID: 0}
   actualGameInfo: {fileID: 0}
+  assetRef: {fileID: 0}
+  ScriptRef: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!4 &1246012281
 Transform:
   m_ObjectHideFlags: 0
@@ -2339,6 +2356,8 @@ MonoBehaviour:
   - Jamy de c'est pas sorcier
   - Le prix de la farine
   - "Les bronz\xE9s font du ski"
+  timerHover: 2
+  hasOpened: 0
 --- !u!1001 &1666255775
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2709,6 +2728,8 @@ MonoBehaviour:
   - Jamy de c'est pas sorcier
   - Le prix de la farine
   - "Les bronz\xE9s font du ski"
+  timerHover: 2
+  hasOpened: 0
 --- !u!1 &1967595546
 GameObject:
   m_ObjectHideFlags: 0
@@ -3002,6 +3023,8 @@ MonoBehaviour:
   - Jamy de c'est pas sorcier
   - Le prix de la farine
   - "Les bronz\xE9s font du ski"
+  timerHover: 2
+  hasOpened: 0
 --- !u!1001 &5448701113435251860
 PrefabInstance:
   m_ObjectHideFlags: 0
