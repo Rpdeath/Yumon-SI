@@ -13,7 +13,7 @@ public class GameInstance : MonoBehaviour
     public User userData;
     public User userDataEnemy;
     
-    [HideInInspector]
+    
     public CreateGameInfo actualGameInfo;
 
 
@@ -89,7 +89,7 @@ public class GameInstance : MonoBehaviour
         else
         {
             actualGameInfo.scorePlayer2 += scoreToAdd;
-            actualGameInfo.sliderPlayer2.value = actualGameInfo.scorePlayer2 / actualGameInfo.maxScore;
+            actualGameInfo.sliderPlayer2.value = (float)actualGameInfo.scorePlayer2 / (float)actualGameInfo.maxScore;
 
             if (actualGameInfo.scorePlayer2 > actualGameInfo.maxScore)
             {

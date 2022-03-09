@@ -2,14 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+public enum Difficulty : int
+{
+    EASY = 5,
+    NORMAL = 3,
+    HARD = 1
+}
+
 public class OponentManager : MonoBehaviour
 {
 
     public Deck startingDeck;
 
+    public Difficulty difficulty;
+
     public List<Card> cardInHand;
     public GameObject[] columns;
     public List<GameObject> starzPosed;
+
+
+    public int mana=0;
+
+    private void Start()
+    {
+        StartCoroutine(LaunchCard());
+        StartCoroutine(CheckForHarvest());
+        StartCoroutine(AddMana());
+    }
+
 
 
     public void DeckReady()
@@ -23,11 +44,78 @@ public class OponentManager : MonoBehaviour
         }
     }
 
-    public void DropCardOnColumn(int x,int y)
+    public void DropCardOnColumn(int x,int y,Card card)
     {
+        DropStarz dropStarz = columns[x + (y * 3)].GetComponentInChildren<DropStarz>();
+
+        GameObject starz = dropStarz.AIDropCard(card);
+        starz.GetComponentInChildren<StarzActifSysteme>().UsedByPlayer = false;
+        starz.GetComponentInChildren<HypeGenerator>().UsedByPlayer = false;
+        starzPosed.Add(starz);
 
     }
 
+    public bool Harvest(int x, int y)
+    {
+        if (columns[x + (y * 3)].GetComponentInChildren<DropStarz>().actualStarz.GetComponentInChildren<HypeGenerator>().isReadyToHarvest)
+        {
+            columns[x + (y * 3)].GetComponentInChildren<DropStarz>().actualStarz.GetComponentInChildren<HypeGenerator>().OnClick();
+            return true;
+        }
+        return false;
+    }
+
+
+    IEnumerator LaunchCard()
+    {
+        yield return new WaitForSeconds((float)difficulty);
+        foreach(Card card in cardInHand)
+        {
+            if (mana >= card.propertie.cost)
+            {
+                foreach(GameObject colu in columns)
+                {
+                    if (colu.GetComponentInChildren<DropStarz>().actualStarz == null)
+                    {
+                        DropCardOnColumn(colu.GetComponent<ColumnPosition>().x, colu.GetComponent<ColumnPosition>().y, card);
+                        mana -= card.propertie.cost;
+                        break;
+                    }
+                }
+            }
+        }
+        StartCoroutine(LaunchCard());
+
+
+
+    }
+
+    IEnumerator CheckForHarvest()
+    {
+        yield return new WaitForSeconds(0.7f);
+        int nb = 0;
+        foreach (GameObject colu in columns)
+        {
+            if (colu.GetComponentInChildren<DropStarz>().actualStarz != null)
+            {
+                if(Harvest(colu.GetComponent<ColumnPosition>().x, colu.GetComponent<ColumnPosition>().y))
+                {
+                    nb += 1;
+                    if(nb>=2)break;
+                }
+                
+            }
+        }
+        StartCoroutine(CheckForHarvest());
+    }
+
+
+    IEnumerator AddMana()
+    {
+        yield return new WaitForSeconds((float)difficulty/2);
+        mana += 1;
+        StartCoroutine(AddMana());
+    }
 
 
 }
