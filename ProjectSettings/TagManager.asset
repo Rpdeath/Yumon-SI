@@ -8,6 +8,7 @@ TagManager:
   - Slider2
   - Handle1
   - Handle2
+  - ColumnOponent
   layers:
   - Default
   - TransparentFX

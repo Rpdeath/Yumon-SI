@@ -23,6 +23,7 @@ public class GameInstance : MonoBehaviour
 
 
     public GameManager gameManager;
+    public OponentManager oponentManager;
 
     #endregion
 
@@ -53,12 +54,21 @@ public class GameInstance : MonoBehaviour
 
     public void StartNewGame()
     {
+
         actualGameInfo.maxScore = 1000;
         actualGameInfo.sliderPlayer1 = GameObject.FindGameObjectWithTag("Slider1").GetComponent<Slider>();
         actualGameInfo.sliderPlayer2 = GameObject.FindGameObjectWithTag("Slider2").GetComponent<Slider>();
 
         actualGameInfo.handle1 = GameObject.FindGameObjectWithTag("Handle1").GetComponent<Image>();
         actualGameInfo.handle2 = GameObject.FindGameObjectWithTag("Handle2").GetComponent<Image>();
+
+        gameManager = GameObject.FindObjectOfType<GameManager>();
+        oponentManager = GameObject.FindObjectOfType<OponentManager>();
+
+        oponentManager.startingDeck = userDataEnemy.deck;
+        oponentManager.DeckReady();
+
+
     }
 
 
