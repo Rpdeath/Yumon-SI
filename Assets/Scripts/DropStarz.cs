@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class DropStarz : MonoBehaviour, IReceive
 {
+    [Header ("Ui")]
+    public ActifButtonUi uiActif;
+
+
     public ScriptReferencement ScriptRef;
     public GameObject actualStarz;
     public Transform spawnPoint;
@@ -15,7 +19,6 @@ public class DropStarz : MonoBehaviour, IReceive
         
         if (actualStarz == null && allowDrop)
         {
-            Debug.Log("Drop Starz");
             Card card = obj.GetComponent<CarDataManager>().CardData;
             GameObject gobj = null;
             if (assetRef.AssetList_id.IndexOf(card.pathOfImage) != -1) gobj = assetRef.AssetList_model[assetRef.AssetList_id.IndexOf(card.pathOfImage)] as GameObject;
@@ -35,6 +38,7 @@ public class DropStarz : MonoBehaviour, IReceive
     {
         actualStarz = Instantiate(objToSpawn, spawnPoint.position, spawnPoint.rotation);
         actualStarz.GetComponentInChildren<HypeGenerator>().timeToCompletion = card.propertie.speed;
+        actualStarz.GetComponentInChildren<StarzActifSysteme>().selfActifUi = uiActif;
         GameInstance.instance.actualGameInfo.manaPlayer1 -= card.propertie.cost;
 
 

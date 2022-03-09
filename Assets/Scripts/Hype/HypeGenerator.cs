@@ -7,11 +7,6 @@ public class HypeGenerator : MonoBehaviour, IClickable
 {
     #region Variable
 
-    [Header ("Stats")]
-    public int maxFill;
-    public float timeToCompletion;
-    public float boost;
-
     [Header("Player 1 Colors")]
     public Color loadingColor;
     public Color harvestReadyColor;
@@ -26,6 +21,9 @@ public class HypeGenerator : MonoBehaviour, IClickable
     [Header ("Setup unity")]
     public Image generatorFill;
 
+    [HideInInspector] public int maxFill;
+    [HideInInspector] public float timeToCompletion;
+    [HideInInspector] public float boost;
     
     private float actualTime;
     private bool isReadyToHarvest = false;
