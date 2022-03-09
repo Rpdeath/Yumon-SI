@@ -17,6 +17,10 @@ public class HypeParticule : MonoBehaviour
     }
 
 
+    public ParticleSystem main;
+    public ParticleSystem child;
+
+
     private void Update()
     {
         actualHandlePos = Camera.main.WorldToScreenPoint(currentHandle.transform.position);
@@ -27,7 +31,8 @@ public class HypeParticule : MonoBehaviour
 
         if (transform.position == worldPos)
         {
-            Destroy(gameObject);
+            child.Stop();
+            Destroy(gameObject, 1f);
         }
 
         
