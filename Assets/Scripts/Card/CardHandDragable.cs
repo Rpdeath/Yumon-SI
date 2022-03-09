@@ -60,6 +60,7 @@ public class CardHandDragable : MonoBehaviour, IDragable
         
         if (Destroy)
         {
+            Debug.Log("Destroy Object :" + gameObject.name);
 
             cardHand.RemoveCard(gameObject);
         }

@@ -73,6 +73,7 @@ public class ScreenInputManager : MonoBehaviour
                         {
                             if (hit.collider.GetComponent<DropStarz>().allowDrop)
                             {
+                                Debug.Log("Should Drop");
                                 isDragging = false;
                                 hit.collider.GetComponent<IReceive>()?.DropCard(dragedObject);
                                 dragedObject = null;
@@ -149,7 +150,7 @@ public class ScreenInputManager : MonoBehaviour
     {
         if (gameCamera == null)
         {
-            gameCamera = Camera.main;
+            gameCamera = Camera.main;Debug.Log("enter");
         }
         
         RaycastHit hit;
