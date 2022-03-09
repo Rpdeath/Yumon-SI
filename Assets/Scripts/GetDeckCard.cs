@@ -18,6 +18,6 @@ public class GetDeckCard : MonoBehaviour
             blankCards[i].GetComponent<CardHandDragable>().cardHand = carHand;
         }
         handManager.hand = blankCards;
-        handManager.UpdateHandPoses();
+        handManager.StartHand();
     }
 }
