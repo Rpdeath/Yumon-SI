@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class CardCollectionSelectOnClick : MonoBehaviour,IClickable
 {
@@ -8,6 +9,7 @@ public class CardCollectionSelectOnClick : MonoBehaviour,IClickable
     public CreateCollection collectionCreator;
     Vector3 startScale;
     RectTransform rt;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,7 @@ public class CardCollectionSelectOnClick : MonoBehaviour,IClickable
 
     public void OnClick()
     {
+
         if (collectionCreator.currentCardsonDeck < collectionCreator.maxCardOnDeck || inDeck)
         {
             inDeck = !inDeck;
