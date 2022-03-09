@@ -46,11 +46,12 @@ public class ActifButtonUi : MonoBehaviour, IClickable
 
     private void Update()
     {
-        SetActifDurationUi();
-
-        SetActifCooldownUi();
-
-        CheckColor();
+        if (selfStarzActif != null)
+        {
+            SetActifDurationUi();
+            SetActifCooldownUi();
+            CheckColor();
+        }
     }
 
     private void Ininit()
@@ -75,22 +76,16 @@ public class ActifButtonUi : MonoBehaviour, IClickable
 
     private void SetActifDurationUi()
     {
-        if (selfStarzActif != null)
+        if (selfStarzActif.actualActifDuration < selfStarzActif.actifDuration)
         {
-            if (selfStarzActif.actualActifDuration < selfStarzActif.actifDuration)
-            {
-                selfSlider.value = selfStarzActif.actualActifDuration / selfStarzActif.actifDuration;
-            }
+            selfSlider.value = selfStarzActif.actualActifDuration / selfStarzActif.actifDuration;
         }
     }
     private void SetActifCooldownUi()
     {
-        if (selfStarzActif != null)
+        if (selfStarzActif.actualCooldown != 0f)
         {
-            if (selfStarzActif.actualCooldown != 0f)
-            {
-                coolDownActifImage.fillAmount = selfStarzActif.actualCooldown / selfStarzActif.cooldownActif;
-            }
+            coolDownActifImage.fillAmount = selfStarzActif.actualCooldown / selfStarzActif.cooldownActif;
         }
     }
 
