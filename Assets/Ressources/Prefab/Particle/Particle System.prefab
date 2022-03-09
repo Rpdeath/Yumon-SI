@@ -116,7 +116,11 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
+<<<<<<< HEAD
       scalar: 1.5
+=======
+      scalar: 20
+>>>>>>> parent of 2fe7cd3 (ColonneLumiereStillWIP)
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -285,7 +289,11 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
+<<<<<<< HEAD
       scalar: 0.05
+=======
+      scalar: 0.1
+>>>>>>> parent of 2fe7cd3 (ColonneLumiereStillWIP)
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -977,7 +985,11 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
+<<<<<<< HEAD
         scalar: 20
+=======
+        scalar: 30
+>>>>>>> parent of 2fe7cd3 (ColonneLumiereStillWIP)
         minScalar: 30
         maxCurve:
           serializedVersion: 2

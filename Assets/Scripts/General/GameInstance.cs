@@ -155,8 +155,13 @@ public class GameInstance : MonoBehaviour
             }
 
             Deck deck = (Deck)ScriptableObject.CreateInstance("Deck");
+<<<<<<< HEAD
             userData.deck = deck;
             deck.listOfCard = new List<Card>();
+=======
+            a.deck = deck;
+
+>>>>>>> parent of 2fe7cd3 (ColonneLumiereStillWIP)
             string de = (b.Substring(b.IndexOf("\"deck\"")-1, b.IndexOf("\"wallets\"") +1 - b.IndexOf("\"deck\""))).Remove(0, 8);
             de = de.Remove(de.Length - 1, 1);
             Debug.Log(de);
@@ -164,6 +169,7 @@ public class GameInstance : MonoBehaviour
             string xe = de.Replace("},{", "}|{");
             foreach (var item in xe.Split('|'))
             {
+<<<<<<< HEAD
                 //Debug.Log(item);
                 string xee = (item.Substring(item.IndexOf("\"deck_data\"")+1, item.IndexOf(",\"deck_owner\"")-1  - item.IndexOf("\"deck_data\""))).Remove(0,11);
                 string xei = (item.Substring(item.IndexOf("\"deck_id\"") + 1, item.IndexOf(",\"deck_data\"") - 2 - item.IndexOf("\"deck_id\""))).Remove(0, 10);
@@ -195,6 +201,13 @@ public class GameInstance : MonoBehaviour
                         }
                     } 
                 }
+=======
+                Debug.Log(item);
+                string xee = (item.Substring(item.IndexOf("\"deck_data\"")+1, item.IndexOf(",\"deck_owner\"")-1  - item.IndexOf("\"deck_data\""))).Remove(0,11);
+                string xei = (item.Substring(item.IndexOf("\"deck_id\"") + 1, item.IndexOf(",\"deck_data\"") - 2 - item.IndexOf("\"deck_id\""))).Remove(0, 10);
+                deck.deck_id = int.Parse(xei);
+                Debug.Log(xei);
+>>>>>>> parent of 2fe7cd3 (ColonneLumiereStillWIP)
 
             }
 

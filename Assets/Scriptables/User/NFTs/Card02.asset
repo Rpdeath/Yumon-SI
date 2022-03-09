@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Card02
   m_EditorClassIdentifier: 
   nft_id: -2
-  nft_data: '{"id":"83","name":"JDG Du Commencement","pathOfImage":"jdg_Start","listOfTags":[1],"rarity":1}'
+  nft_data: '{"id":"83","name":"Bob Lennon","pathOfImage":"bob_lennon","listOfTags":[2],"rarity":1}'
   nft_owner: -10
