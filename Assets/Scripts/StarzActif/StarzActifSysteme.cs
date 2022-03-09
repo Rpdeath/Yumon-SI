@@ -127,10 +127,16 @@ public class StarzActifSysteme : MonoBehaviour
         switch (id)
         {
             case "zevent_boblennon":
+                zevent_boblennon();
                 break;
             default:
                 break;
         }
+    }
+
+    private void zevent_boblennon()
+    {
+
     }
 
 }
