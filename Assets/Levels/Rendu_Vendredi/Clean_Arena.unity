@@ -190,29 +190,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 160
       objectReference: {fileID: 0}
-<<<<<<< HEAD
+
     - target: {fileID: 4928275399828574851, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
       propertyPath: uiActif
       value: 
       objectReference: {fileID: 1616552899}
-=======
-    - target: {fileID: 4928275399828574848, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4928275399828574848, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4928275399828574848, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4928275399828574848, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.67
-      objectReference: {fileID: 0}
->>>>>>> parent of 2fe7cd3 (ColonneLumiereStillWIP)
+
     - target: {fileID: 4928275399828574861, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1201,7 +1184,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Starz_Plateform (3)
       objectReference: {fileID: 0}
-<<<<<<< HEAD
+
     - target: {fileID: 4928275398950291539, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.17364825
@@ -1218,8 +1201,7 @@ PrefabInstance:
       propertyPath: uiActif
       value: 
       objectReference: {fileID: 2110305328}
-=======
->>>>>>> parent of 2fe7cd3 (ColonneLumiereStillWIP)
+
     - target: {fileID: 4928275399828574861, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -3140,7 +3122,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Starz_Plateform (2)
       objectReference: {fileID: 0}
-<<<<<<< HEAD
+
     - target: {fileID: 4928275398950291539, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.17364825
@@ -3157,8 +3139,7 @@ PrefabInstance:
       propertyPath: uiActif
       value: 
       objectReference: {fileID: 1204987369}
-=======
->>>>>>> parent of 2fe7cd3 (ColonneLumiereStillWIP)
+
     - target: {fileID: 4928275399828574861, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
