@@ -8,8 +8,17 @@ public class CarHandPostions : MonoBehaviour
     public int handLenght;
     public Vector2 cardSize;
 
+    public void Start()
+    {
+        cardSize = Vector2.right * (hand[0].GetComponent<RectTransform>().rect.width+2f);
+        handLenght = hand.Count;
+        UpdateHandPoses();
+    }
     private void Update()
     {
+
+        
+
         if (hand.Count != handLenght)
         {
             UpdateHandPoses();
@@ -53,11 +62,5 @@ public class CarHandPostions : MonoBehaviour
                 hand[i].GetComponent<RectTransform>().rotation *= Quaternion.Euler(0, 0, 2*angle);
             }
         }
-    }
-    public void StartHand()
-    {
-        cardSize = Vector2.right * (hand[0].GetComponent<RectTransform>().rect.width + 2f);
-        handLenght = hand.Count;
-        UpdateHandPoses();
     }
 }
