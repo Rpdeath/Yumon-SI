@@ -30,9 +30,15 @@ public class DropStarz : MonoBehaviour, IReceive
         GetComponent<BoxCollider>().enabled = false;
     }
 
-    public void AIDropCard(Card card)
+    public GameObject AIDropCard(Card card)
     {
+        GameObject gobj = null;
+        if (assetRef.AssetList_id.IndexOf(card.pathOfImage) != -1) gobj = assetRef.AssetList_model[assetRef.AssetList_id.IndexOf(card.pathOfImage)] as GameObject;
+        actualStarz = Instantiate(gobj, spawnPoint.position, spawnPoint.rotation);
+        actualStarz.GetComponentInChildren<HypeGenerator>().timeToCompletion = card.propertie.speed;
+        actualStarz.GetComponentInChildren<StarzActifSysteme>().selfActifUi = uiActif;
 
+        return actualStarz;
     }
 
     private void SpawnStarz(GameObject objToSpawn,Card card)

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HypeParticule : MonoBehaviour
 {
@@ -8,11 +9,17 @@ public class HypeParticule : MonoBehaviour
 
     private Vector3 worldPos;
 
+    public Image currentHandle;
+
+    private void Start()
+    {
+        currentHandle=GameInstance.instance.actualGameInfo.handle1;
+    }
 
 
     private void Update()
     {
-        actualHandlePos = Camera.main.WorldToScreenPoint(GameInstance.instance.actualGameInfo.handle1.transform.position);
+        actualHandlePos = Camera.main.WorldToScreenPoint(currentHandle.transform.position);
         worldPos = Camera.main.ScreenToWorldPoint(actualHandlePos);
 
 

@@ -9,6 +9,7 @@ public class StarzActifSysteme : MonoBehaviour
 
     public ActifButtonUi selfActifUi;
 
+    [HideInInspector] public bool UsedByPlayer = true;
     public int actifId;
 
     [Header ("Stats")]
@@ -26,15 +27,21 @@ public class StarzActifSysteme : MonoBehaviour
 
     private void Start()
     {
-        selfActifUi.selfStarzActif = this;
-        actualActifDuration = actifDuration;
-        actualCooldown = 0f;
+        if (UsedByPlayer)
+        {
+            selfActifUi.selfStarzActif = this;
+            actualActifDuration = actifDuration;
+            actualCooldown = 0f;
+        }
     }
 
     private void Update()
     {
-        CheckActifCooldown();
-        CheckActifDuration();
+        if (UsedByPlayer)
+        {
+            CheckActifCooldown();
+            CheckActifDuration();
+        }
     }
     
 
@@ -45,6 +52,8 @@ public class StarzActifSysteme : MonoBehaviour
             // Cherché l'effet de l'actif dans le script qui stock tous les actif
 
             actifIsRunning = true;
+
+            PlayActif(id);
 
             DragDownUi();
             actualActifDuration = 0f;
@@ -111,6 +120,16 @@ public class StarzActifSysteme : MonoBehaviour
             objToMove.transform.position = Vector3.MoveTowards(objToMove.transform.position, newPos.position, Time.deltaTime * speed);
 
             yield return new WaitForEndOfFrame();
+        }
+    }
+    private void PlayActif(string id)
+    {
+        switch (id)
+        {
+            case "zevent_boblennon":
+                break;
+            default:
+                break;
         }
     }
 

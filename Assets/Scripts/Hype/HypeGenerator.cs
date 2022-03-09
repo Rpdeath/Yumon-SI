@@ -7,6 +7,8 @@ public class HypeGenerator : MonoBehaviour, IClickable
 {
     #region Variable
 
+    
+
     [Header("Player 1 Colors")]
     public Color loadingColor;
     public Color harvestReadyColor;
@@ -24,10 +26,12 @@ public class HypeGenerator : MonoBehaviour, IClickable
     [HideInInspector] public int maxFill;
     [HideInInspector] public float timeToCompletion;
     [HideInInspector] public float boost;
+    [HideInInspector] public bool UsedByPlayer = true;
 
-    
+
+
     private float actualTime;
-    private bool isReadyToHarvest = false;
+    public bool isReadyToHarvest = false;
 
     private User userData;
     private Deck_Place_Manager place;
@@ -72,20 +76,37 @@ public class HypeGenerator : MonoBehaviour, IClickable
 
     public void OnClick()
     {
+        
         if (isReadyToHarvest)
         {
-            ResetGenerator();
+            if (!UsedByPlayer)
+            {
+                ResetGenerator(false);
+                GameObject obj = Instantiate(particuleOnHarvest, transform.position, transform.rotation);
+                obj.GetComponent<HypeParticule>().currentHandle = GameInstance.instance.actualGameInfo.handle2;
 
-            Instantiate(particuleOnHarvest, transform.position, transform.rotation);
+            }
+            else
+            {
+                ResetGenerator(true);
+                Instantiate(particuleOnHarvest, transform.position, transform.rotation);
+            }
         }
     }
-    public void ResetGenerator()
+    public void ResetGenerator(bool User)
     {
-        GameInstance.instance.AddScore(userData.users_id, maxFill);
+        if (User)
+        {
+            GameInstance.instance.AddScore(userData.users_id, maxFill);
+        }
+        else
+        {
+            GameInstance.instance.AddScore(GameInstance.instance.userDataEnemy.users_id, maxFill);
+        }
+            actualTime = 0;
+            isReadyToHarvest = false;
 
-        actualTime = 0;
-        isReadyToHarvest = false;
-
-        generatorFill.color = loadingColor;
+            generatorFill.color = loadingColor;
+        
     }
 }
