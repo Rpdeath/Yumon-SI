@@ -19,7 +19,7 @@ public class LoginButton : MonoBehaviour
     public void onClick()
     {
         if (txt.text != "") {
-            StartCoroutine(Request("yumon.rpdeath.com/get/users", txt.text));
+            StartCoroutine(Request("localhost:8080/YumonAPI/get/users", txt.text));
         }
         
     }

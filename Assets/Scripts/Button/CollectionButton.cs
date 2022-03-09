@@ -5,9 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class CollectionButton : MonoBehaviour
 {
-    public string level="Collection";
     public void onClick()
     {
-        SceneManager.LoadScene(level);
+        SceneManager.LoadScene("Collection");
     }
 }

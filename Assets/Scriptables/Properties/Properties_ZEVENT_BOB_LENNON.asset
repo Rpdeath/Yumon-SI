@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Properties_ZEVENT_BOB_LENNON
   m_EditorClassIdentifier: 
   cost: 2
-  hype: 350
+  hype: 250
   speed: 4
   passivId: zevent
   actif_cost: 1
