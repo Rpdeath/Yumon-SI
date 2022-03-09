@@ -7,6 +7,7 @@ TagManager:
   - Slider1
   - Slider2
   - Handle1
+  - Handle2
   layers:
   - Default
   - TransparentFX

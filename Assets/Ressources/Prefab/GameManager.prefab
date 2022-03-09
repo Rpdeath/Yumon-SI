@@ -43,5 +43,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67af0a14aa3eba4429ed67aef198396e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allyStarz: []
-  enemyStarz: []
+  allyStarz:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  enemyStarz:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
