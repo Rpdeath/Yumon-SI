@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System;
 
 public class GameInstance : MonoBehaviour
 {
@@ -14,7 +15,10 @@ public class GameInstance : MonoBehaviour
     
     //[HideInInspector]
     public CreateGameInfo actualGameInfo;
-    
+
+
+    public AssetReferencement assetRef;
+    public ScriptReferencement ScriptRef;
 
 
     #endregion
@@ -38,9 +42,17 @@ public class GameInstance : MonoBehaviour
         CreateGameInfo card = (CreateGameInfo)ScriptableObject.CreateInstance("CreateGameInfo");
         actualGameInfo = card;
 
+        
+    }
+
+
+    public void StartNewGame()
+    {
         actualGameInfo.maxScore = 1000;
         actualGameInfo.sliderPlayer1 = GameObject.FindGameObjectWithTag("Slider1").GetComponent<Slider>();
         actualGameInfo.sliderPlayer2 = GameObject.FindGameObjectWithTag("Slider2").GetComponent<Slider>();
+
+        actualGameInfo.handle1 = GameObject.FindGameObjectWithTag("Handle1").GetComponent<Image>();
     }
 
 
@@ -128,6 +140,71 @@ public class GameInstance : MonoBehaviour
                 JsonUtility.FromJsonOverwrite(item, nft);
                 userData.nfts.Add(nft);
             }
+
+            string w = (b.Substring(b.IndexOf("\"wallets\"")+3, b.IndexOf("\"nfts\"") - 4 - b.IndexOf("\"wallets\""))).Remove(0, 8);
+            w = w.Remove(w.Length - 1, 1);
+            Debug.Log(w);
+            
+            string x = w.Replace("},{", "}|{");
+            foreach (var item in x.Split('|'))
+            {
+                //Debug.Log(item);
+                Wallet wallet = (Wallet)ScriptableObject.CreateInstance("Wallet");
+                JsonUtility.FromJsonOverwrite(item, wallet);
+                userData.wallets.Add(wallet);
+            }
+
+            Deck deck = (Deck)ScriptableObject.CreateInstance("Deck");
+            userData.deck = deck;
+            deck.listOfCard = new List<Card>();
+            string de = (b.Substring(b.IndexOf("\"deck\"")-1, b.IndexOf("\"wallets\"") +1 - b.IndexOf("\"deck\""))).Remove(0, 8);
+            de = de.Remove(de.Length - 1, 1);
+            Debug.Log(de);
+
+            string xe = de.Replace("},{", "}|{");
+            foreach (var item in xe.Split('|'))
+            {
+                //Debug.Log(item);
+                string xee = (item.Substring(item.IndexOf("\"deck_data\"")+1, item.IndexOf(",\"deck_owner\"")-1  - item.IndexOf("\"deck_data\""))).Remove(0,11);
+                string xei = (item.Substring(item.IndexOf("\"deck_id\"") + 1, item.IndexOf(",\"deck_data\"") - 2 - item.IndexOf("\"deck_id\""))).Remove(0, 10);
+                deck.deck_id = int.Parse(xei);
+                SerializedDeck sDeck = new SerializedDeck();
+                xee = (xee.Remove(xee.Length - 1, 1)).Remove(0,1).Replace("\\\"","\"");
+                
+                JsonUtility.FromJsonOverwrite(xee, sDeck);
+                List<Card> lCard = new List<Card>();
+                foreach (Nft nft in GameInstance.instance.userData.nfts)
+                {
+                    if (JsonUtility.ToJson(nft) != "")
+                    {
+                        Card card = (Card)ScriptableObject.CreateInstance("Card");
+                        JsonUtility.FromJsonOverwrite(nft.nft_data, card);
+
+                        card.propertie = (Properties)GameInstance.instance.ScriptRef.AssetList_script[GameInstance.instance.ScriptRef.AssetList_id.IndexOf(card.pathOfImage)];
+                        lCard.Add(card);
+
+                    }
+                }
+                foreach (int i in sDeck.listOfCardId)
+                {
+                   foreach(Card card in lCard)
+                    {
+                        if (card.id == i)
+                        {
+                            deck.listOfCard.Add(card);
+                        }
+                    } 
+                }
+
+            }
+
+
+
+
+
+
+
+
 
             //Debug.Log(JsonUtility.ToJson(userData));
             SceneManager.LoadScene("MainMenu");

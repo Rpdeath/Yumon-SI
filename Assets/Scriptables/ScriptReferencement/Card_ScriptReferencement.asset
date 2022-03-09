@@ -13,8 +13,42 @@ MonoBehaviour:
   m_Name: Card_ScriptReferencement
   m_EditorClassIdentifier: 
   AssetList_id:
-  - zevent
+  - jdg_standard
+  - jdg_Start
+  - jdg_Zevent
   - bob_lennon
+  - kcorp_rekkless
+  - kcorp_kamet0
+  - kcorp_sardoche
+  - kcorp_alderiate
+  - kcorp_kotei
+  - amongus_jdg
+  - amongus_baghera
+  - amongus_antoinedaniel
+  - amongus_ponce
+  - amongus_gomart
+  - zevent_maghla
+  - zevent_boblennon
+  - zevent_zerator
+  - zevent_moman
+  - zevent_ultia
   AssetList_script:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 688c4f84411185d40ba19e12cd901fd5, type: 2}
+  - {fileID: 11400000, guid: 688c4f84411185d40ba19e12cd901fd5, type: 2}
+  - {fileID: 11400000, guid: 688c4f84411185d40ba19e12cd901fd5, type: 2}
+  - {fileID: 11400000, guid: 512e033a3eff1834b9e5d1b50e8aa82a, type: 2}
+  - {fileID: 11400000, guid: 0fddf1989fe993a48bfcc248effc9d51, type: 2}
+  - {fileID: 11400000, guid: 6ecabb7af74a7674b8496b0ff2e5437d, type: 2}
+  - {fileID: 11400000, guid: fca9b2798108ae744b49084819795829, type: 2}
+  - {fileID: 11400000, guid: e5e73e4610156ef45b86f9b3a71103be, type: 2}
+  - {fileID: 11400000, guid: 97c9968c271f12e408a2b56f68ba8cc9, type: 2}
+  - {fileID: 11400000, guid: ea56b19d737cffa44ba16e9422bbd2dc, type: 2}
+  - {fileID: 11400000, guid: 72d4d8c10ed6c334b8060ece1938f5d6, type: 2}
+  - {fileID: 11400000, guid: 0554c293645150449bd337476e99788c, type: 2}
+  - {fileID: 11400000, guid: 4aa4a982b6082dc45ba8c1afcd3f5b02, type: 2}
+  - {fileID: 11400000, guid: 54803298f4ef1c240b775081827abe70, type: 2}
+  - {fileID: 11400000, guid: 28a72177c1d82f8448688c17deacbe32, type: 2}
+  - {fileID: 11400000, guid: 958f337bdf2b71645af7d473e923bcae, type: 2}
+  - {fileID: 11400000, guid: a77eaa546b768164cbd17662c7d79e25, type: 2}
+  - {fileID: 11400000, guid: 458040733c483e64c9e7289dcec23fe4, type: 2}
+  - {fileID: 11400000, guid: 59a14bdc5180e1246aaaf1ea201bc5dc, type: 2}

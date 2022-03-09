@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Levels/Rendu_Vendredi/Clean_Arena.unity
-    guid: 48700ae2a76e7c14db454e60d33d48e2
-  - enabled: 1
     path: Assets/Levels/Proto/Login.unity
     guid: 3a641e2f304f13b49aad65d2091133ba
+  - enabled: 1
+    path: Assets/Levels/Rendu_Vendredi/Clean_Arena.unity
+    guid: 48700ae2a76e7c14db454e60d33d48e2
   - enabled: 1
     path: Assets/Levels/Proto/MainMenu.unity
     guid: 4f14bd37afff96640bc5a209bea77315
@@ -20,5 +20,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Levels/Proto/TestNFT.unity
     guid: a04df79ec6ca8ad4b9e2a7e399d3c590
+  - enabled: 1
+    path: Assets/Levels/Proto/FindAGame.unity
+    guid: 5e788174878cfc049834f50adfb00e03
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9d56a184e1d8a494a8eb0896f69e1c92, type: 2}

@@ -7,18 +7,29 @@ public class HypeGenerator : MonoBehaviour, IClickable
 {
     #region Variable
 
-    private Deck_Place_Manager place;
+    [Header("Player 1 Colors")]
+    public Color loadingColor;
+    public Color harvestReadyColor;
+
+    [Header("Player 2 Colors")]
+    public Color loadingColor2;
+    public Color harvestReadyColor2;
+
+    [Header("Feedback")]
+    public GameObject particuleOnHarvest;
+
+    [Header ("Setup unity")]
     public Image generatorFill;
-   
-    public int maxFill;
-    public float timeToCompletion;
-    public float boost;
 
+    [HideInInspector] public int maxFill;
+    [HideInInspector] public float timeToCompletion;
+    [HideInInspector] public float boost;
+    
     private float actualTime;
-
     private bool isReadyToHarvest = false;
 
     private User userData;
+    private Deck_Place_Manager place;
 
     #endregion
 
@@ -40,6 +51,7 @@ public class HypeGenerator : MonoBehaviour, IClickable
     public void InitGenerator()
     {
         actualTime = 0;
+        generatorFill.color = loadingColor;
     }
     public void StartGeneratingHype()
     {
@@ -51,6 +63,7 @@ public class HypeGenerator : MonoBehaviour, IClickable
         else
         {
             isReadyToHarvest = true;
+            generatorFill.color = harvestReadyColor;
         }
     }
 
@@ -61,6 +74,8 @@ public class HypeGenerator : MonoBehaviour, IClickable
         if (isReadyToHarvest)
         {
             ResetGenerator();
+
+            Instantiate(particuleOnHarvest, transform.position, transform.rotation);
         }
     }
     public void ResetGenerator()
@@ -69,5 +84,7 @@ public class HypeGenerator : MonoBehaviour, IClickable
 
         actualTime = 0;
         isReadyToHarvest = false;
+
+        generatorFill.color = loadingColor;
     }
 }
