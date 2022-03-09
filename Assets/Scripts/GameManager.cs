@@ -57,6 +57,9 @@ public class GameManager : MonoBehaviour
     public AllyPosition allyPos = new AllyPosition();
     public EnemyPosition enemyPos = new EnemyPosition();
 
+    public List<EffectOnUser> lEffect = new List<EffectOnUser>();
+
+
     #endregion
 
 

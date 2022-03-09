@@ -2,6 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public class EffectOnUser
+{
+    public string name;
+    public string stringBuff;
+    public float floatBuff;
+    public int intBuff;
+}
+
+
 public class StarzActifSysteme : MonoBehaviour
 {
     #region Variable
@@ -136,7 +145,23 @@ public class StarzActifSysteme : MonoBehaviour
 
     private void zevent_boblennon()
     {
+        EffectOnUser effect = new EffectOnUser();
+        effect.name="ManaCost";
+        effect.stringBuff = "ZEvent";
+        effect.floatBuff = 0.1f;
+        AssUserEffect(effect, 6);
+    }
 
+    private void AssUserEffect(EffectOnUser effect,float time)
+    {
+        GameInstance.instance.gameManager.lEffect.Add(effect);
+        StartCoroutine(RemoveUserEffect(effect, time));
+    }
+
+    IEnumerator RemoveUserEffect(EffectOnUser effect, float time)
+    {
+        yield return new WaitForSeconds(time);
+        GameInstance.instance.gameManager.lEffect.Remove(effect);
     }
 
 }

@@ -21,8 +21,45 @@ public class CardHandDragable : MonoBehaviour, IDragable
     void Update()
     {
 
+        float cost = card.propertie.cost;
+        foreach(EffectOnUser effect in GameInstance.instance.gameManager.lEffect)
+        {
+            if(effect.name == "ManaCost")
+            {
+                List<string> Stags = new List<string>();
+                foreach(Tags tag in card.listOfTags)
+                {
+                    switch (tag)
+                    {
+                        case Tags.Standard:
+                            break;
+                        case Tags.Start:
+                            break;
+                        case Tags.KCorp:
+                            Stags.Add("KCorp");
+                            break;
+                        case Tags.AmongUs:
+                            Stags.Add("AmongUs");
+                            break;
+                        case Tags.ZEvent:
+                            Stags.Add("ZEvent");
+                            break;
+                        default:
+                            break;
+                    }
+                }
 
-        if(card.propertie.cost<= GameInstance.instance.actualGameInfo.manaPlayer1)
+                foreach(string stag in Stags)
+                {
+                    if (stag == effect.stringBuff)
+                    {
+                        cost = cost * (1 - effect.floatBuff);
+                    }
+                }
+            }
+        }
+
+        if (cost<= GameInstance.instance.actualGameInfo.manaPlayer1)
         {
             isDraggable = true;
             
