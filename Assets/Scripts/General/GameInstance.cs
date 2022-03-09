@@ -43,6 +43,8 @@ public class GameInstance : MonoBehaviour
         actualGameInfo = card;
     }
 
+
+
     private void Start()
     {
         StartNewGame();
