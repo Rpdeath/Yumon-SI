@@ -12,6 +12,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a8418ea7aa4ea64fb51a03cb5f34092, type: 3}
   m_Name: Effect_AssetReferencement
   m_EditorClassIdentifier: 
-  AssetList_id: []
-  AssetList_sprite: []
+  AssetList_id:
+  - HypeProductionSameLine
+  - StealHypeProduction
+  - HypeProduction
+  - PreventSpawnStarz
+  - PreventHype
+  - PreventActif
+  - ManaProduction
+  - ManaCost
+  - ManaProduction
+  - ActifCooldownReduction
+  - BuffNextStarz
+  - HypeConvertor
+  - MomanBoost
+  AssetList_sprite:
+  - {fileID: 2800000, guid: 93b55ae758891a7498452b8f36c31fef, type: 3}
+  - {fileID: 2800000, guid: a2ac518c7fd990c4e90bdc1965c52e3b, type: 3}
+  - {fileID: 2800000, guid: 93b55ae758891a7498452b8f36c31fef, type: 3}
+  - {fileID: 2800000, guid: 18c1fe203b37947498dab6803591155a, type: 3}
+  - {fileID: 2800000, guid: 525d59975707edf42ae48a00b8074f3a, type: 3}
+  - {fileID: 2800000, guid: 525d59975707edf42ae48a00b8074f3a, type: 3}
+  - {fileID: 2800000, guid: 53196352ec8b1e841a28c728e4dd9032, type: 3}
+  - {fileID: 2800000, guid: 537d332e8920aa24d9a1f9c20d6ac46b, type: 3}
+  - {fileID: 2800000, guid: 93b55ae758891a7498452b8f36c31fef, type: 3}
+  - {fileID: 2800000, guid: 3fb9c72906893884b9875e6b24db7eaa, type: 3}
+  - {fileID: 2800000, guid: 93b55ae758891a7498452b8f36c31fef, type: 3}
+  - {fileID: 2800000, guid: 93b55ae758891a7498452b8f36c31fef, type: 3}
   AssetList_model: []
