@@ -11,12 +11,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material #134
-    second: {fileID: 2100000, guid: 0e5eb8c1e96f40b4a8de4bde04d5bf74, type: 2}
+    second: {fileID: 2100000, guid: c343950a9ad4ceb4d8dcd44894ae7d68, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: hair_antoinedaniel_low_DefaultMaterial
-    second: {fileID: 2100000, guid: 5690b8396aa1ce34597fd1b7941d597b, type: 2}
+    second: {fileID: 2100000, guid: 62411cdced3d6464398e052b9c870a8b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
