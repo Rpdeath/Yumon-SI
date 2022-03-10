@@ -25,7 +25,7 @@ public class HypeGenerator : MonoBehaviour, IClickable
     [HideInInspector] public float timeToCompletion;
     [HideInInspector] public float boost;
     private int startMaxFill;
-    /*[HideInInspector]*/ public bool UsedByPlayer = true;
+    [HideInInspector] public bool UsedByPlayer = true;
 
 
 
