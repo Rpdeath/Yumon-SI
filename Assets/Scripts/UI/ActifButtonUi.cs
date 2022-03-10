@@ -91,7 +91,7 @@ public class ActifButtonUi : MonoBehaviour, IClickable
     {
         if (selfStarzActif.actualCooldown != 0f)
         {
-            coolDownActifImage.fillAmount = selfStarzActif.actualCooldown / selfStarzActif.cooldownActif;
+            coolDownActifImage.fillAmount = selfStarzActif.actualCooldown / selfStarzActif.selfCard.properties.cooldown;
         }
     }
 

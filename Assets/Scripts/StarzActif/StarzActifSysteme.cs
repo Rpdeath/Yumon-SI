@@ -145,9 +145,9 @@ public class StarzActifSysteme : MonoBehaviour
 
     private void DragDownUi()
     {
-        StartCoroutine(AnimMoveUi(selfActifUi.effectSquareObj, selfActifUi.squareEffectDownPos, 2f));
+        StartCoroutine(AnimMoveUi(selfActifUi.effectSquareObj, selfActifUi.squareEffectDownPos, 1f));
 
-        StartCoroutine(AnimMoveUi(selfActifUi.sliderObj, selfActifUi.sliderDownPos, 2f));
+        StartCoroutine(AnimMoveUi(selfActifUi.sliderObj, selfActifUi.sliderDownPos, 1f));
     }
 
     private void DragUpUi()

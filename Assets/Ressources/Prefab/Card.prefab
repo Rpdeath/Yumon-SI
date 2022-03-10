@@ -2295,7 +2295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e534c57b43b80824e82da3f5750b2df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CardData: {fileID: 11400000, guid: b912578ff69bdae428a0674c003991a8, type: 2}
+  CardData: {fileID: 11400000, guid: 4d69637b208d3f64a8861ce19cf3e489, type: 2}
   assetref: {fileID: 11400000, guid: b1fc1bc0c07dc464795ddfef67f21762, type: 2}
   commonRef: {fileID: 11400000, guid: aebb611846e5e974eaf7403e2005e551, type: 2}
   limitedRef: {fileID: 11400000, guid: 97968684b12fe234885498ea57a31c08, type: 2}
@@ -2364,6 +2364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDraggable: 0
   cardHand: {fileID: 0}
+  card: {fileID: 0}
   panel: {fileID: 0}
 --- !u!1 &7620263653695844112
 GameObject:
