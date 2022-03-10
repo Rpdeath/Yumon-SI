@@ -36,7 +36,7 @@ public class OponentManager : MonoBehaviour
 
     public void DeckReady()
     {
-        cardInHand = startingDeck.listOfCard;
+        cardInHand = new List<Card>(startingDeck.listOfCard);
         columns = new GameObject[6];
         foreach (GameObject columnItem in GameObject.FindGameObjectsWithTag("ColumnOponent"))
         {
