@@ -145,6 +145,31 @@ public class HypeGenerator : MonoBehaviour, IClickable
                 {
                     scoreToAdd = (int)(scoreToAdd * (1 + effect.floatBuff));
                 }
+                string tag = "";
+                switch (GetComponent<StarzData>().data.listOfTags[0])
+                {
+                    case Tags.Standard:
+                        tag = "Standard";
+                        break;
+                    case Tags.Start:
+                        tag = "Start";
+                        break;
+                    case Tags.KCorp:
+                        tag = "KCorp";
+                        break;
+                    case Tags.AmongUs:
+                        tag = "AmongUs";
+                        break;
+                    case Tags.ZEvent:
+                        tag = "Zevent";
+                        break;
+                    default:
+                        break;
+                }
+                if(effect.stringBuff == tag)
+                {
+                    // do ton truc
+                }
             }
         }
         if (User)
