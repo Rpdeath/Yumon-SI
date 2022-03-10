@@ -29,7 +29,8 @@ public class ActifButtonUi : MonoBehaviour, IClickable
     public Color actifRunningColor;
     public Color emptyActifColor;
 
-    [Header ("Unity setup")]
+    [Header("Unity setup")]
+    public Animator animator;
     public BoxCollider selfCollider;
     public Transform squareEffectDownPos;
     public Transform sliderDownPos;
