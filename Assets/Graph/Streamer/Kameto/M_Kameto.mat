@@ -33,15 +33,15 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - BaseColor:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 3ef6463e05023d54fb90524d1ab98986, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Normal:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: c734db89962cd2246bf0d417afaf7495, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Smoothness:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 987db97f69ee14947bf1750cc0d5d277, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:

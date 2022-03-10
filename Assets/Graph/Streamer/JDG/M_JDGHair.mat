@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8122644046089490145
+--- !u!114 &-7294643160424622153
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Sardoche
-  m_Shader: {fileID: -6465566751694194690, guid: 4dff10bc41d1d0d4fa979d7f708e7860, type: 3}
+  m_Name: M_JDGHair
+  m_Shader: {fileID: -6465566751694194690, guid: dd0f2f24a848f564db9a0978f3c197f6, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -32,18 +32,6 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - BaseColor:
-        m_Texture: {fileID: 2800000, guid: aa39672bdaded79439625218f28a1be9, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - Normal:
-        m_Texture: {fileID: 2800000, guid: ec95501eea82af54fa45a3a15d34f405, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - Smoothness:
-        m_Texture: {fileID: 2800000, guid: eacc174c5e927ae42b68fbdab3c77734, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -102,11 +90,6 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - DepthSensitivity: 0
-    - MaxDistance: 0
-    - MinDistance: 0
-    - NormalsSensitivity: 0
-    - OutlineThickness: 0
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
