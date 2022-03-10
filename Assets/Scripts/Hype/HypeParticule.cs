@@ -11,8 +11,10 @@ public class HypeParticule : MonoBehaviour
 
     public Image currentHandle;
 
-    private void Start()
+    private void Awake()
     {
+
+
         currentHandle=GameInstance.instance.actualGameInfo.handle1;
     }
 
