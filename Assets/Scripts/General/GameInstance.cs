@@ -62,6 +62,8 @@ public class GameInstance : MonoBehaviour
         actualGameInfo.handle1 = GameObject.FindGameObjectWithTag("Handle1").GetComponent<Image>();
         actualGameInfo.handle2 = GameObject.FindGameObjectWithTag("Handle2").GetComponent<Image>();
 
+        actualGameInfo.manaBar = GameObject.FindGameObjectWithTag("ManaBar");
+
         gameManager = GameObject.FindObjectOfType<GameManager>();
         oponentManager = GameObject.FindObjectOfType<OponentManager>();
 

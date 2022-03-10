@@ -10,6 +10,7 @@ TagManager:
   - Handle2
   - ColumnOponent
   - ColumnAlly
+  - ManaBar
   layers:
   - Default
   - TransparentFX

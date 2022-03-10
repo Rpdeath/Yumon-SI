@@ -20,12 +20,10 @@ public class StarzActifSysteme : MonoBehaviour
     public ActifButtonUi selfActifUi;
 
     [HideInInspector] public bool UsedByPlayer = true;
-    public string actifId;
 
-    [Header ("Stats")]
-    public float cooldownActif;
-    public int actifCost;
-    public float actifDuration;
+    [HideInInspector] public float cooldownActif;
+    [HideInInspector] public int actifCost;
+    [HideInInspector] public float actifDuration;
     public bool userController = true;
 
     [HideInInspector]public float actualActifDuration;
@@ -34,10 +32,13 @@ public class StarzActifSysteme : MonoBehaviour
     [HideInInspector] public bool actifIsRunning;
     [HideInInspector] public bool coolDownIsRunning;
 
+    [HideInInspector] public Card selfCard;
     #endregion
 
     private void Start()
     {
+        Init();
+
         if (UsedByPlayer)
         {
             selfActifUi.selfStarzActif = this;
@@ -52,16 +53,24 @@ public class StarzActifSysteme : MonoBehaviour
         {
             CheckActifCooldown();
             CheckActifDuration();
+
+            ReduceActifCooldown();
         }
     }
     
+
+    private void Init()
+    {
+        selfCard = GetComponent<StarzData>().data;
+
+        actifDuration = selfCard.propertie.actifDuration;
+        cooldownActif = selfCard.propertie.cooldown;
+    }
 
     public void StartActifEffect(string id)
     {
         if (!coolDownIsRunning && !actifIsRunning && GameInstance.instance.actualGameInfo.manaPlayer1 >= actifCost)
         {
-            // Cherché l'effet de l'actif dans le script qui stock tous les actif
-
             actifIsRunning = true;
 
             PlayActif(id);
@@ -108,6 +117,22 @@ public class StarzActifSysteme : MonoBehaviour
         }
     }
 
+    private void ReduceActifCooldown()
+    {
+        foreach (EffectOnUser effect in GameInstance.instance.gameManager.lEffect)
+        {
+            if (effect.name == "ActifCooldownReduction")
+            {
+                cooldownActif -= effect.floatBuff;
+
+                if (cooldownActif < 0f)
+                {
+                    cooldownActif = 0f;
+                }
+                GameInstance.instance.gameManager.lEffect.Remove(effect);
+            }
+        }
+    }
 
 
     private void DragDownUi()
@@ -133,6 +158,8 @@ public class StarzActifSysteme : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
     }
+
+
     private void PlayActif(string id)
     {
         switch (id)
@@ -157,6 +184,23 @@ public class StarzActifSysteme : MonoBehaviour
                 break;
             case "zevent_maghla":
                 zevent_maghla();
+            case "kcorp_kamet0":
+                kcorp_kamet0();
+                break;
+            case "kcorp_sardoche":
+                kcorp_sardoche();
+                break;
+            case "kcorp_adlderiate":
+                kcorp_adlderiate();
+                break;
+            case "kcorp_kotei":
+                kcorp_kotei();
+                break;
+            case "zevent_zerator":
+                zevent_zerator();
+                break;
+            case "zevent_moman":
+                zevent_moman();
                 break;
             default:
                 break;
@@ -206,7 +250,6 @@ public class StarzActifSysteme : MonoBehaviour
         effect2.stringBuff = "All";
         AssUserEffect(effect2, 3, false);
     }
-
     private void amongus_gomart()
     {
         EffectOnUser effect = new EffectOnUser();
@@ -214,7 +257,6 @@ public class StarzActifSysteme : MonoBehaviour
         effect.floatBuff = 0.5f;
         AssUserEffect(effect, 4, false);
     }
-
     private void zevent_boblennon()
     {
         EffectOnUser effect = new EffectOnUser();
@@ -223,6 +265,51 @@ public class StarzActifSysteme : MonoBehaviour
         effect.floatBuff = 0.1f;
         AssUserEffect(effect, 6,true);
     }
+
+
+    private void kcorp_kamet0()
+    {
+        EffectOnUser effect = new EffectOnUser();
+        effect.name = "ManaProduction";
+        effect.floatBuff = 2;
+
+        AssUserEffect(effect, 7, true);
+    }
+    private void kcorp_sardoche()
+    {
+        EffectOnUser effect = new EffectOnUser();
+        effect.name = "ActifCooldownReduction";
+        effect.floatBuff = 3f;
+        AssUserEffect(effect, 0, true);
+    }
+    private void kcorp_adlderiate()
+    {
+        EffectOnUser effect = new EffectOnUser();
+        effect.name = "BuffNextStarz";
+        effect.floatBuff = 2;
+        AssUserEffect(effect, 59f, true);
+    }
+    private void kcorp_kotei()
+    {
+        EffectOnUser effect = new EffectOnUser();
+        effect.name = "HypeConvertor";
+        AssUserEffect(effect, 5f, true);
+    }
+    private void zevent_zerator()
+    {
+        GameInstance.instance.AddScore(1, GameInstance.instance.actualGameInfo.manaPlayer1 * 15);
+        GameInstance.instance.actualGameInfo.manaPlayer1 = 0;
+    }
+
+    private void zevent_moman()
+    {
+        EffectOnUser effect = new EffectOnUser();
+        effect.name = "MomanBoost";
+        effect.floatBuff = 1.15f;
+        AssUserEffect(effect, 6, true);
+    }
+
+
 
     private void AssUserEffect(EffectOnUser effect,float time, bool User)
     {

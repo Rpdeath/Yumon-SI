@@ -11,6 +11,7 @@ public class Properties : ScriptableObject
     public float speed = 0;
     public string passivId = "none";
     public int actif_cost = 0;
+    public float actifDuration = 0;
     public int cooldown = 0;
     public string actifId = "none";
 
