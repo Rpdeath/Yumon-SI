@@ -44,8 +44,6 @@ public class CarDataManager : MonoBehaviour
     public TextMeshProUGUI hypeText;
     public TextMeshProUGUI speedText;
     public TextMeshProUGUI cardCost;
-
-
     
 
 
@@ -77,6 +75,7 @@ public class CarDataManager : MonoBehaviour
 
         ApplySprites();
         ApplyProperties();
+        ApplyTargets();
     }
 
     public void UpdateCArd()
@@ -106,18 +105,19 @@ public class CarDataManager : MonoBehaviour
 
         ApplySprites();
         ApplyProperties();
+        ApplyTargets();
     }
 
     public void ApplyProperties()
     {
-        cardCost.text = CardData.propertie.cost.ToString();
-        hypeText.text = CardData.propertie.hype.ToString();
-        speedText.text = CardData.propertie.speed.ToString();
-        actifCost.text = CardData.propertie.actif_cost.ToString();
+        cardCost.text = CardData.properties.cost.ToString();
+        hypeText.text = CardData.properties.hype.ToString();
+        speedText.text = CardData.properties.speed.ToString();
+        actifCost.text = CardData.properties.actif_cost.ToString();
         nameText.text = CardData.name;
         tagText.text = CardData.listOfTags[0].ToString();
-        passifText.text = CardData.propertie.passifRule;
-        actifText.text = CardData.propertie.actifRule;
+        passifText.text = CardData.properties.passifRule;
+        actifText.text = CardData.properties.actifRule;
     }
 
     public void ApplySprites()
@@ -132,6 +132,103 @@ public class CarDataManager : MonoBehaviour
         powerFrame.sprite = listSprite[7];
         powerHype.sprite = listSprite[8];
         powerSpeed.sprite = listSprite[9];
+    }
+
+    public void ApplyTargets()
+    {
+        switch (CardData.properties.actifId)
+        {
+            case "amongus_antoinedaniel" :
+                allyTargetDOWN.color = Color.grey;
+                allyTargetTOP.color = Color.grey;
+                enemyTargetDown.color = Color.white;
+                enemyTargetTOP.color = Color.white;
+                break;
+            case "amongus_baghera":
+                allyTargetDOWN.color = Color.grey;
+                allyTargetTOP.color = Color.grey;
+                enemyTargetDown.color = Color.white;
+                enemyTargetTOP.color = Color.white;
+                break;
+            case "amongus_gomart":
+                allyTargetDOWN.color = Color.grey;
+                allyTargetTOP.color = Color.grey;
+                enemyTargetDown.color = Color.white;
+                enemyTargetTOP.color = Color.white;
+                break;
+            case "amongus_jdg":
+                allyTargetDOWN.color = Color.grey;
+                allyTargetTOP.color = Color.grey;
+                enemyTargetDown.color = Color.white;
+                enemyTargetTOP.color = Color.white;
+                break;
+            case "amongus_ponce":
+                allyTargetDOWN.color = Color.grey;
+                allyTargetTOP.color = Color.grey;
+                enemyTargetDown.color = Color.white;
+                enemyTargetTOP.color = Color.white;
+                break;
+            case "kcorp_alderiate":
+                allyTargetDOWN.color = Color.white;
+                allyTargetTOP.color = Color.white;
+                enemyTargetDown.color = Color.grey;
+                enemyTargetTOP.color = Color.grey;
+                break;
+            case "kcorp_kamet0":
+                allyTargetDOWN.color = Color.grey;
+                allyTargetTOP.color = Color.grey;
+                enemyTargetDown.color = Color.grey;
+                enemyTargetTOP.color = Color.grey;
+                break;
+            case "kcorp_kotei":
+                allyTargetDOWN.color = Color.white;
+                allyTargetTOP.color = Color.white;
+                enemyTargetDown.color = Color.grey;
+                enemyTargetTOP.color = Color.grey;
+                break;
+            case "kcorp_rekkless":
+                allyTargetDOWN.color = Color.grey;
+                allyTargetTOP.color = Color.grey;
+                enemyTargetDown.color = Color.grey;
+                enemyTargetTOP.color = Color.grey;
+                break;
+            case "kcorp_sardoche":
+                allyTargetDOWN.color = Color.white;
+                allyTargetTOP.color = Color.white;
+                enemyTargetDown.color = Color.grey;
+                enemyTargetTOP.color = Color.grey;
+                break;
+            case "zevent_boblennon":
+                allyTargetDOWN.color = Color.white;
+                allyTargetTOP.color = Color.white;
+                enemyTargetDown.color = Color.grey;
+                enemyTargetTOP.color = Color.grey;
+                break;
+            case "zevent_maghla":
+                allyTargetDOWN.color = Color.white;
+                allyTargetTOP.color = Color.white;
+                enemyTargetDown.color = Color.grey;
+                enemyTargetTOP.color = Color.grey;
+                break;
+            case "zevent_moman":
+                allyTargetDOWN.color = Color.white;
+                allyTargetTOP.color = Color.white;
+                enemyTargetDown.color = Color.grey;
+                enemyTargetTOP.color = Color.grey;
+                break;
+            case "zevent_ultia":
+                allyTargetDOWN.color = Color.white;
+                allyTargetTOP.color = Color.grey;
+                enemyTargetDown.color = Color.grey;
+                enemyTargetTOP.color = Color.grey;
+                break;
+            case "zevent_zerator":
+                allyTargetDOWN.color = Color.grey;
+                allyTargetTOP.color = Color.grey;
+                enemyTargetDown.color = Color.grey;
+                enemyTargetTOP.color = Color.grey;
+                break;
+        }        
     }
 
    

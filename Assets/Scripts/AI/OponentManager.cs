@@ -83,14 +83,14 @@ public class OponentManager : MonoBehaviour
             foreach (Card card in cardInHand)
             {
 
-                if (mana >= card.propertie.cost && !cardplaced)
+                if (mana >= card.properties.cost && !cardplaced)
                 {
                     foreach (GameObject colu in columns)
                     {
                         if (colu.GetComponentInChildren<DropStarz>().actualStarz == null && !cardplaced)
                         {
                             DropCardOnColumn(colu.GetComponent<ColumnPosition>().x, colu.GetComponent<ColumnPosition>().y, card);
-                            mana -= card.propertie.cost;
+                            mana -= card.properties.cost;
                             cardplaced = true;
                             break;
                         }

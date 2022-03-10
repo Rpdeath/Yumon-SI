@@ -21,7 +21,7 @@ public class CardHandDragable : MonoBehaviour, IDragable
     void Update()
     {
 
-        float cost = card.propertie.cost;
+        float cost = card.properties.cost;
         foreach(EffectOnUser effect in GameInstance.instance.gameManager.lEffect)
         {
             if(effect.name == "ManaCost")
