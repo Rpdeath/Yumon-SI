@@ -35,14 +35,14 @@ public class HypeGenerator : MonoBehaviour, IClickable
     private User userData;
     private Deck_Place_Manager place;
 
-    [HideInInspector]public Card selfCard;
+    [HideInInspector]public StarzData selfCard;
 
     #endregion
 
     private void Start()
     {
         userData = GameInstance.instance.userData;
-        selfCard = gameObject.GetComponent<Card>();
+        selfCard = gameObject.GetComponent<StarzData>();
 
         InitGenerator();
 

@@ -93,7 +93,7 @@ public class ActifButtonUi : MonoBehaviour, IClickable
     {
         if (!selfStarzActif.actifIsRunning)
         {
-            if (GameInstance.instance.actualGameInfo.manaPlayer1 >= selfStarzActif.actifCost)
+            if (GameInstance.instance.actualGameInfo.manaPlayer1 >= selfStarzActif.selfCard.properties.actif_cost)
             {
                 realBackGround.color = playableColor;
             }
