@@ -261,7 +261,7 @@ GameObject:
   - component: {fileID: 3341986400348503221}
   - component: {fileID: 3871357002986602299}
   - component: {fileID: 8614345530142328590}
-  - component: {fileID: 4742372121516998771}
+  - component: {fileID: 1208078930442644177}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -277,8 +277,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 604105684085426856}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 3, z: 1}
+  m_LocalPosition: {x: 0, y: 3.58, z: 0}
+  m_LocalScale: {x: 0.5, y: 1, z: 0.5}
   m_Children: []
   m_Father: {fileID: 7835938397286150882}
   m_RootOrder: 2
@@ -290,7 +290,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 604105684085426856}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 2534964839176971238, guid: 9bf64a524708b9f4c965ffba46a041fc, type: 3}
 --- !u!23 &8614345530142328590
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -333,7 +333,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &4742372121516998771
+--- !u!95 &1208078930442644177
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -1015,6 +1015,7 @@ MonoBehaviour:
   cooldownActif: 3
   actifCost: 1
   actifDuration: 3
+  userController: 1
   actualActifDuration: 0
   actualCooldown: 0
   actifIsRunning: 0
