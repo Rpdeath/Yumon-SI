@@ -74,7 +74,7 @@ public class StarzActifSysteme : MonoBehaviour
         {
             if (effect.name == "PreventActif")
             {
-                canActif=false,
+                canActif = false;
             }
         }
                 if (canActif && !coolDownIsRunning && !actifIsRunning && GameInstance.instance.actualGameInfo.manaPlayer1 >= actifCost)
