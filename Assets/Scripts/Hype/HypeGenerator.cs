@@ -123,7 +123,7 @@ public class HypeGenerator : MonoBehaviour, IClickable
     }
     public void ResetGenerator(bool User)
     {
-        int scoreToAdd = maxFill;
+        float scoreToAdd = maxFill;
         List<EffectOnUser> list;
         if (UsedByPlayer)
         {
@@ -199,12 +199,12 @@ public class HypeGenerator : MonoBehaviour, IClickable
         
         if (User)
         {
-            GameInstance.instance.AddScore(userData.users_id, scoreToAdd);
+            GameInstance.instance.AddScore(userData.users_id,(int) scoreToAdd);
         }
         else
         {
 
-            GameInstance.instance.AddScore(GameInstance.instance.userDataEnemy.users_id, scoreToAdd);
+            GameInstance.instance.AddScore(GameInstance.instance.userDataEnemy.users_id, (int)scoreToAdd);
         }
             actualTime = 0;
             isReadyToHarvest = false;

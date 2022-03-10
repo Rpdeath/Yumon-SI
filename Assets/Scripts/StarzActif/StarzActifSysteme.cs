@@ -257,7 +257,7 @@ public class StarzActifSysteme : MonoBehaviour
         EffectOnUser effect = new EffectOnUser();
         effect.name = "HypeProduction";
         effect.stringBuff = "All";
-        effect.floatBuff = 0.5f;
+        effect.floatBuff = 5f;
         AssUserEffect(effect, 5, false);
     }
 

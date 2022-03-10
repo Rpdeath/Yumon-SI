@@ -36,13 +36,13 @@ public class OponentManager : MonoBehaviour
         switch (difficulty)
         {
             case Difficulty.EASY:
-                effect.floatBuff = -0.7f;
+                effect.floatBuff = -0.5f;
                 break;
             case Difficulty.NORMAL:
                 effect.floatBuff = -0.9f;
                 break;
             case Difficulty.HARD:
-                effect.floatBuff = 0.1f;
+                effect.floatBuff = 0.5f;
                 break;
             default:
                 break;
