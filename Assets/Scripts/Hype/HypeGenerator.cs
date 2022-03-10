@@ -88,11 +88,24 @@ public class HypeGenerator : MonoBehaviour, IClickable
     public void OnClick()
     {
         bool canActif = true;
-        foreach (EffectOnUser effect in GameInstance.instance.gameManager.lEffect)
+        if (UsedByPlayer)
         {
-            if (effect.name == "PreventHype")
+            foreach (EffectOnUser effect in GameInstance.instance.gameManager.lEffect)
             {
-                canActif = false;
+                if (effect.name == "PreventHype")
+                {
+                    canActif = false;
+                }
+            }
+        }
+        else
+        {
+            foreach (EffectOnUser effect in GameInstance.instance.gameManager.lEffectEnnemy)
+            {
+                if (effect.name == "PreventHype")
+                {
+                    canActif = false;
+                }
             }
         }
         if (isReadyToHarvest && canActif)
@@ -111,7 +124,16 @@ public class HypeGenerator : MonoBehaviour, IClickable
     public void ResetGenerator(bool User)
     {
         int scoreToAdd = maxFill;
-        foreach(EffectOnUser effect in GameInstance.instance.gameManager.lEffect)
+        List<EffectOnUser> list;
+        if (UsedByPlayer)
+        {
+            list = GameInstance.instance.gameManager.lEffect;
+        }
+        else
+        {
+            list = GameInstance.instance.gameManager.lEffectEnnemy;
+        }
+            foreach (EffectOnUser effect in list)
         {
             if(effect.name == "HypeProductionSameLine")
             {
@@ -172,9 +194,12 @@ public class HypeGenerator : MonoBehaviour, IClickable
                 }
             }
         }
+
+        Debug.Log("Production : " + maxFill + " -> " + scoreToAdd);
+        
         if (User)
         {
-            GameInstance.instance.AddScore(userData.users_id, maxFill);
+            GameInstance.instance.AddScore(userData.users_id, scoreToAdd);
         }
         else
         {

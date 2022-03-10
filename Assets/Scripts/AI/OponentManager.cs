@@ -30,6 +30,24 @@ public class OponentManager : MonoBehaviour
         StartCoroutine(LaunchCard());
         StartCoroutine(CheckForHarvest());
         StartCoroutine(AddMana());
+        EffectOnUser effect = new EffectOnUser();
+        effect.name = "HypeProduction";
+        effect.stringBuff = "All";
+        switch (difficulty)
+        {
+            case Difficulty.EASY:
+                effect.floatBuff = -0.7f;
+                break;
+            case Difficulty.NORMAL:
+                effect.floatBuff = -0.9f;
+                break;
+            case Difficulty.HARD:
+                effect.floatBuff = 0.1f;
+                break;
+            default:
+                break;
+        }
+        
     }
 
 
