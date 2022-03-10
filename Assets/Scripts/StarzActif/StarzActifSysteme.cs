@@ -33,6 +33,8 @@ public class StarzActifSysteme : MonoBehaviour
     [HideInInspector] public bool coolDownIsRunning;
 
     [HideInInspector] public Card selfCard;
+
+    public Animator animator;
     #endregion
 
     private void Start()
@@ -82,7 +84,7 @@ public class StarzActifSysteme : MonoBehaviour
             actifIsRunning = true;
 
             PlayActif(id);
-
+            animator.SetBool("isActing", true);
             DragDownUi();
             actualActifDuration = 0f;
             GameInstance.instance.actualGameInfo.manaPlayer1 -= actifCost;
@@ -211,10 +213,27 @@ public class StarzActifSysteme : MonoBehaviour
             case "zevent_moman":
                 zevent_moman();
                 break;
+            case "zevent_ultia":
+                zevent_ultia();
+                break;
+            case "kcorp_rekkles":
+                kcorp_rekkles();
+                break;
             default:
                 break;
         }
     }
+
+    private void zevent_ultia()
+    {
+        StartCoroutine(StopActifAnimation(0.5f));
+    }
+
+    private void kcorp_rekkles()
+    {
+        StartCoroutine(StopActifAnimation(0.5f));
+    }
+
     private void zevent_maghla()
     {
         EffectOnUser effect = new EffectOnUser();
@@ -308,6 +327,7 @@ public class StarzActifSysteme : MonoBehaviour
     {
         GameInstance.instance.AddScore(1, GameInstance.instance.actualGameInfo.manaPlayer1 * 15);
         GameInstance.instance.actualGameInfo.manaPlayer1 = 0;
+        StartCoroutine(StopActifAnimation(0.5f));
     }
 
     private void zevent_moman()
@@ -318,6 +338,12 @@ public class StarzActifSysteme : MonoBehaviour
         AssUserEffect(effect, 6, true);
     }
 
+
+    IEnumerator StopActifAnimation(float time)
+    {
+        yield return new WaitForSeconds(time);
+        animator.SetBool("isActing", false);
+    }
 
 
     private void AssUserEffect(EffectOnUser effect,float time, bool User)
@@ -333,7 +359,7 @@ public class StarzActifSysteme : MonoBehaviour
 
         }
         if (time != 0)
-        {
+        {      
             StartCoroutine(RemoveUserEffect(effect, time, User));
         }
     }
@@ -343,11 +369,13 @@ public class StarzActifSysteme : MonoBehaviour
         yield return new WaitForSeconds(time);
         if (User && userController)
         {
+            animator.SetBool("isActing", false);
             GameInstance.instance.gameManager.lEffect.Remove(effect);
 
         }
         else
         {
+            animator.SetBool("isActing", false);
             GameInstance.instance.gameManager.lEffectEnnemy.Remove(effect);
 
         }

@@ -1883,6 +1883,7 @@ MonoBehaviour:
   actifIsRunning: 0
   coolDownIsRunning: 0
   selfCard: {fileID: 0}
+  animator: {fileID: 7920059268526272975}
 --- !u!1 &5427916813978954337
 GameObject:
   m_ObjectHideFlags: 0
@@ -2050,6 +2051,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6447859875010532106}
+  - component: {fileID: 7920059268526272975}
   m_Layer: 0
   m_Name: Gomart_WH
   m_TagString: Untagged
@@ -2066,7 +2068,7 @@ Transform:
   m_GameObject: {fileID: 5922434482145528240}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 1264493361588868988}
   - {fileID: 7089768753428051852}
@@ -2074,6 +2076,25 @@ Transform:
   m_Father: {fileID: 5427916812339943368}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &7920059268526272975
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5922434482145528240}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b0cc2abbce922554dba62f016de91f1e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6696568294324532903
 GameObject:
   m_ObjectHideFlags: 0
