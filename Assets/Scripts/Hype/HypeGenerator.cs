@@ -15,6 +15,11 @@ public class HypeGenerator : MonoBehaviour, IClickable
     public Color loadingColor2;
     public Color harvestReadyColor2;
 
+    [Header ("Stars Color")]
+    public Color player1StarColor;
+    public Color player2StarColor;
+    public Color yellowStarColor;
+
     [Header("Feedback")]
     public GameObject particuleOnHarvest;
 
@@ -113,11 +118,14 @@ public class HypeGenerator : MonoBehaviour, IClickable
             if (!UsedByPlayer)
             {
                 ResetGenerator(false);
+                GameObject particle = Instantiate(particuleOnHarvest, transform.position, transform.rotation);
+                particle.GetComponent<HypeParticule>().GiveDestination(2);
             }
             else
             {
                 ResetGenerator(true);
-                Instantiate(particuleOnHarvest, transform.position, transform.rotation);
+                GameObject particle =  Instantiate(particuleOnHarvest, transform.position, transform.rotation);
+                particle.GetComponent<HypeParticule>().GiveDestination(1);
             }
         }
     }
