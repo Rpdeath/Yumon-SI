@@ -11,7 +11,7 @@ public class CardHandDragable : MonoBehaviour, IDragable
     Camera gameCamera;
     RectTransform rectT;
     public CarHandPostions cardHand;
-    Card card;
+    public Card card;
     public GameObject panel;
     private void Start()
     {
@@ -68,6 +68,7 @@ public class CardHandDragable : MonoBehaviour, IDragable
             }
         }
 
+        Debug.Log(card.name + " : " +cost + " | " + GameInstance.instance.actualGameInfo.manaPlayer1);
         if (cost<= GameInstance.instance.actualGameInfo.manaPlayer1 && canLaunchCard)
         {
             isDraggable = true;
