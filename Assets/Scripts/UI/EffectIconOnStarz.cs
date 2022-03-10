@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EffectIconOnStarz : MonoBehaviour
 {
@@ -16,6 +17,10 @@ public class EffectIconOnStarz : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         UpdateIcons();
+        for (int i=0; i<6;i++)
+        {
+            gameObject.transform.GetChild(i).gameObject.SetActive(false);
+        }
         StartCoroutine(cdUpdate());
     }
     private void UpdateIcons()
@@ -25,7 +30,8 @@ public class EffectIconOnStarz : MonoBehaviour
         {
             Sprite sp = GameInstance.instance.effectAssetRef.AssetList_sprite[GameInstance.instance.effectAssetRef.AssetList_id.IndexOf(effect.name)] as Sprite;
             effectList.Add(sp);
-
+            gameObject.transform.GetChild(effectList.Count).gameObject.SetActive(true);
+            gameObject.transform.GetChild(effectList.Count).GetComponent<Image>().sprite = sp;
 
 
             /*if (effect.name == "HypeProductionSameLine" || effect.name == "MomanBoost" || effect.name == "HypeProduction")

@@ -590,6 +590,7 @@ GameObject:
   - component: {fileID: 3331309065100390877}
   - component: {fileID: 4346688490161259016}
   - component: {fileID: 3105644335827403592}
+  - component: {fileID: 2091118597542470473}
   m_Layer: 0
   m_Name: CanvasStatus
   m_TagString: Untagged
@@ -695,6 +696,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63f1de409544ef74db278b7598416007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2091118597542470473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4223028126904405966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e3519cb6761c614fbd59c03a4631e66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectList: []
+  CardData: {fileID: 4120033268376828355}
+  effectNum: 0
 --- !u!1 &4492592355167677764
 GameObject:
   m_ObjectHideFlags: 0
