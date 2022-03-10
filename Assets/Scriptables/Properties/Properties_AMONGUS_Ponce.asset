@@ -19,3 +19,7 @@ MonoBehaviour:
   actif_cost: 3
   cooldown: 25
   actifId: amongus_ponce
+  passifRule: "Gagne 10% de g\xE9n\xE9ration de hype pour chaque effets n\xE9gatifs
+    chez l'ennemi"
+  actifRule: "Emp\xEAche les Starz adverses de g\xE9n\xE9rer de la Hype ou utiliser
+    son actif pendant 3s."

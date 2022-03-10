@@ -16,6 +16,7 @@ public class GetDeckCard : MonoBehaviour
             blankCards[i].GetComponent<CarDataManager>().CardData = playerDeck.listOfCard[i];
             blankCards[i].GetComponent<CarDataManager>().UpdateCArd();
             blankCards[i].GetComponent<CardHandDragable>().cardHand = carHand;
+            blankCards[i].GetComponent<CardHandDragable>().card = playerDeck.listOfCard[i];
         }
         handManager.hand = blankCards;
         handManager.StartHand();

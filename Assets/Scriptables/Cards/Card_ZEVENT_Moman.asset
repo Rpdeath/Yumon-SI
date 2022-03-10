@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Card_ZEVENT_Moman
   m_EditorClassIdentifier: 
   id: 0
-  name: MoMaN
+  name: MoMaN ZEvent
   pathOfImage: zevent_moman
   listOfTags: 04000000
   rarity: 2

@@ -19,3 +19,6 @@ MonoBehaviour:
   actif_cost: 6
   cooldown: 55
   actifId: amongus_gomart
+  passifRule: "Gagne 10% de g\xE9n\xE9ration de hype pour chaque effets n\xE9gatifs
+    chez l'ennemi"
+  actifRule: Reduit la production de mana de l'adversaire pendant 4s.

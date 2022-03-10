@@ -201,7 +201,7 @@ public class GameInstance : MonoBehaviour
                         Card card = (Card)ScriptableObject.CreateInstance("Card");
                         JsonUtility.FromJsonOverwrite(nft.nft_data, card);
 
-                        card.propertie = (Properties)GameInstance.instance.ScriptRef.AssetList_script[GameInstance.instance.ScriptRef.AssetList_id.IndexOf(card.pathOfImage)];
+                        card.properties = (Properties)GameInstance.instance.ScriptRef.AssetList_script[GameInstance.instance.ScriptRef.AssetList_id.IndexOf(card.pathOfImage)];
                         lCard.Add(card);
 
                     }
@@ -301,7 +301,7 @@ public class GameInstance : MonoBehaviour
                         Card card = (Card)ScriptableObject.CreateInstance("Card");
                         JsonUtility.FromJsonOverwrite(nft.nft_data, card);
 
-                        card.propertie = (Properties)GameInstance.instance.ScriptRef.AssetList_script[GameInstance.instance.ScriptRef.AssetList_id.IndexOf(card.pathOfImage)];
+                        card.properties = (Properties)GameInstance.instance.ScriptRef.AssetList_script[GameInstance.instance.ScriptRef.AssetList_id.IndexOf(card.pathOfImage)];
                         lCard.Add(card);
 
                     }
