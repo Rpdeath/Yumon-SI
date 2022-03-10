@@ -17,6 +17,7 @@ MonoBehaviour:
   speed: 5
   passivId: amongus
   actif_cost: 6
+  actifDuration: 4
   cooldown: 55
   actifId: amongus_gomart
   passifRule: "Gagne 10% de g\xE9n\xE9ration de hype pour chaque effets n\xE9gatifs

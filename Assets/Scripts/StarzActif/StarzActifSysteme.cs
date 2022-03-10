@@ -79,7 +79,7 @@ public class StarzActifSysteme : MonoBehaviour
                 canActif = false;
             }
         }
-                if (canActif && !coolDownIsRunning && !actifIsRunning && GameInstance.instance.actualGameInfo.manaPlayer1 >= actifCost)
+        if (canActif && !coolDownIsRunning && !actifIsRunning && GameInstance.instance.actualGameInfo.manaPlayer1 >= actifCost)
         {
             actifIsRunning = true;
 
@@ -87,7 +87,7 @@ public class StarzActifSysteme : MonoBehaviour
             animator.SetBool("isActing", true);
             DragDownUi();
             actualActifDuration = 0f;
-            GameInstance.instance.actualGameInfo.manaPlayer1 -= actifCost;
+            GameInstance.instance.actualGameInfo.manaPlayer1 -= selfCard.properties.actif_cost;
         }
     }
 
@@ -95,19 +95,19 @@ public class StarzActifSysteme : MonoBehaviour
     {
         if (actifIsRunning)
         {
-            if (actualActifDuration < actifDuration)
+            if (actualActifDuration < selfCard.properties.actifDuration)
             {
                 actualActifDuration += Time.deltaTime;
             }
             else
             {
                 actifIsRunning = false;
-                actualActifDuration = actifDuration;
+                actualActifDuration = selfCard.properties.actifDuration;
 
                 DragUpUi();
 
                 coolDownIsRunning = true;
-                actualCooldown = cooldownActif;
+                actualCooldown = selfCard.properties.cooldown;
             }
         }
     }
@@ -147,16 +147,17 @@ public class StarzActifSysteme : MonoBehaviour
 
     private void DragDownUi()
     {
-        StartCoroutine(AnimMoveUi(selfActifUi.effectSquareObj, selfActifUi.squareEffectDownPos, 0.1f));
+        selfActifUi.animator.SetTrigger("DragDown");
 
-        StartCoroutine(AnimMoveUi(selfActifUi.sliderObj, selfActifUi.sliderDownPos, 0.1f));
+        /*StartCoroutine(AnimMoveUi(selfActifUi.effectSquareObj, selfActifUi.squareEffectDownPos, 3f));
+        StartCoroutine(AnimMoveUi(selfActifUi.sliderObj, selfActifUi.sliderDownPos, 3f));*/
     }
 
     private void DragUpUi()
     {
-        StartCoroutine(AnimMoveUi(selfActifUi.effectSquareObj, selfActifUi.coolDownActifImage.gameObject.transform, 0.1f));
-
-        StartCoroutine(AnimMoveUi(selfActifUi.sliderObj, selfActifUi.coolDownActifImage.gameObject.transform, 0.1f));
+        selfActifUi.animator.SetTrigger("DragUp");
+        /*StartCoroutine(AnimMoveUi(selfActifUi.effectSquareObj, selfActifUi.coolDownActifImage.gameObject.transform, 2f));
+        StartCoroutine(AnimMoveUi(selfActifUi.sliderObj, selfActifUi.coolDownActifImage.gameObject.transform, 2f));*/
     }
 
     IEnumerator AnimMoveUi(GameObject objToMove ,Transform newPos, float speed)
@@ -164,7 +165,6 @@ public class StarzActifSysteme : MonoBehaviour
         while (objToMove.transform.position != newPos.position)
         {
             objToMove.transform.position = Vector3.MoveTowards(objToMove.transform.position, newPos.position, Time.deltaTime * speed);
-
             yield return new WaitForEndOfFrame();
         }
     }
