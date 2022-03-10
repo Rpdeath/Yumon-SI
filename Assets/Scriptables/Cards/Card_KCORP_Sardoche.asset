@@ -17,4 +17,4 @@ MonoBehaviour:
   pathOfImage: kcorp_sardoche
   listOfTags: 02000000
   rarity: 1
-  propertie: {fileID: 11400000, guid: fca9b2798108ae744b49084819795829, type: 2}
+  properties: {fileID: 11400000, guid: fca9b2798108ae744b49084819795829, type: 2}

@@ -17,4 +17,4 @@ MonoBehaviour:
   pathOfImage: zevent_ultia
   listOfTags: 04000000
   rarity: 1
-  propertie: {fileID: 11400000, guid: 59a14bdc5180e1246aaaf1ea201bc5dc, type: 2}
+  properties: {fileID: 11400000, guid: 59a14bdc5180e1246aaaf1ea201bc5dc, type: 2}

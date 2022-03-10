@@ -17,4 +17,4 @@ MonoBehaviour:
   pathOfImage: kcorp_alderiate
   listOfTags: 02000000
   rarity: 0
-  propertie: {fileID: 11400000, guid: e5e73e4610156ef45b86f9b3a71103be, type: 2}
+  properties: {fileID: 11400000, guid: e5e73e4610156ef45b86f9b3a71103be, type: 2}

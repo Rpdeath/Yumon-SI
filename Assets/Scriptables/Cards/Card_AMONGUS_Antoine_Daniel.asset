@@ -17,4 +17,4 @@ MonoBehaviour:
   pathOfImage: amongus_antoinedaniel
   listOfTags: 03000000
   rarity: 2
-  propertie: {fileID: 11400000, guid: 0554c293645150449bd337476e99788c, type: 2}
+  properties: {fileID: 11400000, guid: 0554c293645150449bd337476e99788c, type: 2}

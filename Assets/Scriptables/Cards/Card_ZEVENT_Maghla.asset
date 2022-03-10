@@ -17,4 +17,4 @@ MonoBehaviour:
   pathOfImage: zevent_maghla
   listOfTags: 04000000
   rarity: 1
-  propertie: {fileID: 11400000, guid: 28a72177c1d82f8448688c17deacbe32, type: 2}
+  properties: {fileID: 11400000, guid: 28a72177c1d82f8448688c17deacbe32, type: 2}

@@ -17,4 +17,4 @@ MonoBehaviour:
   pathOfImage: zevent_boblennon
   listOfTags: 04000000
   rarity: 0
-  propertie: {fileID: 11400000, guid: 958f337bdf2b71645af7d473e923bcae, type: 2}
+  properties: {fileID: 11400000, guid: 958f337bdf2b71645af7d473e923bcae, type: 2}

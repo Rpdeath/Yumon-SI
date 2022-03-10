@@ -17,4 +17,4 @@ MonoBehaviour:
   pathOfImage: kcorp_kamet0
   listOfTags: 02000000
   rarity: 2
-  propertie: {fileID: 11400000, guid: 6ecabb7af74a7674b8496b0ff2e5437d, type: 2}
+  properties: {fileID: 11400000, guid: 6ecabb7af74a7674b8496b0ff2e5437d, type: 2}

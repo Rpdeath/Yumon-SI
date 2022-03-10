@@ -17,4 +17,4 @@ MonoBehaviour:
   pathOfImage: amongus_baghera
   listOfTags: 03000000
   rarity: 1
-  propertie: {fileID: 11400000, guid: 72d4d8c10ed6c334b8060ece1938f5d6, type: 2}
+  properties: {fileID: 11400000, guid: 72d4d8c10ed6c334b8060ece1938f5d6, type: 2}

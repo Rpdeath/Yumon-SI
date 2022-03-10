@@ -17,4 +17,4 @@ MonoBehaviour:
   pathOfImage: zevent_moman
   listOfTags: 04000000
   rarity: 2
-  propertie: {fileID: 11400000, guid: 458040733c483e64c9e7289dcec23fe4, type: 2}
+  properties: {fileID: 11400000, guid: 458040733c483e64c9e7289dcec23fe4, type: 2}

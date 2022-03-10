@@ -17,4 +17,4 @@ MonoBehaviour:
   pathOfImage: amongus_ponce
   listOfTags: 03000000
   rarity: 3
-  propertie: {fileID: 11400000, guid: 4aa4a982b6082dc45ba8c1afcd3f5b02, type: 2}
+  properties: {fileID: 11400000, guid: 4aa4a982b6082dc45ba8c1afcd3f5b02, type: 2}

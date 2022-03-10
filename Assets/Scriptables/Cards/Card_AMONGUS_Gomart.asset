@@ -17,4 +17,4 @@ MonoBehaviour:
   pathOfImage: amongus_gomart
   listOfTags: 03000000
   rarity: 2
-  propertie: {fileID: 11400000, guid: 54803298f4ef1c240b775081827abe70, type: 2}
+  properties: {fileID: 11400000, guid: 54803298f4ef1c240b775081827abe70, type: 2}

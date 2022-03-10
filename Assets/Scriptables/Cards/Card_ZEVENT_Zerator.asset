@@ -17,4 +17,4 @@ MonoBehaviour:
   pathOfImage: zevent_zerator
   listOfTags: 04000000
   rarity: 3
-  propertie: {fileID: 11400000, guid: a77eaa546b768164cbd17662c7d79e25, type: 2}
+  properties: {fileID: 11400000, guid: a77eaa546b768164cbd17662c7d79e25, type: 2}

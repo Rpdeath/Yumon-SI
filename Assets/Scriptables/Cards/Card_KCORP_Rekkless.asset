@@ -17,4 +17,4 @@ MonoBehaviour:
   pathOfImage: kcorp_rekkless
   listOfTags: 02000000
   rarity: 4
-  propertie: {fileID: 11400000, guid: 0fddf1989fe993a48bfcc248effc9d51, type: 2}
+  properties: {fileID: 11400000, guid: 0fddf1989fe993a48bfcc248effc9d51, type: 2}

@@ -17,4 +17,4 @@ MonoBehaviour:
   pathOfImage: amongus_jdg
   listOfTags: 03000000
   rarity: 0
-  propertie: {fileID: 11400000, guid: ea56b19d737cffa44ba16e9422bbd2dc, type: 2}
+  properties: {fileID: 11400000, guid: ea56b19d737cffa44ba16e9422bbd2dc, type: 2}
