@@ -1015,6 +1015,7 @@ MonoBehaviour:
   cooldownActif: 3
   actifCost: 1
   actifDuration: 3
+  userController: 1
   actualActifDuration: 0
   actualCooldown: 0
   actifIsRunning: 0

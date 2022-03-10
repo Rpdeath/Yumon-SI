@@ -19,7 +19,6 @@ public class StarzActifSysteme : MonoBehaviour
     public ActifButtonUi selfActifUi;
 
     [HideInInspector] public bool UsedByPlayer = true;
-    public string actifId;
 
     [HideInInspector] public float cooldownActif;
     [HideInInspector] public int actifCost;
@@ -32,7 +31,7 @@ public class StarzActifSysteme : MonoBehaviour
     [HideInInspector] public bool actifIsRunning;
     [HideInInspector] public bool coolDownIsRunning;
 
-    private Card selfCard;
+    [HideInInspector] public Card selfCard;
     #endregion
 
     private void Start()
@@ -129,6 +128,7 @@ public class StarzActifSysteme : MonoBehaviour
                 {
                     cooldownActif = 0f;
                 }
+                GameInstance.instance.gameManager.lEffect.Remove(effect);
             }
         }
     }
@@ -186,6 +186,12 @@ public class StarzActifSysteme : MonoBehaviour
                 break;
             case "kcorp_kotei":
                 kcorp_kotei();
+                break;
+            case "zevent_zerator":
+                zevent_zerator();
+                break;
+            case "zevent_moman":
+                zevent_moman();
                 break;
             default:
                 break;
@@ -255,6 +261,21 @@ public class StarzActifSysteme : MonoBehaviour
         effect.name = "HypeConvertor";
         AssUserEffect(effect, 5f, true);
     }
+    private void zevent_zerator()
+    {
+        GameInstance.instance.AddScore(1, GameInstance.instance.actualGameInfo.manaPlayer1 * 15);
+        GameInstance.instance.actualGameInfo.manaPlayer1 = 0;
+    }
+
+    private void zevent_moman()
+    {
+        EffectOnUser effect = new EffectOnUser();
+        effect.name = "MomanBoost";
+        effect.floatBuff = 1.15f;
+        AssUserEffect(effect, 6, true);
+    }
+
+
 
     private void AssUserEffect(EffectOnUser effect,float time, bool User)
     {

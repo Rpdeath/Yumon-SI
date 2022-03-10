@@ -6,9 +6,6 @@ using UnityEngine.UI;
 public class HypeGenerator : MonoBehaviour, IClickable
 {
     #region Variable
-
-    
-
     [Header("Player 1 Colors")]
     public Color loadingColor;
     public Color harvestReadyColor;
@@ -24,10 +21,10 @@ public class HypeGenerator : MonoBehaviour, IClickable
     public Image generatorFill;
 
     [HideInInspector] public int maxFill;
-    private int startMaxFill;
     [HideInInspector] public float timeToCompletion;
     [HideInInspector] public float boost;
     [HideInInspector] public bool UsedByPlayer = true;
+    private int startMaxFill;
 
 
 
@@ -37,11 +34,14 @@ public class HypeGenerator : MonoBehaviour, IClickable
     private User userData;
     private Deck_Place_Manager place;
 
+    [HideInInspector]public Card selfCard;
+
     #endregion
 
     private void Start()
     {
         userData = GameInstance.instance.userData;
+        selfCard = gameObject.GetComponent<Card>();
 
         InitGenerator();
 
@@ -49,7 +49,7 @@ public class HypeGenerator : MonoBehaviour, IClickable
         {
             if (effect.name == "BuffNextStarz")
             {
-                StartCoroutine(SartAdleriateBuff(10f));
+                StartCoroutine(StartAdleriateBuff(10f));
             }
         }
     }
@@ -115,6 +115,17 @@ public class HypeGenerator : MonoBehaviour, IClickable
                 }
                 else
                 {
+                    foreach (EffectOnUser effectT in GameInstance.instance.gameManager.lEffect)
+                    {
+                        if (effectT.name == "MomanBoost")
+                        {
+                            if (selfCard.propertie.passivId == "zevent")
+                            {
+                                // Ajouter le score à l'instance avec le buff de 15%
+                            }
+                        }
+                    }
+
                     GameObject obj = Instantiate(particuleOnHarvest, transform.position, transform.rotation);
                     obj.GetComponent<HypeParticule>().GiveDestination(userData.users_id);
                     GameInstance.instance.AddScore(userData.users_id, maxFill);
@@ -133,7 +144,7 @@ public class HypeGenerator : MonoBehaviour, IClickable
     }
 
 
-    IEnumerator SartAdleriateBuff(float time)
+    IEnumerator StartAdleriateBuff(float time)
     {
         maxFill = maxFill * 2;
         yield return new WaitForSeconds(time);
