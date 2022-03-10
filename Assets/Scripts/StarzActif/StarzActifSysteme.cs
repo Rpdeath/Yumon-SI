@@ -300,7 +300,7 @@ public class StarzActifSysteme : MonoBehaviour
     {
         EffectOnUser effect = new EffectOnUser();
         effect.name = "ManaProduction";
-        effect.floatBuff = 2;
+        effect.floatBuff = 0.5f;
 
         AssUserEffect(effect, 7, true);
     }
@@ -315,7 +315,7 @@ public class StarzActifSysteme : MonoBehaviour
     {
         EffectOnUser effect = new EffectOnUser();
         effect.name = "BuffNextStarz";
-        effect.floatBuff = 2;
+        effect.floatBuff = 1;
         AssUserEffect(effect, 59f, true);
     }
     private void kcorp_kotei()
@@ -363,6 +363,9 @@ public class StarzActifSysteme : MonoBehaviour
         {      
             StartCoroutine(RemoveUserEffect(effect, time, User));
         }
+
+        Debug.Log(GameInstance.instance.gameManager.lEffect.Count);
+
     }
 
     IEnumerator RemoveUserEffect(EffectOnUser effect, float time, bool User)
