@@ -410,6 +410,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1568998578}
     m_Modifications:
+    - target: {fileID: 3434864473073726720, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
+      propertyPath: y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4928275398251277116, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -458,6 +462,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Starz_Plateform (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4928275398251277117, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
+      propertyPath: m_TagString
+      value: ColumnAlly
+      objectReference: {fileID: 0}
     - target: {fileID: 4928275398950291539, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.17364825
@@ -504,6 +512,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1568998578}
     m_Modifications:
+    - target: {fileID: 3434864473073726720, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
+      propertyPath: x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4928275398251277116, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -551,6 +563,10 @@ PrefabInstance:
     - target: {fileID: 4928275398251277117, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
       propertyPath: m_Name
       value: Starz_Plateform (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928275398251277117, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
+      propertyPath: m_TagString
+      value: ColumnAlly
       objectReference: {fileID: 0}
     - target: {fileID: 4928275398950291539, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -645,6 +661,10 @@ PrefabInstance:
     - target: {fileID: 4928275398251277117, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
       propertyPath: m_Name
       value: Starz_Plateform (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928275398251277117, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
+      propertyPath: m_TagString
+      value: ColumnAlly
       objectReference: {fileID: 0}
     - target: {fileID: 4928275398950291539, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -836,6 +856,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1568998578}
     m_Modifications:
+    - target: {fileID: 3434864473073726720, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
+      propertyPath: x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434864473073726720, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
+      propertyPath: y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4928275398251277116, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -884,6 +912,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Starz_Plateform (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4928275398251277117, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
+      propertyPath: m_TagString
+      value: ColumnAlly
+      objectReference: {fileID: 0}
     - target: {fileID: 4928275398950291539, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.17364825
@@ -930,6 +962,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1568998578}
     m_Modifications:
+    - target: {fileID: 3434864473073726720, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
+      propertyPath: x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434864473073726720, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
+      propertyPath: y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4928275398251277116, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -977,6 +1017,10 @@ PrefabInstance:
     - target: {fileID: 4928275398251277117, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
       propertyPath: m_Name
       value: Starz_Plateform (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928275398251277117, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
+      propertyPath: m_TagString
+      value: ColumnAlly
       objectReference: {fileID: 0}
     - target: {fileID: 4928275398950291539, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3861,6 +3905,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1568998578}
     m_Modifications:
+    - target: {fileID: 3434864473073726720, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
+      propertyPath: x
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4928275398251277116, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -3908,6 +3956,10 @@ PrefabInstance:
     - target: {fileID: 4928275398251277117, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
       propertyPath: m_Name
       value: Starz_Plateform (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928275398251277117, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
+      propertyPath: m_TagString
+      value: ColumnAlly
       objectReference: {fileID: 0}
     - target: {fileID: 4928275398950291539, guid: d96a5b292b75f54488f02813c36dd0e9, type: 3}
       propertyPath: m_LocalRotation.w

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class HypeGenerator : MonoBehaviour, IClickable
 {
@@ -95,12 +96,43 @@ public class HypeGenerator : MonoBehaviour, IClickable
     }
     public void ResetGenerator(bool User)
     {
+        int scoreToAdd = maxFill;
+        foreach(EffectOnUser effect in GameInstance.instance.gameManager.lEffect)
+        {
+            if(effect.name == "HypeProductionSameLine")
+            {
+                int line = 0;
+                foreach(GameObject gobj in GameInstance.instance.gameManager.columns)
+                {
+                    if(gobj.GetComponentInChildren<StarzData>().data.pathOfImage == effect.stringBuff)
+                    {
+                        line = gobj.GetComponent<ColumnPosition>().x;
+                    }
+                }
+                if(GameInstance.instance.gameManager.columns[line * 3 + 0].GetComponent<DropStarz>().actualStarz.GetComponentInChildren<StarzData>().data.id == GetComponent<StarzData>().data.id)
+                {
+                    scoreToAdd = (int)(scoreToAdd * (1 + effect.floatBuff));
+                }
+                if (GameInstance.instance.gameManager.columns[line * 3 + 1].GetComponent<DropStarz>().actualStarz.GetComponentInChildren<StarzData>().data.id == GetComponent<StarzData>().data.id)
+                {
+                    scoreToAdd = (int)(scoreToAdd * (1 + effect.floatBuff));
+                }
+                if (GameInstance.instance.gameManager.columns[line * 3 + 2].GetComponent<DropStarz>().actualStarz.GetComponentInChildren<StarzData>().data.id == GetComponent<StarzData>().data.id)
+                {
+                    scoreToAdd = (int)(scoreToAdd * (1 + effect.floatBuff));
+                }
+
+
+            }
+        }
         if (User)
         {
+
             GameInstance.instance.AddScore(userData.users_id, maxFill);
         }
         else
         {
+
             GameInstance.instance.AddScore(GameInstance.instance.userDataEnemy.users_id, maxFill);
         }
             actualTime = 0;

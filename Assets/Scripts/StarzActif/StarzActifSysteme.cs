@@ -8,6 +8,7 @@ public class EffectOnUser
     public string stringBuff;
     public float floatBuff;
     public int intBuff;
+    
 }
 
 
@@ -148,9 +149,43 @@ public class StarzActifSysteme : MonoBehaviour
             case "amongus_baghera":
                 amongus_baghera();
                 break;
+            case "amongus_jdg":
+                amongus_jdg();
+                break;
+            case "amongus_antoinedaniel":
+                amongus_antoinedaniel();
+                break;
+            case "zevent_maghla":
+                zevent_maghla();
+                break;
             default:
                 break;
         }
+    }
+    private void zevent_maghla()
+    {
+        EffectOnUser effect = new EffectOnUser();
+        effect.name = "HypeProductionSameLine";
+        effect.stringBuff = "zevent_maghla";
+        effect.floatBuff = 0.5f;
+        AssUserEffect(effect, 5, false);
+    }
+    private void amongus_antoinedaniel()
+    {
+        EffectOnUser effect = new EffectOnUser();
+        effect.name = "StealHypeProduction";
+        effect.stringBuff = "All";
+        effect.floatBuff = 0.2f;
+        AssUserEffect(effect, 5, false);
+    }
+
+    private void amongus_jdg()
+    {
+        EffectOnUser effect = new EffectOnUser();
+        effect.name = "HypeProduction";
+        effect.stringBuff = "All";
+        effect.floatBuff = 0.5f;
+        AssUserEffect(effect, 5, false);
     }
 
     private void amongus_baghera()
@@ -201,7 +236,10 @@ public class StarzActifSysteme : MonoBehaviour
             GameInstance.instance.gameManager.lEffectEnnemy.Add(effect);
 
         }
-        StartCoroutine(RemoveUserEffect(effect, time,User));
+        if (time != 0)
+        {
+            StartCoroutine(RemoveUserEffect(effect, time, User));
+        }
     }
 
     IEnumerator RemoveUserEffect(EffectOnUser effect, float time, bool User)

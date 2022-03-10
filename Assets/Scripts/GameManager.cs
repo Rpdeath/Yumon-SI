@@ -59,11 +59,19 @@ public class GameManager : MonoBehaviour
 
     public List<EffectOnUser> lEffect = new List<EffectOnUser>();
     public List<EffectOnUser> lEffectEnnemy = new List<EffectOnUser>();
-
+    public GameObject[] columns;
 
     #endregion
 
-
+    private void Start()
+    {
+        columns = new GameObject[6];
+        foreach (GameObject columnItem in GameObject.FindGameObjectsWithTag("ColumnAlly"))
+        {
+            ColumnPosition columnPos = columnItem.GetComponent<ColumnPosition>();
+            columns[columnPos.x + (columnPos.y * 3)] = columnItem;
+        }
+    }
 
     public void AddStarzToPosition(int pos)
     {
