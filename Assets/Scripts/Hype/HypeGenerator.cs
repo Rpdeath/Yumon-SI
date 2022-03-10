@@ -87,8 +87,15 @@ public class HypeGenerator : MonoBehaviour, IClickable
 
     public void OnClick()
     {
-        
-        if (isReadyToHarvest)
+        bool canActif = true;
+        foreach (EffectOnUser effect in GameInstance.instance.gameManager.lEffect)
+        {
+            if (effect.name == "PreventHype")
+            {
+                canActif = false;
+            }
+        }
+        if (isReadyToHarvest && canActif)
         {
             if (!UsedByPlayer)
             {

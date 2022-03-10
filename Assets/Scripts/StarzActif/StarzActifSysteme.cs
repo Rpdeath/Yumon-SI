@@ -69,7 +69,15 @@ public class StarzActifSysteme : MonoBehaviour
 
     public void StartActifEffect(string id)
     {
-        if (!coolDownIsRunning && !actifIsRunning && GameInstance.instance.actualGameInfo.manaPlayer1 >= actifCost)
+        bool canActif = true;
+        foreach (EffectOnUser effect in GameInstance.instance.gameManager.lEffect)
+        {
+            if (effect.name == "PreventActif")
+            {
+                canActif=false,
+            }
+        }
+                if (canActif && !coolDownIsRunning && !actifIsRunning && GameInstance.instance.actualGameInfo.manaPlayer1 >= actifCost)
         {
             actifIsRunning = true;
 
