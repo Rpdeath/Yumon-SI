@@ -69,7 +69,7 @@ public class ActifButtonUi : MonoBehaviour, IClickable
     {
         if (selfStarzActif != null)
         {
-            selfStarzActif.StartActifEffect(selfStarzActif.selfCard.propertie.actifId);
+            selfStarzActif.StartActifEffect(selfStarzActif.selfCard.properties.actifId);
         }
     }
 

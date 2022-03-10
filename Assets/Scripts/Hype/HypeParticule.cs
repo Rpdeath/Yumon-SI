@@ -21,7 +21,6 @@ public class HypeParticule : MonoBehaviour
 
 
     public ParticleSystem main;
-    public ParticleSystem child;
 
 
     private void Update()

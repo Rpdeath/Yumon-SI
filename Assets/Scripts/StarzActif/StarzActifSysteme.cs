@@ -63,8 +63,8 @@ public class StarzActifSysteme : MonoBehaviour
     {
         selfCard = GetComponent<StarzData>().data;
 
-        actifDuration = selfCard.propertie.actifDuration;
-        cooldownActif = selfCard.propertie.cooldown;
+        actifDuration = selfCard.properties.actifDuration;
+        cooldownActif = selfCard.properties.cooldown;
     }
 
     public void StartActifEffect(string id)
