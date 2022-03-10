@@ -39,7 +39,7 @@ public class StarzActifSysteme : MonoBehaviour
 
     private void Start()
     {
-        Init();
+       StartCoroutine(Init());
 
         if (UsedByPlayer)
         {
@@ -61,9 +61,10 @@ public class StarzActifSysteme : MonoBehaviour
     }
     
 
-    private void Init()
+    IEnumerator Init()
     {
-        selfCard = GetComponent<StarzData>().data;
+        yield return new WaitForEndOfFrame();
+        Debug.Log(selfCard.properties);
 
         actifDuration = selfCard.properties.actifDuration;
         cooldownActif = selfCard.properties.cooldown;
