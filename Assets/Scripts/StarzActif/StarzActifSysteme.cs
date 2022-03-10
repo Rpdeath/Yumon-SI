@@ -145,21 +145,17 @@ public class StarzActifSysteme : MonoBehaviour
 
     private void DragDownUi()
     {
-        Debug.Log("je monte");
         selfActifUi.animator.SetTrigger("DragDown");
 
-        //StartCoroutine(AnimMoveUi(selfActifUi.effectSquareObj, selfActifUi.squareEffectDownPos, 3f));
-
-        //StartCoroutine(AnimMoveUi(selfActifUi.sliderObj, selfActifUi.sliderDownPos, 3f));
+        /*StartCoroutine(AnimMoveUi(selfActifUi.effectSquareObj, selfActifUi.squareEffectDownPos, 3f));
+        StartCoroutine(AnimMoveUi(selfActifUi.sliderObj, selfActifUi.sliderDownPos, 3f));*/
     }
 
     private void DragUpUi()
     {
-        Debug.Log("je monte");
         selfActifUi.animator.SetTrigger("DragUp");
-        //StartCoroutine(AnimMoveUi(selfActifUi.effectSquareObj, selfActifUi.coolDownActifImage.gameObject.transform, 2f));
-
-        //StartCoroutine(AnimMoveUi(selfActifUi.sliderObj, selfActifUi.coolDownActifImage.gameObject.transform, 2f));
+        /*StartCoroutine(AnimMoveUi(selfActifUi.effectSquareObj, selfActifUi.coolDownActifImage.gameObject.transform, 2f));
+        StartCoroutine(AnimMoveUi(selfActifUi.sliderObj, selfActifUi.coolDownActifImage.gameObject.transform, 2f));*/
     }
 
     IEnumerator AnimMoveUi(GameObject objToMove ,Transform newPos, float speed)
