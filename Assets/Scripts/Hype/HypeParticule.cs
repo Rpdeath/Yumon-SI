@@ -16,7 +16,7 @@ public class HypeParticule : MonoBehaviour
     {
 
 
-        currentHandle=GameInstance.instance.actualGameInfo.handle1;
+        //currentHandle=GameInstance.instance.actualGameInfo.handle1;
     }
 
 
