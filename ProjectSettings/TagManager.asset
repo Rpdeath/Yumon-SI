@@ -9,6 +9,7 @@ TagManager:
   - Handle1
   - Handle2
   - ColumnOponent
+  - ManaBar
   layers:
   - Default
   - TransparentFX

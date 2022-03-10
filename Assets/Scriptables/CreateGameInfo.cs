@@ -13,6 +13,7 @@ public class CreateGameInfo : ScriptableObject
 
     public Image handle1;
     public Image handle2;
+    public GameObject manaBar;
 
 
     public int scorePlayer1;

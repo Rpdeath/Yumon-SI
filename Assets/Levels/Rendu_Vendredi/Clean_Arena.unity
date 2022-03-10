@@ -755,6 +755,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GlobalManaBar
       objectReference: {fileID: 0}
+    - target: {fileID: 3788025957968650303, guid: a996b80ba9b085b4e9923f69c68e7104, type: 3}
+      propertyPath: m_TagString
+      value: ManaBar
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a996b80ba9b085b4e9923f69c68e7104, type: 3}
 --- !u!224 &230632136 stripped
@@ -2595,6 +2599,7 @@ MonoBehaviour:
   assetRef: {fileID: 0}
   ScriptRef: {fileID: 0}
   gameManager: {fileID: 885048581}
+  oponentManager: {fileID: 0}
 --- !u!1 &1414261208
 GameObject:
   m_ObjectHideFlags: 0
@@ -3804,7 +3809,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0

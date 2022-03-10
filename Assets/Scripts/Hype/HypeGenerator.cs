@@ -24,6 +24,7 @@ public class HypeGenerator : MonoBehaviour, IClickable
     public Image generatorFill;
 
     [HideInInspector] public int maxFill;
+    private int startMaxFill;
     [HideInInspector] public float timeToCompletion;
     [HideInInspector] public float boost;
     [HideInInspector] public bool UsedByPlayer = true;
@@ -43,6 +44,14 @@ public class HypeGenerator : MonoBehaviour, IClickable
         userData = GameInstance.instance.userData;
 
         InitGenerator();
+
+        foreach (EffectOnUser effect in GameInstance.instance.gameManager.lEffect)
+        {
+            if (effect.name == "BuffNextStarz")
+            {
+                StartCoroutine(SartAdleriateBuff(10f));
+            }
+        }
     }
 
     public void Update()
@@ -56,6 +65,7 @@ public class HypeGenerator : MonoBehaviour, IClickable
     public void InitGenerator()
     {
         actualTime = 0;
+        startMaxFill = maxFill;
         generatorFill.color = loadingColor;
     }
     public void StartGeneratingHype()
@@ -82,9 +92,6 @@ public class HypeGenerator : MonoBehaviour, IClickable
             if (!UsedByPlayer)
             {
                 ResetGenerator(false);
-                GameObject obj = Instantiate(particuleOnHarvest, transform.position, transform.rotation);
-                obj.GetComponent<HypeParticule>().currentHandle = GameInstance.instance.actualGameInfo.handle2;
-
             }
             else
             {
@@ -97,7 +104,22 @@ public class HypeGenerator : MonoBehaviour, IClickable
     {
         if (User)
         {
-            GameInstance.instance.AddScore(userData.users_id, maxFill);
+            foreach (EffectOnUser effect in GameInstance.instance.gameManager.lEffect)
+            {
+                if (effect.name == "HypeConvertor")
+                {
+                    GameInstance.instance.actualGameInfo.manaPlayer1 += 1;
+
+                    GameObject obj = Instantiate(particuleOnHarvest, transform.position, transform.rotation);
+                    obj.GetComponent<HypeParticule>().GiveDestination(3);
+                }
+                else
+                {
+                    GameObject obj = Instantiate(particuleOnHarvest, transform.position, transform.rotation);
+                    obj.GetComponent<HypeParticule>().GiveDestination(userData.users_id);
+                    GameInstance.instance.AddScore(userData.users_id, maxFill);
+                }
+            }
         }
         else
         {
@@ -108,5 +130,13 @@ public class HypeGenerator : MonoBehaviour, IClickable
 
             generatorFill.color = loadingColor;
         
+    }
+
+
+    IEnumerator SartAdleriateBuff(float time)
+    {
+        maxFill = maxFill * 2;
+        yield return new WaitForSeconds(time);
+        maxFill = startMaxFill;
     }
 }
