@@ -124,16 +124,24 @@ public class HypeGenerator : MonoBehaviour, IClickable
 
 
             }
+
+            if(effect.name == "HypeProduction")
+            {
+                if(effect.stringBuff == "All")
+                {
+                    scoreToAdd = (int)(scoreToAdd * (1 + effect.floatBuff));
+                }
+            }
         }
         if (User)
         {
 
-            GameInstance.instance.AddScore(userData.users_id, maxFill);
+            GameInstance.instance.AddScore(userData.users_id, scoreToAdd);
         }
         else
         {
 
-            GameInstance.instance.AddScore(GameInstance.instance.userDataEnemy.users_id, maxFill);
+            GameInstance.instance.AddScore(GameInstance.instance.userDataEnemy.users_id, scoreToAdd);
         }
             actualTime = 0;
             isReadyToHarvest = false;
