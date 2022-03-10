@@ -110,6 +110,7 @@ MonoBehaviour:
   actifIsRunning: 0
   coolDownIsRunning: 0
   selfCard: {fileID: 0}
+  animator: {fileID: 1859425960879969661}
 --- !u!1 &1543918154603860445
 GameObject:
   m_ObjectHideFlags: 0
@@ -669,6 +670,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!95 &1859425960879969661
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6268512967970053311}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f747cac17609fe449b018c17672594dd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8192601868055123002
 GameObject:
   m_ObjectHideFlags: 0
@@ -1033,6 +1053,18 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9909f714a875ca244a7dc0de15624016, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9909f714a875ca244a7dc0de15624016, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9909f714a875ca244a7dc0de15624016, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9909f714a875ca244a7dc0de15624016, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1089,5 +1121,10 @@ PrefabInstance:
 --- !u!4 &6752562673398351365 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9909f714a875ca244a7dc0de15624016, type: 3}
+  m_PrefabInstance: {fileID: 6503007117891723758}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6268512967970053311 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9909f714a875ca244a7dc0de15624016, type: 3}
   m_PrefabInstance: {fileID: 6503007117891723758}
   m_PrefabAsset: {fileID: 0}

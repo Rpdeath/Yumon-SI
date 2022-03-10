@@ -1021,6 +1021,7 @@ MonoBehaviour:
   actifIsRunning: 0
   coolDownIsRunning: 0
   selfCard: {fileID: 0}
+  animator: {fileID: 4015066619985978207}
 --- !u!1001 &3081087305610367966
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1028,6 +1029,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7835938397861760840}
     m_Modifications:
+    - target: {fileID: 2124108331258081409, guid: 627382e5d26aef2479e5789f80ba0d01, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 06b83978bcd827648a1352a03d419d24, type: 2}
     - target: {fileID: 3573462068014339391, guid: 627382e5d26aef2479e5789f80ba0d01, type: 3}
       propertyPath: m_Name
       value: Bob_Lennon
@@ -1078,6 +1083,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 627382e5d26aef2479e5789f80ba0d01, type: 3}
+--- !u!95 &4015066619985978207 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2124108331258081409, guid: 627382e5d26aef2479e5789f80ba0d01, type: 3}
+  m_PrefabInstance: {fileID: 3081087305610367966}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1161529483434171483 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4241454605250301829, guid: 627382e5d26aef2479e5789f80ba0d01, type: 3}
