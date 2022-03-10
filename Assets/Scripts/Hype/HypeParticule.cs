@@ -9,7 +9,19 @@ public class HypeParticule : MonoBehaviour
 
     private Vector3 actualHandlePos;
     private Vector3 worldPos;
-    [HideInInspector]public Image currentHandle;
+
+    public Image currentHandle;
+
+    private void Awake()
+    {
+
+
+        currentHandle=GameInstance.instance.actualGameInfo.handle1;
+    }
+
+
+    public ParticleSystem main;
+    public ParticleSystem child;
 
 
     private void Update()

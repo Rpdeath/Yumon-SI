@@ -118,7 +118,7 @@ Material:
     - MaxDistance: 0.3
     - MinDistance: 10
     - NormalsSensitivity: 1
-    - OutlineThickness: 2.32
+    - OutlineThickness: 0
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
