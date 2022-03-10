@@ -19,3 +19,5 @@ MonoBehaviour:
   actif_cost: 2
   cooldown: 40
   actifId: zevent_maghla
+  passifRule: "G\xE9n\xE8re la Hype 8% plus vite pour chaque Starz ZEvent en jeu"
+  actifRule: "Cette ligne g\xE9n\xE8re 50% de Hype en plus pendant 5s."

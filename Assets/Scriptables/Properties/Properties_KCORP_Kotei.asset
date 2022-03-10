@@ -19,3 +19,6 @@ MonoBehaviour:
   actif_cost: 2
   cooldown: 30
   actifId: kcorp_kotei
+  passifRule: "Si Rekkless est sur le terrain double la g\xE9n\xE9ration de Hype
+    des autres Starz KCorp"
+  actifRule: "Transforme la Hype g\xE9n\xE9r\xE9e en Mana pendant 5s."

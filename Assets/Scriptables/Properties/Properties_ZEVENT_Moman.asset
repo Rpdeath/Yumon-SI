@@ -19,3 +19,5 @@ MonoBehaviour:
   actif_cost: 4
   cooldown: 40
   actifId: zevent_moman
+  passifRule: "G\xE9n\xE8re la Hype 8% plus vite pour chaque Starz ZEvent en jeu"
+  actifRule: Boost la production de Hype des Starz ZEvent de 15% pendant 6s.

@@ -19,3 +19,6 @@ MonoBehaviour:
   actif_cost: 4
   cooldown: 40
   actifId: zevent_ultia
+  passifRule: "G\xE9n\xE8re la Hype 8% plus vite pour chaque Starz ZEvent en jeu"
+  actifRule: "Les Starz en frontline ne peuvent pas subir d'effets n\xE9gatifs pendant
+    10s."

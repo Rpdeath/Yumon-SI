@@ -13,4 +13,14 @@ MonoBehaviour:
   m_Name: Deck_Test
   m_EditorClassIdentifier: 
   deck_id: 0
-  listOfCard: []
+  listOfCard:
+  - {fileID: 11400000, guid: 6c5e93eaf2cb96c40a3e8e96e25d0017, type: 2}
+  - {fileID: 11400000, guid: b50f59b4b500987429cecd77b2406876, type: 2}
+  - {fileID: 11400000, guid: 2b51a9b847c6f1c4c8a5ec70992a3f17, type: 2}
+  - {fileID: 11400000, guid: 753009303d5a4704f832774671965fbd, type: 2}
+  - {fileID: 11400000, guid: 38a375c6afa2c28459e1e5910f8cc480, type: 2}
+  - {fileID: 11400000, guid: 937a5f6ce1153604d9d0e836c8b1d73a, type: 2}
+  - {fileID: 11400000, guid: 4b51ec22c01e2244d901a6c5cfe268e8, type: 2}
+  - {fileID: 11400000, guid: c7f84fa17c4d79d48a04f5a0d3c00149, type: 2}
+  - {fileID: 11400000, guid: 3c2140ee22f699c40b3fe9ebffc064ef, type: 2}
+  - {fileID: 11400000, guid: 35b1f56dc9d343a4baa23f7e7290dbc6, type: 2}

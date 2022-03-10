@@ -14,4 +14,7 @@ public class Properties : ScriptableObject
     public int cooldown = 0;
     public string actifId = "none";
 
+    public string passifRule = "none";
+    public string actifRule = "none";
+
 }

@@ -19,3 +19,6 @@ MonoBehaviour:
   actif_cost: 2
   cooldown: 40
   actifId: amongus_antoinedaniel
+  passifRule: "Gagne 10% de g\xE9n\xE9ration de hype pour chaque effets n\xE9gatifs
+    chez l'ennemi"
+  actifRule: Vole 20% de la productin de Hype de la ligne en face pendant 3s.

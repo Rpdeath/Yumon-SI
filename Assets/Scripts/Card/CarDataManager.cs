@@ -54,7 +54,7 @@ public class CarDataManager : MonoBehaviour
     {
         Image image = portrait;
         //Sprite sp = Resources.Load<Sprite>(CardData.pathOfImage);
-        if(assetref.AssetList_id.IndexOf(CardData.pathOfImage)!=-1) image.sprite = assetref.AssetList_sprite[assetref.AssetList_id.IndexOf(CardData.pathOfImage)] as Sprite;
+        if(assetref.AssetList_id.IndexOf(CardData.pathOfImage)!=-1) image.sprite = assetref.AssetList_sprite[assetref.AssetList_id.IndexOf(CardData.pathOfImage)] as Sprite;        
 
         switch (CardData.rarity)
         {
@@ -73,20 +73,12 @@ public class CarDataManager : MonoBehaviour
             case Rarity.Unique:
                 listSprite = uniqueRef.AssetList_sprite;
                 break;
-        }
+        }        
 
-        frame.sprite = listSprite[0];
-        tagFrame.sprite = listSprite[1];
-        passifFrame.sprite = listSprite[2];
-        actifFrame.sprite = listSprite[3];
-        stroke.sprite = listSprite[4];
-        target.sprite = listSprite[5];
-        nameFrame.sprite = listSprite[6];
-        powerFrame.sprite = listSprite[7];
-        powerHype.sprite = listSprite[8];
-        powerSpeed.sprite = listSprite[9];
-
+        ApplySprites();
+        ApplyProperties();
     }
+
     public void UpdateCArd()
     {
         Image image = portrait;
@@ -112,6 +104,24 @@ public class CarDataManager : MonoBehaviour
                 break;
         }
 
+        ApplySprites();
+        ApplyProperties();
+    }
+
+    public void ApplyProperties()
+    {
+        cardCost.text = CardData.propertie.cost.ToString();
+        hypeText.text = CardData.propertie.hype.ToString();
+        speedText.text = CardData.propertie.speed.ToString();
+        actifCost.text = CardData.propertie.actif_cost.ToString();
+        nameText.text = CardData.name;
+        tagText.text = CardData.listOfTags[0].ToString();
+        passifText.text = CardData.propertie.passifRule;
+        actifText.text = CardData.propertie.actifRule;
+    }
+
+    public void ApplySprites()
+    {
         frame.sprite = listSprite[0];
         tagFrame.sprite = listSprite[1];
         passifFrame.sprite = listSprite[2];
@@ -122,12 +132,6 @@ public class CarDataManager : MonoBehaviour
         powerFrame.sprite = listSprite[7];
         powerHype.sprite = listSprite[8];
         powerSpeed.sprite = listSprite[9];
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
    

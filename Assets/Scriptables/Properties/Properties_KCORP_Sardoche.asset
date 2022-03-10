@@ -19,3 +19,6 @@ MonoBehaviour:
   actif_cost: 6
   cooldown: 60
   actifId: kcorp_rekkless
+  passifRule: "Si Rekkless est sur le terrain double la g\xE9n\xE9ration de Hype
+    des autres Starz KCorp"
+  actifRule: "R\xE9duit le cooldown de tous les actifs en court de 3s."
