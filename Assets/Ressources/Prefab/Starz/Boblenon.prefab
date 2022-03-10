@@ -968,6 +968,7 @@ MonoBehaviour:
   boost: 1
   UsedByPlayer: 1
   isReadyToHarvest: 0
+  selfCard: {fileID: 0}
 --- !u!114 &3154374412450651659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1011,7 +1012,6 @@ MonoBehaviour:
   hypeScript: {fileID: 4061153235685021126}
   selfActifUi: {fileID: 0}
   UsedByPlayer: 1
-  actifId: 1
   cooldownActif: 3
   actifCost: 1
   actifDuration: 3
@@ -1020,6 +1020,7 @@ MonoBehaviour:
   actualCooldown: 0
   actifIsRunning: 0
   coolDownIsRunning: 0
+  selfCard: {fileID: 0}
 --- !u!1001 &3081087305610367966
 PrefabInstance:
   m_ObjectHideFlags: 0
