@@ -79,16 +79,19 @@ public class OponentManager : MonoBehaviour
         }
         if (canLaunchCard)
         {
+            bool cardplaced = false;
             foreach (Card card in cardInHand)
             {
-                if (mana >= card.propertie.cost)
+
+                if (mana >= card.propertie.cost && !cardplaced)
                 {
                     foreach (GameObject colu in columns)
                     {
-                        if (colu.GetComponentInChildren<DropStarz>().actualStarz == null)
+                        if (colu.GetComponentInChildren<DropStarz>().actualStarz == null && !cardplaced)
                         {
                             DropCardOnColumn(colu.GetComponent<ColumnPosition>().x, colu.GetComponent<ColumnPosition>().y, card);
                             mana -= card.propertie.cost;
+                            cardplaced = true;
                             break;
                         }
                     }
