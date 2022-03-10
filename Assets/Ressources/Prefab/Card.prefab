@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -54, y: -2.0000076}
+  m_AnchoredPosition: {x: -54, y: -2}
   m_SizeDelta: {x: 245, y: 98}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1231549933722689785
@@ -93,7 +93,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &10218905606369343
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2297,6 +2297,46 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CardData: {fileID: 11400000, guid: b912578ff69bdae428a0674c003991a8, type: 2}
   assetref: {fileID: 11400000, guid: b1fc1bc0c07dc464795ddfef67f21762, type: 2}
+  commonRef: {fileID: 11400000, guid: aebb611846e5e974eaf7403e2005e551, type: 2}
+  limitedRef: {fileID: 11400000, guid: 97968684b12fe234885498ea57a31c08, type: 2}
+  rareRef: {fileID: 11400000, guid: 5ac0ba42b5be07a48a66077ba6e357d4, type: 2}
+  epicRef: {fileID: 11400000, guid: 6fd9b259701efd4448b00197830513fc, type: 2}
+  uniqueRef: {fileID: 11400000, guid: d5dbf1828e492654b9e30f7e9bbbb02f, type: 2}
+  listSprite:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  listText: []
+  portrait: {fileID: 5066591961821440547}
+  frame: {fileID: 3479923186458393474}
+  tagFrame: {fileID: 2501749312952620255}
+  tagText: {fileID: 5133709060841147118}
+  passifFrame: {fileID: 2892980696546231108}
+  passifText: {fileID: 8298725865934665485}
+  actifFrame: {fileID: 871168926062095886}
+  actifText: {fileID: 6247789420929046001}
+  actifCost: {fileID: 1494227246819236318}
+  stroke: {fileID: 4159529121500357028}
+  target: {fileID: 3747985929931081881}
+  allyTargetTOP: {fileID: 347357470075526916}
+  allyTargetDOWN: {fileID: 3196153088751695518}
+  enemyTargetTOP: {fileID: 6862332010103907985}
+  enemyTargetDown: {fileID: 6776755117561136688}
+  nameFrame: {fileID: 4942963467011406999}
+  nameText: {fileID: 8123113010819826112}
+  powerFrame: {fileID: 3586379121911162027}
+  powerHype: {fileID: 8459164026823038692}
+  powerSpeed: {fileID: 4401675191498849383}
+  hypeText: {fileID: 7169249585150387710}
+  speedText: {fileID: 5043449253094946811}
+  cardCost: {fileID: 5089807933373385157}
 --- !u!65 &4211503543075507681
 BoxCollider:
   m_ObjectHideFlags: 0
