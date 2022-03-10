@@ -10,6 +10,7 @@ public class GetDeckCard : MonoBehaviour
 
     private void Start()
     {
+        playerDeck = GameInstance.instance.userData.deck;
         CarHandPostions carHand = GetComponent<CarHandPostions>();
         for (int i=0;i<playerDeck.listOfCard.Count; i++)
         {

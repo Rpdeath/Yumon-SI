@@ -1352,8 +1352,9 @@ MonoBehaviour:
   userData: {fileID: 11400000, guid: 82e262b7f0e0fbc439a384ffca2bd314, type: 2}
   userDataEnemy: {fileID: 11400000, guid: d41ccc5711dc2d34cb384cf2f0411cab, type: 2}
   actualGameInfo: {fileID: 0}
-  assetRef: {fileID: 0}
-  ScriptRef: {fileID: 0}
+  assetRef: {fileID: 11400000, guid: b1fc1bc0c07dc464795ddfef67f21762, type: 2}
+  effectAssetRef: {fileID: 11400000, guid: 32f993e94ed569b4780402801ff91fac, type: 2}
+  ScriptRef: {fileID: 11400000, guid: 6b5fcec24c7f89245b331a946c3dadcc, type: 2}
   gameManager: {fileID: 980741444}
   oponentManager: {fileID: 0}
 --- !u!4 &784873891
@@ -3452,7 +3453,7 @@ PrefabInstance:
     - target: {fileID: 3177801954410839472, guid: 1f5d57b12518707488e0a846ac8f596e, type: 3}
       propertyPath: playerDeck
       value: 
-      objectReference: {fileID: 11400000, guid: 4a34a99a3cf09ef4ea59af826230dd08, type: 2}
+      objectReference: {fileID: 11400000, guid: 7c908f393b353714681cf6b9f62c0b5a, type: 2}
     - target: {fileID: 4161703689501188902, guid: 1f5d57b12518707488e0a846ac8f596e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
