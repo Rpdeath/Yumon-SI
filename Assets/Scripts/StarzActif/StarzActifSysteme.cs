@@ -184,6 +184,7 @@ public class StarzActifSysteme : MonoBehaviour
                 break;
             case "zevent_maghla":
                 zevent_maghla();
+                break;
             case "kcorp_kamet0":
                 kcorp_kamet0();
                 break;
