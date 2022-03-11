@@ -23,3 +23,4 @@ MonoBehaviour:
   passifRule: "Gagne 10% de g\xE9n\xE9ration de hype pour chaque effets n\xE9gatifs
     chez l'ennemi"
   actifRule: "Diminue la g\xE9n\xE9ration de hype des Starz adverse pendant 5s."
+  pictoUiSprite: {fileID: 21300000, guid: 3843efdf44f6cf449920912bece6ea23, type: 3}

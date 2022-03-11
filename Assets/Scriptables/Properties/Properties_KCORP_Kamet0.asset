@@ -23,3 +23,4 @@ MonoBehaviour:
   passifRule: "Si Rekkless est sur le terrain double la g\xE9n\xE9ration de Hype
     des autres Starz KCorp"
   actifRule: Boost la production de mana pendant 7s.
+  pictoUiSprite: {fileID: 21300000, guid: 9993bc7b07eddfe49ad637f8bc346236, type: 3}

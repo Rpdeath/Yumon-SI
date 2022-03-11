@@ -22,3 +22,4 @@ MonoBehaviour:
   actifId: zevent_moman
   passifRule: "G\xE9n\xE8re la Hype 8% plus vite pour chaque Starz ZEvent en jeu"
   actifRule: Boost la production de Hype des Starz ZEvent de 15% pendant 6s.
+  pictoUiSprite: {fileID: 21300000, guid: 2855f84edf2d15344b8b2eb8e928d513, type: 3}

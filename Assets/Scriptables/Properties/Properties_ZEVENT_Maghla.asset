@@ -22,3 +22,4 @@ MonoBehaviour:
   actifId: zevent_maghla
   passifRule: "G\xE9n\xE8re la Hype 8% plus vite pour chaque Starz ZEvent en jeu"
   actifRule: "Cette ligne g\xE9n\xE8re 50% de Hype en plus pendant 5s."
+  pictoUiSprite: {fileID: 21300000, guid: 871a2b9f36557544d8160b768f4c2b1b, type: 3}

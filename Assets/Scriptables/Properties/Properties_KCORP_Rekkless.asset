@@ -23,3 +23,4 @@ MonoBehaviour:
   passifRule: "Si Rekkless est sur le terrain double la g\xE9n\xE9ration de Hype
     des autres Starz KCorp"
   actifRule: "D\xE9clenche une Hype Fever !"
+  pictoUiSprite: {fileID: 21300000, guid: ce45b06396e8e48429150fd42f7d322f, type: 3}

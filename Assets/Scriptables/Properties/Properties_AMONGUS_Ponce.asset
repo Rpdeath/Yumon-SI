@@ -24,3 +24,4 @@ MonoBehaviour:
     chez l'ennemi"
   actifRule: "Emp\xEAche les Starz adverses de g\xE9n\xE9rer de la Hype ou utiliser
     son actif pendant 3s."
+  pictoUiSprite: {fileID: 21300000, guid: 4b7c79d6f1986d14fbf37488401f25e7, type: 3}

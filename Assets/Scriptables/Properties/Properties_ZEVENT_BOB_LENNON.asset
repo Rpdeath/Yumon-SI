@@ -22,3 +22,4 @@ MonoBehaviour:
   actifId: zevent_boblennon
   passifRule: "G\xE9n\xE8re la Hype 8% plus vite pour chaque Starz ZEvent en jeu"
   actifRule: "Diminue le co\xFBt en Mana de (1) des cartes ZEvent pendant 6s."
+  pictoUiSprite: {fileID: 21300000, guid: ccbca8715abeacd41b75184ac8c3bac8, type: 3}

@@ -22,3 +22,4 @@ MonoBehaviour:
   actifId: zevent_zerator
   passifRule: "G\xE9n\xE8re la Hype 8% plus vite pour chaque Starz ZEvent en jeu"
   actifRule: Convertit tout le Mana disponible en Hype (1 Mana = 10 Hype)
+  pictoUiSprite: {fileID: 21300000, guid: f76010018b83fbe4ebffc2f5ff1a3ce4, type: 3}
