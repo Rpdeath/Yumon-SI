@@ -1162,7 +1162,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 20bfc30f6334f6c46a80a41f66dd6a43, type: 2}
+  - {fileID: 2100000, guid: 8379ddacbf269834997d041765070642, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1839,6 +1839,9 @@ MonoBehaviour:
   harvestReadyColor: {r: 0.00965023, g: 1, b: 0, a: 1}
   loadingColor2: {r: 1, g: 0.48627454, b: 0, a: 1}
   harvestReadyColor2: {r: 0.007843138, g: 1, b: 0, a: 1}
+  player1StarColor: {r: 0, g: 0, b: 0, a: 0}
+  player2StarColor: {r: 0, g: 0, b: 0, a: 0}
+  yellowStarColor: {r: 0, g: 0, b: 0, a: 0}
   particuleOnHarvest: {fileID: 1296804583814003741, guid: 24d20f00c2be877458bbdbacfb062502, type: 3}
   generatorFill: {fileID: 2029142514586531329}
   maxFill: 3
@@ -1900,6 +1903,7 @@ MonoBehaviour:
   coolDownIsRunning: 0
   selfCard: {fileID: 0}
   animator: {fileID: 7920059268526272975}
+  spawnAnim: {fileID: 3976388763179463249}
 --- !u!1 &5427916813978954337
 GameObject:
   m_ObjectHideFlags: 0

@@ -84,6 +84,9 @@ MonoBehaviour:
   harvestReadyColor: {r: 0.00965023, g: 1, b: 0, a: 1}
   loadingColor2: {r: 1, g: 0.48627454, b: 0, a: 1}
   harvestReadyColor2: {r: 0.007843138, g: 1, b: 0, a: 1}
+  player1StarColor: {r: 0, g: 0, b: 0, a: 0}
+  player2StarColor: {r: 0, g: 0, b: 0, a: 0}
+  yellowStarColor: {r: 0, g: 0, b: 0, a: 0}
   particuleOnHarvest: {fileID: 1296804583814003741, guid: 24d20f00c2be877458bbdbacfb062502, type: 3}
   generatorFill: {fileID: 5959727933465641310}
   maxFill: 3
@@ -145,6 +148,7 @@ MonoBehaviour:
   coolDownIsRunning: 0
   selfCard: {fileID: 0}
   animator: {fileID: 4033514197581155160}
+  spawnAnim: {fileID: 8769416827232666894}
 --- !u!1 &418297320539906192
 GameObject:
   m_ObjectHideFlags: 0

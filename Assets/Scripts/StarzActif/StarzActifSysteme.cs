@@ -35,6 +35,8 @@ public class StarzActifSysteme : MonoBehaviour
     [HideInInspector] public Card selfCard;
 
     public Animator animator;
+
+    public Animator spawnAnim;
     #endregion
 
     private void Start()
@@ -86,6 +88,7 @@ public class StarzActifSysteme : MonoBehaviour
 
             PlayActif(id);
             animator.SetBool("isActing", true);
+            spawnAnim.Play("ActifUsed",-1,0f);
             DragDownUi();
             actualActifDuration = 0f;
             GameInstance.instance.actualGameInfo.manaPlayer1 -= selfCard.properties.actif_cost;
