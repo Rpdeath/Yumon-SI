@@ -23,6 +23,7 @@ public class GameInstance : MonoBehaviour
 
     public GameManager gameManager;
     public OponentManager oponentManager;
+    public GameObject winloseParent;
     public GameObject winLooseScreen;
 
     #endregion
@@ -85,7 +86,7 @@ public class GameInstance : MonoBehaviour
 
             if (actualGameInfo.scorePlayer1 > actualGameInfo.maxScore)
             {
-
+                winloseParent.SetActive(true);
                 winLooseScreen.GetComponent<Text>().text = "You Win";
                 Debug.Log("WIN");
             }
@@ -97,6 +98,7 @@ public class GameInstance : MonoBehaviour
 
             if (actualGameInfo.scorePlayer2 > actualGameInfo.maxScore)
             {
+                winloseParent.SetActive(true);
                 winLooseScreen.GetComponent<Text>().text = "You Lose";
                 Debug.Log("Loose");
             }

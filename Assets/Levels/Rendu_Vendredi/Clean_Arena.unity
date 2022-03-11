@@ -3063,7 +3063,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1167603134
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4089,6 +4089,7 @@ MonoBehaviour:
   ScriptRef: {fileID: 11400000, guid: 6b5fcec24c7f89245b331a946c3dadcc, type: 2}
   gameManager: {fileID: 885048581}
   oponentManager: {fileID: 0}
+  winloseParent: {fileID: 0}
   winLooseScreen: {fileID: 784002007}
 --- !u!1 &1414261208
 GameObject:
