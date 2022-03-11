@@ -9,7 +9,7 @@ public class CollectionButton : MonoBehaviour
     public Difficulty difficulty;
     public void onClick()
     {
-        SceneManager.LoadScene(level);
         GameInstance.instance.difficulty = difficulty;
+        SceneManager.LoadScene(level);
     }
 }

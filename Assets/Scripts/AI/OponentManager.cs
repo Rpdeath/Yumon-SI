@@ -37,23 +37,8 @@ public class OponentManager : MonoBehaviour
         StartCoroutine(LaunchCard());
         StartCoroutine(CheckForHarvest());
         StartCoroutine(AddMana());
-        EffectOnUser effect = new EffectOnUser();
-        effect.name = "HypeProduction";
-        effect.stringBuff = "All";
-        switch (difficulty)
-        {
-            case Difficulty.EASY:
-                effect.floatBuff = -0.5f;
-                break;
-            case Difficulty.NORMAL:
-                effect.floatBuff = -0.9f;
-                break;
-            case Difficulty.HARD:
-                effect.floatBuff = 0.5f;
-                break;
-            default:
-                break;
-        }
+        difficulty = GameInstance.instance.difficulty;
+
     }
 
 
@@ -160,7 +145,22 @@ public class OponentManager : MonoBehaviour
 
     IEnumerator AddMana()
     {
-        yield return new WaitForSeconds(2.5f);
+        switch (difficulty)
+        {
+            case Difficulty.EASY:
+                yield return new WaitForSeconds(4f);
+                break;
+            case Difficulty.NORMAL:
+                yield return new WaitForSeconds(3f);
+                break;
+            case Difficulty.HARD:
+                yield return new WaitForSeconds(2f);
+                break;
+            default:
+                yield return new WaitForSeconds(3f);
+                break;
+        }
+        
         float boost = 1;
         foreach (EffectOnUser effect in GameInstance.instance.gameManager.lEffectEnnemy)
         {
