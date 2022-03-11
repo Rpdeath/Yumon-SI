@@ -118,14 +118,10 @@ public class HypeGenerator : MonoBehaviour, IClickable
             if (!UsedByPlayer)
             {
                 ResetGenerator(false);
-                GameObject particle = Instantiate(particuleOnHarvest, transform.position, transform.rotation);
-                particle.GetComponent<HypeParticule>().GiveDestination(2);
             }
             else
             {
                 ResetGenerator(true);
-                GameObject particle =  Instantiate(particuleOnHarvest, transform.position, transform.rotation);
-                particle.GetComponent<HypeParticule>().GiveDestination(1);
             }
         }
     }
@@ -165,8 +161,6 @@ public class HypeGenerator : MonoBehaviour, IClickable
                 {
                     scoreToAdd = (int)(scoreToAdd * (1 + effect.floatBuff));
                 }
-
-
             }
 
             if(effect.name == "HypeProduction")
@@ -202,17 +196,31 @@ public class HypeGenerator : MonoBehaviour, IClickable
                 }
             }
         }
-
-        Debug.Log("Production : " + maxFill + " -> " + scoreToAdd);
         
         if (User)
         {
             GameInstance.instance.AddScore(userData.users_id,(int) scoreToAdd);
+
+            GameObject particle = Instantiate(particuleOnHarvest, transform.position, transform.rotation);
+
+            HypeParticule actualParticle = particle.GetComponent<HypeParticule>();
+            actualParticle.GiveDestination(1);
+            actualParticle.main.startColor = player1StarColor;
+            actualParticle.child.startColor = player1StarColor;
+            actualParticle.main.Emit((int)scoreToAdd);
+
         }
         else
         {
-
             GameInstance.instance.AddScore(GameInstance.instance.userDataEnemy.users_id, (int)scoreToAdd);
+
+            GameObject particle = Instantiate(particuleOnHarvest, transform.position, transform.rotation);
+
+            HypeParticule actualParticle = particle.GetComponent<HypeParticule>();
+            actualParticle.GiveDestination(2);
+            actualParticle.main.startColor = player2StarColor;
+            actualParticle.child.startColor = player2StarColor;
+            actualParticle.main.Emit((int)scoreToAdd);
         }
             actualTime = 0;
             isReadyToHarvest = false;

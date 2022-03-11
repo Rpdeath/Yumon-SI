@@ -84,6 +84,9 @@ MonoBehaviour:
   harvestReadyColor: {r: 0.00965023, g: 1, b: 0, a: 1}
   loadingColor2: {r: 1, g: 0.48627454, b: 0, a: 1}
   harvestReadyColor2: {r: 0.007843138, g: 1, b: 0, a: 1}
+  player1StarColor: {r: 0.10588236, g: 0.6392157, b: 0.9058824, a: 1}
+  player2StarColor: {r: 0.90196085, g: 0.46274513, b: 0.10588236, a: 1}
+  yellowStarColor: {r: 0.91372555, g: 0.8470589, b: 0.098039225, a: 1}
   particuleOnHarvest: {fileID: 1296804583814003741, guid: 24d20f00c2be877458bbdbacfb062502, type: 3}
   generatorFill: {fileID: 5681979914789676164}
   maxFill: 3
