@@ -26,6 +26,13 @@ public class OponentManager : MonoBehaviour
 
     private void Start()
     {
+       
+        
+    }
+
+
+    public void StartAI()
+    {
         startingDeck = GameInstance.instance.userDataEnemy.deck;
         StartCoroutine(LaunchCard());
         StartCoroutine(CheckForHarvest());
@@ -47,9 +54,7 @@ public class OponentManager : MonoBehaviour
             default:
                 break;
         }
-        
     }
-
 
 
     public void DeckReady()
@@ -155,7 +160,7 @@ public class OponentManager : MonoBehaviour
 
     IEnumerator AddMana()
     {
-        yield return new WaitForSeconds((float)difficulty);
+        yield return new WaitForSeconds(2.5f);
         float boost = 1;
         foreach (EffectOnUser effect in GameInstance.instance.gameManager.lEffectEnnemy)
         {
@@ -164,7 +169,7 @@ public class OponentManager : MonoBehaviour
                 boost = boost - effect.floatBuff;
             }
         }
-        mana += 1 * boost;
+        mana += 1 ;
         StartCoroutine(AddMana());
     }
 

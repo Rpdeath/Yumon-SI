@@ -71,6 +71,7 @@ public class GameManager : MonoBehaviour
             ColumnPosition columnPos = columnItem.GetComponent<ColumnPosition>();
             columns[columnPos.x + (columnPos.y * 3)] = columnItem;
         }
+        GameInstance.instance.StartNewGame();
     }
 
     public void AddStarzToPosition(int pos)

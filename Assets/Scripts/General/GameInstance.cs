@@ -16,7 +16,7 @@ public class GameInstance : MonoBehaviour
     
     public CreateGameInfo actualGameInfo;
 
-
+    public Difficulty difficulty;
 
     public AssetReferencement assetRef;
     public AssetReferencement effectAssetRef;
@@ -49,7 +49,7 @@ public class GameInstance : MonoBehaviour
 
     private void Start()
     {
-        StartNewGame();
+        //StartNewGame();
     }
 
 
@@ -67,7 +67,8 @@ public class GameInstance : MonoBehaviour
 
         gameManager = GameObject.FindObjectOfType<GameManager>();
         oponentManager = GameObject.FindObjectOfType<OponentManager>();
-
+        oponentManager.StartAI();
+        oponentManager.difficulty = difficulty;
         oponentManager.startingDeck = userDataEnemy.deck;
         oponentManager.DeckReady();
 
