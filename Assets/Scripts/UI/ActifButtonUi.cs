@@ -119,6 +119,8 @@ public class ActifButtonUi : MonoBehaviour, IClickable
 
     private void CheckColor()
     {
+        realBackGround.sprite = selfStarzActif.selfCard.properties.pictoUiSprite;
+
         if (!selfStarzActif.actifIsRunning)
         {
             if (GameInstance.instance.actualGameInfo.manaPlayer1 >= selfStarzActif.selfCard.properties.actif_cost)

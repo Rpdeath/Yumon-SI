@@ -23,3 +23,4 @@ MonoBehaviour:
   passifRule: "Gagne 10% de g\xE9n\xE9ration de hype pour chaque effets n\xE9gatifs
     chez l'ennemi"
   actifRule: Vole 20% de la productin de Hype de la ligne en face pendant 3s.
+  pictoUiSprite: {fileID: 21300000, guid: 835324d619c6acc429ab3e7b0bdc894c, type: 3}

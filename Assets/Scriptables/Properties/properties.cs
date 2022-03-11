@@ -18,4 +18,7 @@ public class Properties : ScriptableObject
     public string passifRule = "none";
     public string actifRule = "none";
 
+    [Space]
+    public Sprite pictoUiSprite;
+
 }
