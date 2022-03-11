@@ -5591,7 +5591,7 @@ MonoBehaviour:
   ScriptRef: {fileID: 11400000, guid: 6b5fcec24c7f89245b331a946c3dadcc, type: 2}
   gameManager: {fileID: 885048581}
   oponentManager: {fileID: 0}
-  winloseParent: {fileID: 0}
+  winloseParent: {fileID: 1167603133}
   winLooseScreen: {fileID: 784002007}
 --- !u!1 &1414261208
 GameObject:
