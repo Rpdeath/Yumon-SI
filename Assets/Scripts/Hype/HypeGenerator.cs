@@ -15,6 +15,11 @@ public class HypeGenerator : MonoBehaviour, IClickable
     public Color loadingColor2;
     public Color harvestReadyColor2;
 
+    [Header ("Stars Color")]
+    public Color player1StarColor;
+    public Color player2StarColor;
+    public Color yellowStarColor;
+
     [Header("Feedback")]
     public GameObject particuleOnHarvest;
 
@@ -25,7 +30,7 @@ public class HypeGenerator : MonoBehaviour, IClickable
     [HideInInspector] public float timeToCompletion;
     [HideInInspector] public float boost;
     private int startMaxFill;
-    /*[HideInInspector]*/ public bool UsedByPlayer = true;
+    [HideInInspector] public bool UsedByPlayer = true;
 
 
 
@@ -88,11 +93,24 @@ public class HypeGenerator : MonoBehaviour, IClickable
     public void OnClick()
     {
         bool canActif = true;
-        foreach (EffectOnUser effect in GameInstance.instance.gameManager.lEffect)
+        if (UsedByPlayer)
         {
-            if (effect.name == "PreventHype")
+            foreach (EffectOnUser effect in GameInstance.instance.gameManager.lEffect)
             {
-                canActif = false;
+                if (effect.name == "PreventHype")
+                {
+                    canActif = false;
+                }
+            }
+        }
+        else
+        {
+            foreach (EffectOnUser effect in GameInstance.instance.gameManager.lEffectEnnemy)
+            {
+                if (effect.name == "PreventHype")
+                {
+                    canActif = false;
+                }
             }
         }
         if (isReadyToHarvest && canActif)
@@ -104,14 +122,22 @@ public class HypeGenerator : MonoBehaviour, IClickable
             else
             {
                 ResetGenerator(true);
-                Instantiate(particuleOnHarvest, transform.position, transform.rotation);
             }
         }
     }
     public void ResetGenerator(bool User)
     {
-        int scoreToAdd = maxFill;
-        foreach(EffectOnUser effect in GameInstance.instance.gameManager.lEffect)
+        float scoreToAdd = maxFill;
+        List<EffectOnUser> list;
+        if (UsedByPlayer)
+        {
+            list = GameInstance.instance.gameManager.lEffect;
+        }
+        else
+        {
+            list = GameInstance.instance.gameManager.lEffectEnnemy;
+        }
+            foreach (EffectOnUser effect in list)
         {
             if(effect.name == "HypeProductionSameLine")
             {
@@ -135,8 +161,6 @@ public class HypeGenerator : MonoBehaviour, IClickable
                 {
                     scoreToAdd = (int)(scoreToAdd * (1 + effect.floatBuff));
                 }
-
-
             }
 
             if(effect.name == "HypeProduction")
@@ -172,14 +196,31 @@ public class HypeGenerator : MonoBehaviour, IClickable
                 }
             }
         }
+        
         if (User)
         {
-            GameInstance.instance.AddScore(userData.users_id, maxFill);
+            GameInstance.instance.AddScore(userData.users_id,(int) scoreToAdd);
+
+            GameObject particle = Instantiate(particuleOnHarvest, transform.position, transform.rotation);
+
+            HypeParticule actualParticle = particle.GetComponent<HypeParticule>();
+            actualParticle.GiveDestination(1);
+            actualParticle.main.startColor = player1StarColor;
+            actualParticle.child.startColor = player1StarColor;
+            actualParticle.main.Emit((int)scoreToAdd);
+
         }
         else
         {
+            GameInstance.instance.AddScore(GameInstance.instance.userDataEnemy.users_id, (int)scoreToAdd);
 
-            GameInstance.instance.AddScore(GameInstance.instance.userDataEnemy.users_id, scoreToAdd);
+            GameObject particle = Instantiate(particuleOnHarvest, transform.position, transform.rotation);
+
+            HypeParticule actualParticle = particle.GetComponent<HypeParticule>();
+            actualParticle.GiveDestination(2);
+            actualParticle.main.startColor = player2StarColor;
+            actualParticle.child.startColor = player2StarColor;
+            actualParticle.main.Emit((int)scoreToAdd);
         }
             actualTime = 0;
             isReadyToHarvest = false;

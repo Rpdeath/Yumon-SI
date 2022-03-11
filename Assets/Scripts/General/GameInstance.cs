@@ -19,6 +19,7 @@ public class GameInstance : MonoBehaviour
 
 
     public AssetReferencement assetRef;
+    public AssetReferencement effectAssetRef;
     public ScriptReferencement ScriptRef;
 
 

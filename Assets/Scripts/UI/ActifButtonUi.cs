@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ActifButtonUi : MonoBehaviour, IClickable
 {
@@ -10,6 +11,8 @@ public class ActifButtonUi : MonoBehaviour, IClickable
     [Header("1st Square Info")]
     public Image realBackGround;
     public Image coolDownActifImage;
+    public GameObject starCostInfo;
+    public TextMeshProUGUI costText;
     public GameObject pictoHolderInfo;
 
     [Header("Effect Square Info")]
@@ -26,7 +29,8 @@ public class ActifButtonUi : MonoBehaviour, IClickable
     public Color actifRunningColor;
     public Color emptyActifColor;
 
-    [Header ("Unity setup")]
+    [Header("Unity setup")]
+    public Animator animator;
     public BoxCollider selfCollider;
     public Transform squareEffectDownPos;
     public Transform sliderDownPos;
@@ -51,6 +55,7 @@ public class ActifButtonUi : MonoBehaviour, IClickable
             SetActifDurationUi();
             SetActifCooldownUi();
             CheckColor();
+            CheckStarCostInfo();
         }
     }
 
@@ -62,6 +67,8 @@ public class ActifButtonUi : MonoBehaviour, IClickable
         selfSlider.value = 0f;
         startSliderPos = sliderObj.transform;
         startSquareEffectPos = effectSquareObj.transform;
+
+        starCostInfo.SetActive(false);
     }
 
 
@@ -76,17 +83,23 @@ public class ActifButtonUi : MonoBehaviour, IClickable
 
     private void SetActifDurationUi()
     {
-        if (selfStarzActif.actualActifDuration < selfStarzActif.actifDuration)
+        if (selfStarzActif.actualActifDuration < selfStarzActif.selfCard.properties.actifDuration)
         {
-            selfSlider.value = selfStarzActif.actualActifDuration / selfStarzActif.actifDuration;
+            selfSlider.value = selfStarzActif.actualActifDuration / selfStarzActif.selfCard.properties.actifDuration;
         }
     }
     private void SetActifCooldownUi()
     {
         if (selfStarzActif.actualCooldown != 0f)
         {
-            coolDownActifImage.fillAmount = selfStarzActif.actualCooldown / selfStarzActif.cooldownActif;
+            coolDownActifImage.fillAmount = selfStarzActif.actualCooldown / selfStarzActif.selfCard.properties.cooldown;
         }
+    }
+
+    private void CheckStarCostInfo()
+    {
+        starCostInfo.SetActive(true);
+        costText.text = selfStarzActif.selfCard.properties.actif_cost.ToString();
     }
 
     private void CheckColor()

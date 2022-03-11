@@ -68,7 +68,7 @@ public class CardHandDragable : MonoBehaviour, IDragable
             }
         }
 
-        Debug.Log(card.name + " : " +cost + " | " + GameInstance.instance.actualGameInfo.manaPlayer1);
+        //Debug.Log(card.name + " : " +cost + " | " + GameInstance.instance.actualGameInfo.manaPlayer1);
         if (cost<= GameInstance.instance.actualGameInfo.manaPlayer1 && canLaunchCard)
         {
             isDraggable = true;

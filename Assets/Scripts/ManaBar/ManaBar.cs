@@ -55,15 +55,19 @@ public class ManaBar : MonoBehaviour
                     {
                         if (effect.name == "ManaProduction")
                         {
-                            boost = boost - effect.floatBuff;
+                            float preBoost = boost;
+                            boost = boost + ( effect.floatBuff);
+                            Debug.Log("Mana Boosted : "+preBoost+" -> "+boost);
                         }
                     }
                     actualTime += Time.deltaTime * boost;
+                    boost = 1;
                 }
                 else
                 {
                     GameInstance.instance.actualGameInfo.manaPlayer1 += 1;
                     actualTime = 0;
+
 
                     GameInstance.instance.RefreshManaState(userData.users_id, GameInstance.instance.actualGameInfo.manaPlayer1);
                 }

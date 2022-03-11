@@ -17,6 +17,7 @@ MonoBehaviour:
   speed: 3
   passivId: zevent
   actif_cost: 0
+  actifDuration: 0.1
   cooldown: 20
   actifId: zevent_zerator
   passifRule: "G\xE9n\xE8re la Hype 8% plus vite pour chaque Starz ZEvent en jeu"

@@ -13,9 +13,12 @@ MonoBehaviour:
   m_Name: Properties_ZEVENT_BOB_LENNON
   m_EditorClassIdentifier: 
   cost: 2
-  hype: 350
-  speed: 4
+  hype: 3
+  speed: 3
   passivId: zevent
   actif_cost: 1
+  actifDuration: 6
   cooldown: 30
-  actifId: bob_lennon
+  actifId: zevent_boblennon
+  passifRule: "G\xE9n\xE8re la Hype 8% plus vite pour chaque Starz ZEvent en jeu"
+  actifRule: "Diminue le co\xFBt en Mana de (1) des cartes ZEvent pendant 6s."

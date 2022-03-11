@@ -37,6 +37,7 @@ public class DropStarz : MonoBehaviour, IReceive
         actualStarz = Instantiate(gobj, spawnPoint.position, spawnPoint.rotation);
         actualStarz.GetComponentInChildren<HypeGenerator>().timeToCompletion = card.properties.speed;
         actualStarz.GetComponentInChildren<StarzActifSysteme>().selfActifUi = uiActif;
+        actualStarz.GetComponentInChildren<StarzActifSysteme>().selfCard = card;
 
         return actualStarz;
     }
@@ -46,6 +47,7 @@ public class DropStarz : MonoBehaviour, IReceive
         actualStarz = Instantiate(objToSpawn, spawnPoint.position, spawnPoint.rotation);
         actualStarz.GetComponentInChildren<HypeGenerator>().timeToCompletion = card.properties.speed;
         actualStarz.GetComponentInChildren<StarzActifSysteme>().selfActifUi = uiActif;
+        actualStarz.GetComponentInChildren<StarzActifSysteme>().selfCard = card;
         GameInstance.instance.actualGameInfo.manaPlayer1 -= card.properties.cost;
         actualStarz.GetComponentInChildren<StarzData>().data = card;
         actualStarz.GetComponentInChildren<StarzData>().pos = pillarId;

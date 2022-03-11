@@ -33,11 +33,15 @@ public class StarzActifSysteme : MonoBehaviour
     [HideInInspector] public bool coolDownIsRunning;
 
     [HideInInspector] public Card selfCard;
+
+    public Animator animator;
+
+    public Animator spawnAnim;
     #endregion
 
     private void Start()
     {
-        Init();
+       StartCoroutine(Init());
 
         if (UsedByPlayer)
         {
@@ -59,9 +63,10 @@ public class StarzActifSysteme : MonoBehaviour
     }
     
 
-    private void Init()
+    IEnumerator Init()
     {
-        selfCard = GetComponent<StarzData>().data;
+        yield return new WaitForEndOfFrame();
+        Debug.Log(selfCard.properties);
 
         actifDuration = selfCard.properties.actifDuration;
         cooldownActif = selfCard.properties.cooldown;
@@ -77,15 +82,16 @@ public class StarzActifSysteme : MonoBehaviour
                 canActif = false;
             }
         }
-                if (canActif && !coolDownIsRunning && !actifIsRunning && GameInstance.instance.actualGameInfo.manaPlayer1 >= actifCost)
+        if (canActif && !coolDownIsRunning && !actifIsRunning && GameInstance.instance.actualGameInfo.manaPlayer1 >= actifCost)
         {
             actifIsRunning = true;
 
             PlayActif(id);
-
+            animator.SetBool("isActing", true);
+            spawnAnim.Play("ActifUsed",-1,0f);
             DragDownUi();
             actualActifDuration = 0f;
-            GameInstance.instance.actualGameInfo.manaPlayer1 -= actifCost;
+            GameInstance.instance.actualGameInfo.manaPlayer1 -= selfCard.properties.actif_cost;
         }
     }
 
@@ -93,19 +99,19 @@ public class StarzActifSysteme : MonoBehaviour
     {
         if (actifIsRunning)
         {
-            if (actualActifDuration < actifDuration)
+            if (actualActifDuration < selfCard.properties.actifDuration)
             {
                 actualActifDuration += Time.deltaTime;
             }
             else
             {
                 actifIsRunning = false;
-                actualActifDuration = actifDuration;
+                actualActifDuration = selfCard.properties.actifDuration;
 
                 DragUpUi();
 
                 coolDownIsRunning = true;
-                actualCooldown = cooldownActif;
+                actualCooldown = selfCard.properties.cooldown;
             }
         }
     }
@@ -145,16 +151,17 @@ public class StarzActifSysteme : MonoBehaviour
 
     private void DragDownUi()
     {
-        StartCoroutine(AnimMoveUi(selfActifUi.effectSquareObj, selfActifUi.squareEffectDownPos, 0.1f));
+        selfActifUi.animator.SetTrigger("DragDown");
 
-        StartCoroutine(AnimMoveUi(selfActifUi.sliderObj, selfActifUi.sliderDownPos, 0.1f));
+        /*StartCoroutine(AnimMoveUi(selfActifUi.effectSquareObj, selfActifUi.squareEffectDownPos, 3f));
+        StartCoroutine(AnimMoveUi(selfActifUi.sliderObj, selfActifUi.sliderDownPos, 3f));*/
     }
 
     private void DragUpUi()
     {
-        StartCoroutine(AnimMoveUi(selfActifUi.effectSquareObj, selfActifUi.coolDownActifImage.gameObject.transform, 0.1f));
-
-        StartCoroutine(AnimMoveUi(selfActifUi.sliderObj, selfActifUi.coolDownActifImage.gameObject.transform, 0.1f));
+        selfActifUi.animator.SetTrigger("DragUp");
+        /*StartCoroutine(AnimMoveUi(selfActifUi.effectSquareObj, selfActifUi.coolDownActifImage.gameObject.transform, 2f));
+        StartCoroutine(AnimMoveUi(selfActifUi.sliderObj, selfActifUi.coolDownActifImage.gameObject.transform, 2f));*/
     }
 
     IEnumerator AnimMoveUi(GameObject objToMove ,Transform newPos, float speed)
@@ -162,7 +169,6 @@ public class StarzActifSysteme : MonoBehaviour
         while (objToMove.transform.position != newPos.position)
         {
             objToMove.transform.position = Vector3.MoveTowards(objToMove.transform.position, newPos.position, Time.deltaTime * speed);
-
             yield return new WaitForEndOfFrame();
         }
     }
@@ -211,10 +217,27 @@ public class StarzActifSysteme : MonoBehaviour
             case "zevent_moman":
                 zevent_moman();
                 break;
+            case "zevent_ultia":
+                zevent_ultia();
+                break;
+            case "kcorp_rekkles":
+                kcorp_rekkles();
+                break;
             default:
                 break;
         }
     }
+
+    private void zevent_ultia()
+    {
+        StartCoroutine(StopActifAnimation(0.5f));
+    }
+
+    private void kcorp_rekkles()
+    {
+        StartCoroutine(StopActifAnimation(0.5f));
+    }
+
     private void zevent_maghla()
     {
         EffectOnUser effect = new EffectOnUser();
@@ -237,7 +260,7 @@ public class StarzActifSysteme : MonoBehaviour
         EffectOnUser effect = new EffectOnUser();
         effect.name = "HypeProduction";
         effect.stringBuff = "All";
-        effect.floatBuff = 0.5f;
+        effect.floatBuff = 5f;
         AssUserEffect(effect, 5, false);
     }
 
@@ -280,7 +303,7 @@ public class StarzActifSysteme : MonoBehaviour
     {
         EffectOnUser effect = new EffectOnUser();
         effect.name = "ManaProduction";
-        effect.floatBuff = 2;
+        effect.floatBuff = 0.5f;
 
         AssUserEffect(effect, 7, true);
     }
@@ -295,7 +318,7 @@ public class StarzActifSysteme : MonoBehaviour
     {
         EffectOnUser effect = new EffectOnUser();
         effect.name = "BuffNextStarz";
-        effect.floatBuff = 2;
+        effect.floatBuff = 1;
         AssUserEffect(effect, 59f, true);
     }
     private void kcorp_kotei()
@@ -308,6 +331,7 @@ public class StarzActifSysteme : MonoBehaviour
     {
         GameInstance.instance.AddScore(1, GameInstance.instance.actualGameInfo.manaPlayer1 * 15);
         GameInstance.instance.actualGameInfo.manaPlayer1 = 0;
+        StartCoroutine(StopActifAnimation(0.5f));
     }
 
     private void zevent_moman()
@@ -318,6 +342,12 @@ public class StarzActifSysteme : MonoBehaviour
         AssUserEffect(effect, 6, true);
     }
 
+
+    IEnumerator StopActifAnimation(float time)
+    {
+        yield return new WaitForSeconds(time);
+        animator.SetBool("isActing", false);
+    }
 
 
     private void AssUserEffect(EffectOnUser effect,float time, bool User)
@@ -333,9 +363,12 @@ public class StarzActifSysteme : MonoBehaviour
 
         }
         if (time != 0)
-        {
+        {      
             StartCoroutine(RemoveUserEffect(effect, time, User));
         }
+
+        Debug.Log(GameInstance.instance.gameManager.lEffect.Count);
+
     }
 
     IEnumerator RemoveUserEffect(EffectOnUser effect, float time, bool User)
@@ -343,11 +376,13 @@ public class StarzActifSysteme : MonoBehaviour
         yield return new WaitForSeconds(time);
         if (User && userController)
         {
+            animator.SetBool("isActing", false);
             GameInstance.instance.gameManager.lEffect.Remove(effect);
 
         }
         else
         {
+            animator.SetBool("isActing", false);
             GameInstance.instance.gameManager.lEffectEnnemy.Remove(effect);
 
         }

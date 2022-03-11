@@ -5,9 +5,9 @@ using UnityEngine;
 
 public enum Difficulty : int
 {
-    EASY = 5,
+    EASY = 4,
     NORMAL = 3,
-    HARD = 1
+    HARD = 2
 }
 
 public class OponentManager : MonoBehaviour
@@ -26,16 +26,35 @@ public class OponentManager : MonoBehaviour
 
     private void Start()
     {
+        startingDeck = GameInstance.instance.userDataEnemy.deck;
         StartCoroutine(LaunchCard());
         StartCoroutine(CheckForHarvest());
         StartCoroutine(AddMana());
+        EffectOnUser effect = new EffectOnUser();
+        effect.name = "HypeProduction";
+        effect.stringBuff = "All";
+        switch (difficulty)
+        {
+            case Difficulty.EASY:
+                effect.floatBuff = -0.5f;
+                break;
+            case Difficulty.NORMAL:
+                effect.floatBuff = -0.9f;
+                break;
+            case Difficulty.HARD:
+                effect.floatBuff = 0.5f;
+                break;
+            default:
+                break;
+        }
+        
     }
 
 
 
     public void DeckReady()
     {
-        cardInHand = startingDeck.listOfCard;
+        cardInHand = new List<Card>(startingDeck.listOfCard);
         columns = new GameObject[6];
         foreach (GameObject columnItem in GameObject.FindGameObjectsWithTag("ColumnOponent"))
         {
@@ -80,6 +99,7 @@ public class OponentManager : MonoBehaviour
         if (canLaunchCard)
         {
             bool cardplaced = false;
+            int cardToRemove = -1;
             foreach (Card card in cardInHand)
             {
 
@@ -91,11 +111,20 @@ public class OponentManager : MonoBehaviour
                         {
                             DropCardOnColumn(colu.GetComponent<ColumnPosition>().x, colu.GetComponent<ColumnPosition>().y, card);
                             mana -= card.properties.cost;
+                            
                             cardplaced = true;
                             break;
                         }
                     }
+                    if (cardplaced == true)
+                    {
+                        cardToRemove = cardInHand.IndexOf(card);
+                    }
                 }
+            }
+            if(cardToRemove != -1 )
+            {
+                cardInHand.RemoveAt(cardToRemove);
             }
         }
         StartCoroutine(LaunchCard());
@@ -106,7 +135,7 @@ public class OponentManager : MonoBehaviour
 
     IEnumerator CheckForHarvest()
     {
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds((float)difficulty*0.5f);
         int nb = 0;
         foreach (GameObject colu in columns)
         {
@@ -126,7 +155,7 @@ public class OponentManager : MonoBehaviour
 
     IEnumerator AddMana()
     {
-        yield return new WaitForSeconds((float)difficulty/2);
+        yield return new WaitForSeconds((float)difficulty);
         float boost = 1;
         foreach (EffectOnUser effect in GameInstance.instance.gameManager.lEffectEnnemy)
         {
