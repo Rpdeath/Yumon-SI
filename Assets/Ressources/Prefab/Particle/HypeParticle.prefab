@@ -4828,7 +4828,7 @@ GameObject:
   - component: {fileID: 7322497960609218347}
   - component: {fileID: 2154018833597497754}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: HypeParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5793,7 +5793,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 7
+        scalar: 1
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -9702,5 +9702,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2dba0244e3d8ec438c1fd33eede75dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  main: {fileID: 6179693043186329851}
   child: {fileID: 6664683645467918861}
+  main: {fileID: 6179693043186329851}
+  currentHandle: {fileID: 0}

@@ -6,22 +6,12 @@ using UnityEngine.UI;
 public class HypeParticule : MonoBehaviour
 {
     public ParticleSystem child;
+    public ParticleSystem main;
 
     private Vector3 actualHandlePos;
     private Vector3 worldPos;
 
     public Image currentHandle;
-
-    private void Awake()
-    {
-
-
-        //currentHandle=GameInstance.instance.actualGameInfo.handle1;
-    }
-
-
-    public ParticleSystem main;
-
 
     private void Update()
     {
