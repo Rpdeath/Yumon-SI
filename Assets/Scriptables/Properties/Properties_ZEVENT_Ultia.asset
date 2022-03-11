@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb03376abe0e68447b8037302c6d3077, type: 3}
   m_Name: Properties_ZEVENT_Ultia
   m_EditorClassIdentifier: 
-  cost: 3
+  cost: 2
   hype: 1
   speed: 3
   passivId: zevent

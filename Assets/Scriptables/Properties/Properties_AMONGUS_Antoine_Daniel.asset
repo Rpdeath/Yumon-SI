@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb03376abe0e68447b8037302c6d3077, type: 3}
   m_Name: Properties_AMONGUS_Antoine_Daniel
   m_EditorClassIdentifier: 
-  cost: 6
+  cost: 5
   hype: 2
   speed: 6
   passivId: amongus

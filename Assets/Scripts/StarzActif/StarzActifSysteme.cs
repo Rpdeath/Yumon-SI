@@ -66,7 +66,6 @@ public class StarzActifSysteme : MonoBehaviour
     IEnumerator Init()
     {
         yield return new WaitForEndOfFrame();
-        Debug.Log(selfCard.properties);
 
         actifDuration = selfCard.properties.actifDuration;
         cooldownActif = selfCard.properties.cooldown;

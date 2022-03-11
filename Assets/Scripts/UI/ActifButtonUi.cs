@@ -39,11 +39,15 @@ public class ActifButtonUi : MonoBehaviour, IClickable
     [HideInInspector] public Transform startSquareEffectPos;
 
     [HideInInspector] public StarzActifSysteme selfStarzActif;
+    public string helperText;
+    public HelperBox helperComponent;
+    public bool setActifTextOnce;
 
     #endregion
 
     private void Start()
     {
+        helperComponent = gameObject.GetComponent<HelperBox>();
         Ininit();
     }
 
@@ -56,6 +60,17 @@ public class ActifButtonUi : MonoBehaviour, IClickable
             SetActifCooldownUi();
             CheckColor();
             CheckStarCostInfo();
+
+            helperText = selfStarzActif.selfCard.properties.actifRule;
+
+            //Debug.Log(helperComponent.helperList.Count);
+            if (setActifTextOnce == false)
+            {
+                setActifTextOnce = true;
+                helperComponent.allHelpComments.Add(helperText);
+
+            }
+            //Debug.Log(helperComponent.helperList[0]);
         }
     }
 
