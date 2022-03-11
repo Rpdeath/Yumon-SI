@@ -7,8 +7,24 @@ public class MouseOverCard : MonoBehaviour,IHover
     public RectTransform cardTransform;
     public bool isHover;
     public GameObject visual;
+    public Properties cardProperties;
+    public bool setHelperOnce;
+    public HelperBox helperBox;
+
     public void Hover()
     {
+        if(setHelperOnce == false)
+        {
+            setHelperOnce = true;
+            cardProperties = gameObject.GetComponent<CarDataManager>().CardData.properties;
+            helperBox = gameObject.GetComponent<HelperBox>();
+
+            helperBox.allHelpComments.Add("Coût = " + cardProperties.cost);
+            helperBox.allHelpComments.Add("Génère " + cardProperties.hype + " hype in " + cardProperties.speed + "sec");
+            helperBox.allHelpComments.Add("Actif coût de " + cardProperties.actif_cost + " : " + cardProperties.actifRule);
+            helperBox.allHelpComments.Add("Passif : " + cardProperties.passifRule);
+
+        }
         if (!isHover)
         {
             isHover = true;

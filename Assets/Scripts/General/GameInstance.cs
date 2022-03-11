@@ -1,9 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using System;
 
 public class GameInstance : MonoBehaviour
 {
@@ -25,6 +23,8 @@ public class GameInstance : MonoBehaviour
 
     public GameManager gameManager;
     public OponentManager oponentManager;
+    public GameObject winloseParent;
+    public GameObject winLooseScreen;
 
     #endregion
 
@@ -56,7 +56,7 @@ public class GameInstance : MonoBehaviour
     public void StartNewGame()
     {
 
-        actualGameInfo.maxScore = 1000;
+        actualGameInfo.maxScore = 280;
         actualGameInfo.sliderPlayer1 = GameObject.FindGameObjectWithTag("Slider1").GetComponent<Slider>();
         actualGameInfo.sliderPlayer2 = GameObject.FindGameObjectWithTag("Slider2").GetComponent<Slider>();
 
@@ -87,7 +87,9 @@ public class GameInstance : MonoBehaviour
 
             if (actualGameInfo.scorePlayer1 > actualGameInfo.maxScore)
             {
-                Debug.Log("Player 1 WIN !!!!!!!!!!!");
+                winloseParent.SetActive(true);
+                winLooseScreen.GetComponent<Text>().text = "You Win";
+                Debug.Log("WIN");
             }
         }
         else
@@ -97,7 +99,9 @@ public class GameInstance : MonoBehaviour
 
             if (actualGameInfo.scorePlayer2 > actualGameInfo.maxScore)
             {
-                Debug.Log("Player 2 WIN !!!!!!!!!!!");
+                winloseParent.SetActive(true);
+                winLooseScreen.GetComponent<Text>().text = "You Lose";
+                Debug.Log("Loose");
             }
         }
     }

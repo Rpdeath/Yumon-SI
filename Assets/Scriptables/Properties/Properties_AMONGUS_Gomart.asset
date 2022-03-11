@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb03376abe0e68447b8037302c6d3077, type: 3}
   m_Name: Properties_AMONGUS_Gomart
   m_EditorClassIdentifier: 
-  cost: 2
+  cost: 1
   hype: 3
   speed: 5
   passivId: amongus

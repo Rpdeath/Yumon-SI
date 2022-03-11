@@ -20,6 +20,7 @@ public class ManagerHelperBox : MonoBehaviour
         }
         #endregion
     }
+   
     public void SetHelpersBox(List<string> helpsTexts)
     {
         for (int i =0;i<helpsTexts.Count; i++)

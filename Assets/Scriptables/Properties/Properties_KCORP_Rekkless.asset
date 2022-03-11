@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Properties_KCORP_Rekkless
   m_EditorClassIdentifier: 
   cost: 9
-  hype: 5
+  hype: 6
   speed: 9
   passivId: kcorp
   actif_cost: 5
